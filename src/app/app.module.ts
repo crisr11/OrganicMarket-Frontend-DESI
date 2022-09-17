@@ -8,7 +8,6 @@ import { AgricultorListarComponent } from './page/agricultor/agricultor-listar/a
 import { OrdenListarComponent } from './page/orden/orden-listar/orden-listar.component';
 import { OrdenComponent } from './page/orden/orden.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import{MatTableModule} from '@angular/material/table';
 
 

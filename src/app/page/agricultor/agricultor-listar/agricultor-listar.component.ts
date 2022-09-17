@@ -9,7 +9,7 @@ import { agricultor } from 'src/app/model/agricultor';
 })
 export class AgricultorListarComponent implements OnInit {
   dataSource: MatTableDataSource<agricultor>= new MatTableDataSource();
-  displayedColumns:string[]=['id_agricultor','direccion','persona_id_persona'];
+  displayedColumns:string[]=["id_agricultor","direccion","persona_id_persona"];
   constructor(private ps: AgricultorService) { }
 
   ngOnInit(): void {

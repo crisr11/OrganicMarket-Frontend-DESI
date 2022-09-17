@@ -4,11 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { OrdenComponent } from './page/orden/orden.component';
 
 const routes: Routes = [{
-  path: 'propietarios', component: AgricultorComponent, children:[
+  path: 'agricultor', component: AgricultorComponent, children:[
 
   ]
 },{
-  path:'vehiculos',component:OrdenComponent,children:[
+  path:'orden',component:OrdenComponent,children:[
 
   ]
 }];
