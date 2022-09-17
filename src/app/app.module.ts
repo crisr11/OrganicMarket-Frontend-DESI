@@ -10,6 +10,10 @@ import { OrdenComponent } from './page/orden/orden.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import{MatTableModule} from '@angular/material/table';
+import { ProductoListarComponent } from './page/producto/producto-listar/producto-listar.component';
+import { TipoListarComponent } from './page/tipo/tipo-listar/tipo-listar.component';
+import { ProductoComponent } from './page/producto/producto.component';
+import { TipoComponent } from './page/tipo/tipo.component';
 
 
 
@@ -21,9 +25,10 @@ import{MatTableModule} from '@angular/material/table';
     AgricultorListarComponent,
     OrdenListarComponent,
     OrdenComponent,
-
-
-
+    ProductoComponent,
+    TipoComponent,
+    ProductoListarComponent,
+    TipoListarComponent
   
   ],
   imports: [
