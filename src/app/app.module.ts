@@ -14,6 +14,10 @@ import { ProductoListarComponent } from './page/producto/producto-listar/product
 import { TipoListarComponent } from './page/tipo/tipo-listar/tipo-listar.component';
 import { ProductoComponent } from './page/producto/producto.component';
 import { TipoComponent } from './page/tipo/tipo.component';
+import { PersonaComponent } from './page/persona/persona.component';
+import { PersonaListarComponent } from './page/persona/persona-listar/persona-listar.component';
+import { AdministradorComponent } from './page/administrador/administrador.component';
+import { AdministradorListarComponent } from './page/administrador/administrador-listar/administrador-listar.component';
 
 
 
@@ -28,7 +32,11 @@ import { TipoComponent } from './page/tipo/tipo.component';
     ProductoComponent,
     TipoComponent,
     ProductoListarComponent,
-    TipoListarComponent
+    TipoListarComponent,
+    PersonaComponent,
+    PersonaListarComponent,
+    AdministradorComponent,
+    AdministradorListarComponent
   
   ],
   imports: [

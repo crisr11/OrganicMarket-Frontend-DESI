@@ -16,5 +16,5 @@ export class OrdenListarComponent implements OnInit {
     this.Os.listar().subscribe(d => {
       this.dataSource = new MatTableDataSource(d);
     })  }
-   
+
 }

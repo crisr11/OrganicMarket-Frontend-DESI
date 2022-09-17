@@ -1,6 +1,98 @@
 
 module.exports = function () {
     var data = {
+      persona:[
+        {
+          id_persona:1,
+          nombre:"Luis Garcia",
+          dni:788901202,
+          telefonoPersona:921829525,
+          correoPersona:"lugarcia001@gmail.com"
+
+        },
+        {
+          id_persona:2,
+          nombre:"Samanta Chavez",
+          dniPersona:720012077,
+          telefonoPersona:981271231,
+          correoPersona:"samchavez021@gmail.com"
+        },
+        {
+          id_persona:3,
+          nombre:"Gonzalo Lacherre",
+          dniPersona:77233900,
+          telefonoPersona:900132763,
+          correoPersona:"gonlach22192@gmail.com"
+        },
+        {
+          id_persona:4,
+          nombre:"Samuel Martinez",
+          dniPersona:70911477,
+          telefonoPersona:942566772,
+          correoPersona:"sammartinez1288800@gmail.com"
+        },
+        {
+          id_persona:5,
+          nombre:"Jose Madero",
+          dniPersona:71823082,
+          telefonoPersona:981379980,
+          correoPersona:"jomadero06@gmail.com"
+        },
+        {
+          id_persona:6,
+          nombre:"Vicente Torres",
+          dni:79272231,
+          telefonoPersona:917800120,
+          correoPersona:"vicotorres010@gmail.com"
+
+        },
+        {
+          id_persona:7,
+          nombre:"Leonardo Santander",
+          dni:78823011,
+          telefonoPersona:923210111,
+          correoPersona:"leosantander201@gmail.com"
+        },
+        {
+          id_persona:8,
+          nombre:"Domingo Cipria",
+          dni:72301399,
+          telefonoPersona:981234377,
+          correoPersona:"domcipria12322@gmail.com"
+        },
+        {
+          id_persona:9,
+          nombre:"Diana Quintanilla",
+          dni:72340033,
+          telefonoPersona:907821290,
+          correoPersona:"dianquinta_129@gmail.com"
+        },
+        {
+          id_persona:10,
+          nombre:"Cinthia Nuñez",
+          dni:72321177,
+          telefonoPersona:971137842,
+          correoPersona:"cinthinuñ01999@gmail.com"
+        }
+      ],
+      administrador:[
+        {
+          id_administrador:1,
+          persona_id_persona:6
+        },
+        {
+          idAdministrador:2,
+
+            persona_id_persona:7
+
+        },
+        {
+          idAdministrador:3,
+
+            persona_id_persona:9
+
+        }
+      ],
       agricultor: [
         {
           id_agricultor: 1,
@@ -141,9 +233,8 @@ module.exports = function () {
           }
         }
       ]
-  
+
     }
-  
+
     return data
   }
-  
