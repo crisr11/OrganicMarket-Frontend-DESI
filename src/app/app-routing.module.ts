@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { OrdenComponent } from './page/orden/orden.component';
 import { ProductoComponent } from './page/producto/producto.component';
+import { PersonaComponent } from './page/persona/persona.component';
+import { AdministradorComponent } from './page/administrador/administrador.component';
 import { TipoComponent } from './page/tipo/tipo.component';
 
 const routes: Routes = [{
@@ -19,6 +21,14 @@ const routes: Routes = [{
   ]
 },{
   path:'tipos',component:TipoComponent,children:[
+
+  ]
+},{
+  path:'persona',component:PersonaComponent,children:[
+
+  ]
+},{
+  path:'administrador',component:AdministradorComponent,children:[
 
   ]
 }
