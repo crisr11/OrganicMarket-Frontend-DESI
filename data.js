@@ -296,7 +296,38 @@ module.exports = function () {
                 id:16
             }
         }
-    ]
+    ],
+    promociones:[
+      {
+          id: 1,
+          fechaInicio:"2022/9/17",
+          fechaFin:"2022/10/17"
+      },
+      {
+          id: 2,
+          fechaInicio:"2022/7/16",
+          fechaFin:"2022/8/16"
+      },
+      {
+          id: 3,
+          fechaInicio:"2022/11/24",
+          fechaFin:"2022/12/24"
+      }
+  ],
+  publicaciones:[
+      {
+          id: 1,
+          contenido:"frutas"
+      },
+      {
+          id: 2,
+          contenido: "verduras"
+      },
+      {
+          id: 3,
+          contenido: "legumbres"
+      }
+  ]
 
     }
 

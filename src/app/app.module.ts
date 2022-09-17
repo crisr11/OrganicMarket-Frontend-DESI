@@ -24,6 +24,10 @@ import { PersonaComponent } from './page/persona/persona.component';
 import { PersonaListarComponent } from './page/persona/persona-listar/persona-listar.component';
 import { AdministradorComponent } from './page/administrador/administrador.component';
 import { AdministradorListarComponent } from './page/administrador/administrador-listar/administrador-listar.component';
+import { PromocionComponent } from './page/promocion/promocion.component';
+import { PublicacionComponent } from './page/publicacion/publicacion.component';
+import { PromocionListarComponent } from './page/promocion/promocion-listar/promocion-listar.component';
+import { PublicacionListarComponent } from './page/publicacion/publicacion-listar/publicacion-listar.component';
 
 
 
@@ -46,7 +50,11 @@ import { AdministradorListarComponent } from './page/administrador/administrador
     AcuerdoComponent,
     AcuerdoListarComponent,
     MayoristaComponent,
-    MayoristaListarComponent
+    MayoristaListarComponent,
+    PromocionComponent,
+    PublicacionComponent,
+    PromocionListarComponent,
+    PublicacionListarComponent
   
   ],
   imports: [

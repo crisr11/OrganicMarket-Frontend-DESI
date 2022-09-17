@@ -8,6 +8,8 @@ import { AdministradorComponent } from './page/administrador/administrador.compo
 import { TipoComponent } from './page/tipo/tipo.component';
 import { MayoristaComponent } from './page/mayorista/mayorista.component';
 import { AcuerdoComponent } from './page/acuerdo/acuerdo.component';
+import { PromocionComponent } from './page/promocion/promocion.component';
+import { PublicacionComponent } from './page/publicacion/publicacion.component';
 
 const routes: Routes = [{
   path: 'agricultor', component: AgricultorComponent, children:[
@@ -39,6 +41,16 @@ const routes: Routes = [{
   ]
 },{
   path: 'acuerdos', component: AcuerdoComponent, children:[
+    
+  ]
+},
+{
+  path: 'promocion', component: PromocionComponent, children:[
+    
+  ]
+},
+{
+  path: 'publicacion', component: PublicacionComponent, children:[
     
   ]
 }
