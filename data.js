@@ -236,34 +236,28 @@ module.exports = function () {
 
       detalleorden:[
         {
-          orden:{
+          dorden:{
             id_orden:1,
-          },
-          fechacompra:"24-05-2022",
-          Producto:{
-            ID_Producto:1,
-          },
-          Nombre: "Haba"          
+          },    
+          producto:{
+            id_producto:1,
+          }                
         },
         {
-          orden:{
+          dorden:{
             id_orden:2,
           },
-          fechacompra:"14-09-2022",
-          Producto:{
-            ID_Producto:2,
-          },
-          Nombre: "Papa"
+          producto:{
+            id_producto:2,
+          }
         },
         {
-          orden:{
+          dorden:{
             id_orden:3,
           },
-          fechacompra:"14-12-2022",
-          Producto:{
-            ID_Producto:3,
-          },
-          Nombre: "Rábano"
+          producto:{
+            id_producto:3,
+          }
         }
     ]
       

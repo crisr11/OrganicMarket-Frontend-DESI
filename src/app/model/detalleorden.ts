@@ -3,8 +3,6 @@ import { orden } from './orden';
 
 export class detalleorden{
 
-    orden:orden=new orden()
-    fechacompra:string=""
-    Producto:Producto=new Producto()
-    Nombre:string=""
+    id_dorden:orden=new orden()
+    producto:Producto=new Producto()
 }

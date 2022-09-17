@@ -28,28 +28,19 @@
               The actual rendered columns are set as a property on the row definition" -->
 
         <!-- Position Column -->
-        <ng-container matColumnDef="id_orden">
+        <ng-container matColumnDef="dorden">
             <th mat-header-cell *matHeaderCellDef> ID ORDEN</th>
-            <td mat-cell *matCellDef="let element"> {{element.orden.id_orden}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.dorden.id_orden}} </td>
         </ng-container>
 
         <!-- Name Column -->
-        <ng-container matColumnDef="fechacompra">
-            <th mat-header-cell *matHeaderCellDef> Fecha de Compra </th>
-            <td mat-cell *matCellDef="let element"> {{element.fechacompra}} </td>
-        </ng-container>
 
-        <ng-container matColumnDef="Producto">
+        <ng-container matColumnDef="producto">
             <th mat-header-cell *matHeaderCellDef> ID Producto</th>
-            <td mat-cell *matCellDef="let element"> {{element.Producto.ID_Producto} </td>
+            <td mat-cell *matCellDef="let element"> {{element.producto.id_producto}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="Nombre">
-            <th mat-header-cell *matHeaderCellDef> Nombre Producto </th>
-            <td mat-cell *matCellDef="let element"> {{element.Nombre} </td>
-        </ng-container>
-
-        < <tr mat-header-row *matHeaderRowDef="displayedColumns">
+         <tr mat-header-row *matHeaderRowDef="displayedColumns">
             </tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>

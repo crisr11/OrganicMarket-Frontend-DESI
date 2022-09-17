@@ -10,7 +10,7 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class DetalleordenListarComponent implements OnInit {
   dataSource:MatTableDataSource<detalleorden> = new MatTableDataSource();
-  displayedColumns:string[]=["orden", "fechacompra","Producto","Nombre"]
+  displayedColumns:string[]=["dorden", "producto"]
   constructor(private Ds:DetalleordenService) { }
 
   ngOnInit(): void {

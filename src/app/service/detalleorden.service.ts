@@ -1,4 +1,4 @@
-import { detalleorden } from './../model/detalleorden';
+import { detalleorden } from '../model/detalleorden';
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
