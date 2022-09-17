@@ -1,4 +1,4 @@
 export class Tipo{
-    ID_Tipo:number=0;
-    Nombre:string="";
+    ID_Tipo:number=0
+    Nombre:string=""
 }

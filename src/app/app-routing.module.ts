@@ -6,11 +6,11 @@ import { ProductoComponent } from './page/producto/producto.component';
 import { TipoComponent } from './page/tipo/tipo.component';
 
 const routes: Routes = [{
-  path: 'propietarios', component: AgricultorComponent, children:[
+  path: 'agricultor', component: AgricultorComponent, children:[
 
   ]
 },{
-  path:'vehiculos',component:OrdenComponent,children:[
+  path:'orden',component:OrdenComponent,children:[
 
   ]
 },{

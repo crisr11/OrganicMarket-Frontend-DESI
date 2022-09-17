@@ -1,4 +1,22 @@
-<p>orden-listar works!</p>
+<body>
+  <header class="header">
+    <div class="container logo-nav">
+      <figure class="logo">
+        <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo" >
+        <figcaption class="nombre-logo notranslate">OrganicMarket</figcaption>
+    </figure>
+        <!--Navigation-->
+        <nav class="navbar">
+          <ul>
+              <li><a routerLink="/agricultor">Agricultores</a></li>
+              <li><a routerLink="/orden">Ordenes</a></li>
+              <li><a routerLink="/productos">Productos</a></li>
+              <li><a routerLink="/tipos">Tipos</a></li>
+          </ul>
+        </nav>
+      
+  </div>
+</header>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
@@ -6,40 +24,42 @@
   
     <!-- Position Column -->
     <ng-container matColumnDef="id_orden">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <th mat-header-cell *matHeaderCellDef> ID ORDEN</th>
       <td mat-cell *matCellDef="let element"> {{element.id_orden}} </td>
     </ng-container>
   
     <!-- Name Column -->
     <ng-container matColumnDef="fechacompra">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.fechacompra} </td>
+      <th mat-header-cell *matHeaderCellDef> Fecha de Compra </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechacompra}}  </td>
     </ng-container>
   
     <!-- Weight Column -->
     <ng-container matColumnDef="fechaenvio">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
+      <th mat-header-cell *matHeaderCellDef> Fecha de Envio </th>
       <td mat-cell *matCellDef="let element"> {{element.fechaenvio}} </td>
     </ng-container>
 
     <ng-container matColumnDef="fechaentrega">
-        <th mat-header-cell *matHeaderCellDef> Weight </th>
-        <td mat-cell *matCellDef="let element"> {{element.fechaentrega} </td>
+        <th mat-header-cell *matHeaderCellDef> Fecha de Entrega </th>
+        <td mat-cell *matCellDef="let element"> {{element.fechaentrega}} </td>
       </ng-container>
 
       <ng-container matColumnDef="cantidad">
-        <th mat-header-cell *matHeaderCellDef> Weight </th>
+        <th mat-header-cell *matHeaderCellDef> Cantidad </th>
         <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
       </ng-container>
+
       <ng-container matColumnDef="agricultor_id_agricultor">
-        <th mat-header-cell *matHeaderCellDef> Weight </th>
+        <th mat-header-cell *matHeaderCellDef>  ID AGRICULTOR</th>
         <td mat-cell *matCellDef="let element"> {{element.agricultor_id_agricultor.id_agricultor}} </td>
       </ng-container>
       <ng-container matColumnDef="mayorista_id_mayorista">
-        <th mat-header-cell *matHeaderCellDef> Weight </th>
+        <th mat-header-cell *matHeaderCellDef> ID MAYORISTA </th>
         <td mat-cell *matCellDef="let element"> {{element.mayorista_id_mayorista}} </td>
       </ng-container>
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+</body>
