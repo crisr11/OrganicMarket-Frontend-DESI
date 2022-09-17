@@ -53,7 +53,7 @@ module.exports = function () {
             fechaentrega: "29-05-2022",
             cantidad: 50,
             agricultor_id_agricultor:{
-                id:1,
+                id_agricultor:1,
               },
             mayorista_id_mayorista: 1,
               /*mayorista_id_mayorista:{
@@ -67,7 +67,7 @@ module.exports = function () {
             fechaentrega: "30-09-2022",
             cantidad: 17,
             agricultor_id_agricultor:{
-                id:3,
+                id_agricultor:3,
               },
             mayorista_id_mayorista: 2,
               /*mayorista_id_mayorista:{
@@ -81,7 +81,7 @@ module.exports = function () {
             fechaentrega: "29-12-2022",
             cantidad: 10,
             agricultor_id_agricultor:{
-                id:5,
+                id_agricultor:5,
               },
             mayorista_id_mayorista: 3,
               /*mayorista_id_mayorista:{
