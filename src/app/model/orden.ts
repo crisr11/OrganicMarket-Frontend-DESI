@@ -1,6 +1,6 @@
 import { agricultor } from "./agricultor";
 
-export class Vehiculo{
+export class orden{
   id_orden:number=0;
   fechacompra:string="";
   fechaenvio:string="";
