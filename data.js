@@ -88,9 +88,62 @@ module.exports = function () {
               id:3
             }*/
         }
+      ],
+      tipos: [
+        {
+          ID_Tipo: 1,
+          Nombre: "Tuberculos"
+        },
+        {
+          ID_Tipo: 2,
+          Nombre: "Semillas"
+        },
+        {
+          ID_Tipo: 3,
+          Nombre: "Raíces"
+        },
+        {
+          ID_Tipo: 4,
+          Nombre: "Tallos"
+        }
+      ],
+      productos: [
+        {
+          ID_Producto: 1,
+          Nombre: "Haba",
+          Precio: 10,
+          Tipo: {
+            ID_Tipo: 1
+          }
+        },
+        {
+          ID_Producto: 2,
+          Nombre: "Papa",
+          Precio: 7,
+          Tipo: {
+            ID_Tipo: 2
+          }
+        },
+        {
+          ID_Producto: 3,
+          Nombre: "Rábano",
+          Precio: 6,
+          Tipo: {
+            ID_Tipo: 3
+          }
+        },
+        {
+          ID_Producto: 4,
+          Nombre: "Espárrago",
+          Precio: 5,
+          Tipo: {
+            ID_Tipo: 4
+          }
+        }
       ]
-
+  
     }
-
+  
     return data
   }
+  
