@@ -4,6 +4,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AgricultorComponent } from './page/agricultor/agricultor.component';
+
+import { MayoristaComponent } from './page/mayorista/mayorista.component';
+import { AcuerdoComponent } from './page/acuerdo/acuerdo.component';
+import { MayoristaListarComponent } from './page/mayorista/mayorista-listar/mayorista-listar.component';
+import { AcuerdoListarComponent } from './page/acuerdo/acuerdo-listar/acuerdo-listar.component';
+
 import { AgricultorListarComponent } from './page/agricultor/agricultor-listar/agricultor-listar.component';
 import { OrdenListarComponent } from './page/orden/orden-listar/orden-listar.component';
 import { OrdenComponent } from './page/orden/orden.component';
@@ -36,7 +42,11 @@ import { AdministradorListarComponent } from './page/administrador/administrador
     PersonaComponent,
     PersonaListarComponent,
     AdministradorComponent,
-    AdministradorListarComponent
+    AdministradorListarComponent,
+    AcuerdoComponent,
+    AcuerdoListarComponent,
+    MayoristaComponent,
+    MayoristaListarComponent
   
   ],
   imports: [

@@ -6,6 +6,8 @@ import { ProductoComponent } from './page/producto/producto.component';
 import { PersonaComponent } from './page/persona/persona.component';
 import { AdministradorComponent } from './page/administrador/administrador.component';
 import { TipoComponent } from './page/tipo/tipo.component';
+import { MayoristaComponent } from './page/mayorista/mayorista.component';
+import { AcuerdoComponent } from './page/acuerdo/acuerdo.component';
 
 const routes: Routes = [{
   path: 'agricultor', component: AgricultorComponent, children:[
@@ -30,6 +32,14 @@ const routes: Routes = [{
 },{
   path:'administrador',component:AdministradorComponent,children:[
 
+  ]
+},{
+  path: 'mayoristas', component: MayoristaComponent, children:[
+
+  ]
+},{
+  path: 'acuerdos', component: AcuerdoComponent, children:[
+    
   ]
 }
 ];

@@ -6,73 +6,73 @@ module.exports = function () {
           id_persona:1,
           nombre:"Luis Garcia",
           dni:788901202,
-          telefonoPersona:921829525,
-          correoPersona:"lugarcia001@gmail.com"
+          telefono:921829525,
+          correo:"lugarcia001@gmail.com"
 
         },
         {
           id_persona:2,
           nombre:"Samanta Chavez",
-          dniPersona:720012077,
-          telefonoPersona:981271231,
-          correoPersona:"samchavez021@gmail.com"
+          dni:720012077,
+          telefono:981271231,
+          correo:"samchavez021@gmail.com"
         },
         {
           id_persona:3,
           nombre:"Gonzalo Lacherre",
-          dniPersona:77233900,
-          telefonoPersona:900132763,
-          correoPersona:"gonlach22192@gmail.com"
+          dni:77233900,
+          telefono:900132763,
+          correo:"gonlach22192@gmail.com"
         },
         {
           id_persona:4,
           nombre:"Samuel Martinez",
-          dniPersona:70911477,
-          telefonoPersona:942566772,
-          correoPersona:"sammartinez1288800@gmail.com"
+          dni:70911477,
+          telefono:942566772,
+          correo:"sammartinez1288800@gmail.com"
         },
         {
           id_persona:5,
           nombre:"Jose Madero",
-          dniPersona:71823082,
-          telefonoPersona:981379980,
-          correoPersona:"jomadero06@gmail.com"
+          dni:71823082,
+          telefono:981379980,
+          correo:"jomadero06@gmail.com"
         },
         {
           id_persona:6,
           nombre:"Vicente Torres",
           dni:79272231,
-          telefonoPersona:917800120,
-          correoPersona:"vicotorres010@gmail.com"
+          telefono:917800120,
+          correo:"vicotorres010@gmail.com"
 
         },
         {
           id_persona:7,
           nombre:"Leonardo Santander",
           dni:78823011,
-          telefonoPersona:923210111,
-          correoPersona:"leosantander201@gmail.com"
+          telefono:923210111,
+          correo:"leosantander201@gmail.com"
         },
         {
           id_persona:8,
           nombre:"Domingo Cipria",
           dni:72301399,
-          telefonoPersona:981234377,
-          correoPersona:"domcipria12322@gmail.com"
+          telefono:981234377,
+          correo:"domcipria12322@gmail.com"
         },
         {
           id_persona:9,
           nombre:"Diana Quintanilla",
           dni:72340033,
-          telefonoPersona:907821290,
-          correoPersona:"dianquinta_129@gmail.com"
+          telefono:907821290,
+          correo:"dianquinta_129@gmail.com"
         },
         {
           id_persona:10,
           nombre:"Cinthia Nuñez",
           dni:72321177,
-          telefonoPersona:971137842,
-          correoPersona:"cinthinuñ01999@gmail.com"
+          telefono:971137842,
+          correo:"cinthinuñ01999@gmail.com"
         }
       ],
       administrador:[
@@ -81,13 +81,13 @@ module.exports = function () {
           persona_id_persona:6
         },
         {
-          idAdministrador:2,
+          id_administrador:2,
 
             persona_id_persona:7
 
         },
         {
-          idAdministrador:3,
+          id_administrador:3,
 
             persona_id_persona:9
 
@@ -232,7 +232,71 @@ module.exports = function () {
             ID_Tipo: 4
           }
         }
-      ]
+      ],
+      mayoristas: [
+        {
+            id: 1,
+            dni: "123",
+            telefono: "321",
+            nombre: "Luna",
+            correo: "luna@gmail.com",
+            RUC: "32121"
+        },
+        {
+            id: 2,
+            dni: "123",
+            telefono: "321",
+            nombre: "Milena",
+            correo: "milena@gmail.com",
+            RUC: "32121"
+        },
+        {
+            id: 3,
+            dni: "123",
+            telefono: "321",
+            nombre: "Yuli",
+            correo: "yuli@gmail.com",
+            RUC: "32121"
+        }
+    ],
+    acuerdos: [
+        {
+            id: 1,
+            descuento: 0.05,
+            fechaInicio: new Date(2022, 8, 5),
+            fechaFin: new Date(2022, 10, 5),
+            agricultor:{
+                id:12
+            },
+            mayorista:{
+                id:13
+            }
+        },
+        {
+            id: 2,
+            descuento: 0.05,
+            fechaInicio: new Date(2022, 8, 5),
+            fechaFin: new Date(2022, 10, 5),
+            agricultor:{
+                id:12
+            },
+            mayorista:{
+                id:14
+            }
+        },
+        {
+            id: 3,
+            descuento: 0.05,
+            fechaInicio: new Date(2022, 8, 10),
+            fechaFin: new Date(2022, 10, 5),
+            agricultor:{
+                id:15
+            },
+            mayorista:{
+                id:16
+            }
+        }
+    ]
 
     }
 
