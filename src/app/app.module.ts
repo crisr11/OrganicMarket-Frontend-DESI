@@ -7,6 +7,7 @@ import { AgricultorComponent } from './page/agricultor/agricultor.component';
 import { AgricultorListarComponent } from './page/agricultor/agricultor-listar/agricultor-listar.component';
 import { OrdenListarComponent } from './page/orden/orden-listar/orden-listar.component';
 import { OrdenComponent } from './page/orden/orden.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -27,7 +28,8 @@ import { OrdenComponent } from './page/orden/orden.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
