@@ -232,9 +232,45 @@ module.exports = function () {
             ID_Tipo: 4
           }
         }
-      ]
+      ],
 
+      detalleorden:[
+        {
+          orden:{
+            id_orden:1,
+          },
+          fechacompra:"24-05-2022",
+          Producto:{
+            ID_Producto:1,
+          },
+          Nombre: "Haba"          
+        },
+        {
+          orden:{
+            id_orden:2,
+          },
+          fechacompra:"14-09-2022",
+          Producto:{
+            ID_Producto:2,
+          },
+          Nombre: "Papa"
+        },
+        {
+          orden:{
+            id_orden:3,
+          },
+          fechacompra:"14-12-2022",
+          Producto:{
+            ID_Producto:3,
+          },
+          Nombre: "Rábano"
+        }
+    ]
+      
     }
+    
+
+    
 
     return data
   }

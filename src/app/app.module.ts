@@ -18,6 +18,8 @@ import { PersonaComponent } from './page/persona/persona.component';
 import { PersonaListarComponent } from './page/persona/persona-listar/persona-listar.component';
 import { AdministradorComponent } from './page/administrador/administrador.component';
 import { AdministradorListarComponent } from './page/administrador/administrador-listar/administrador-listar.component';
+import { DetalleordenComponent } from './page/detalleorden/detalleorden.component';
+import { DetalleordenListarComponent } from './page/detalleorden/detalleorden-listar/detalleorden-listar.component';
 
 
 
@@ -36,7 +38,9 @@ import { AdministradorListarComponent } from './page/administrador/administrador
     PersonaComponent,
     PersonaListarComponent,
     AdministradorComponent,
-    AdministradorListarComponent
+    AdministradorListarComponent,
+    DetalleordenComponent,
+    DetalleordenListarComponent
   
   ],
   imports: [
