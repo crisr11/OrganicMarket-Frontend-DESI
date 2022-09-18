@@ -10,7 +10,7 @@ import { Promocion } from 'src/app/model/promocion';
 })
 export class PromocionListarComponent implements OnInit {
   dataSource:MatTableDataSource <Promocion> =new MatTableDataSource();
-  displayedColumns:string[]=['id','idAgricultor','idProducto','fechaInicio','fechaFin'];
+  displayedColumns:string[]=['ID PROMOCION','AGRICULTOR ID','PRODUCTO ID','FECHA INICIO','FECHA FIN'];
   constructor(private pS:PromocionService) { }
 
   ngOnInit(): void {

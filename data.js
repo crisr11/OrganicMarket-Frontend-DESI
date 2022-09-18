@@ -301,33 +301,69 @@ module.exports = function () {
     ],
     promociones:[
       {
-          id: 1,
-          fechaInicio:"2022/9/17",
-          fechaFin:"2022/10/17"
+          id_promocion: 1,
+          agricultor:{
+            id_agricultor: 1
+          },
+          productos:{
+            ID_Producto: 3
+          },
+          fechaInicio:new Date(2022,9,17),
+          fechaFin:new Date(2022,10,17)
       },
       {
-          id: 2,
-          fechaInicio:"2022/7/16",
-          fechaFin:"2022/8/16"
+          id_promocion: 2,
+          agricultor:{
+          id_agricultor: 2
+          },
+          productos:{
+          ID_Producto: 2
+          },
+          fechaInicio:new Date(2022,11,17),
+          fechaFin:new Date(2022,12,17)
       },
       {
-          id: 3,
-          fechaInicio:"2022/11/24",
-          fechaFin:"2022/12/24"
+          id_promocion: 3,
+          agricultor:{
+          id_agricultor: 3
+          },
+          productos:{
+          ID_Producto: 1
+          },
+          fechaInicio:new Date(2022,7,17),
+          fechaFin:new Date(2022,8,17)
       }
   ],
   publicaciones:[
       {
-          id: 1,
-          contenido:"frutas"
+          id_publicacion: 1,
+          contenido:"frutas",
+          agricultor:{
+          id_agricultor: 3
+          },
+          productos:{
+          ID_Producto: 3
+          }
       },
       {
-          id: 2,
-          contenido: "verduras"
+          id_publicacion: 2,
+          contenido: "verduras",
+          agricultor:{
+          id_agricultor: 4
+          },
+          productos:{
+          ID_Producto: 2
+          }
       },
       {
-          id: 3,
-          contenido: "legumbres"
+          id_publicacion: 3,
+          contenido: "legumbres",
+          agricultor:{
+          id_agricultor: 5
+          },
+          productos:{
+          ID_Producto: 1
+          }
       }
   ],
 

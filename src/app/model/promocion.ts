@@ -1,9 +1,10 @@
 import { agricultor } from "./agricultor"
 import { Producto } from "./producto"
+
 export class Promocion{
-    id: number=0;
-    fechaInicio: string="";
-    fechaFin: string="";
+    id_promocion: number=0;
     agricultor: agricultor = new agricultor()
-    mayorista: Producto = new Producto()
+    producto: Producto = new Producto()
+    fechaInicio: Date = new Date()
+    fechaFin: Date = new Date()
 }
