@@ -305,8 +305,8 @@ module.exports = function () {
           agricultor:{
             id_agricultor: 1
           },
-          productos:{
-            ID_Producto: 3
+          producto:{
+            id_producto: 3
           },
           fechaInicio:new Date(2022,9,17),
           fechaFin:new Date(2022,10,17)
@@ -316,8 +316,8 @@ module.exports = function () {
           agricultor:{
           id_agricultor: 2
           },
-          productos:{
-          ID_Producto: 2
+          producto:{
+          id_producto: 2
           },
           fechaInicio:new Date(2022,11,17),
           fechaFin:new Date(2022,12,17)
@@ -327,8 +327,8 @@ module.exports = function () {
           agricultor:{
           id_agricultor: 3
           },
-          productos:{
-          ID_Producto: 1
+          producto:{
+          id_producto: 1
           },
           fechaInicio:new Date(2022,7,17),
           fechaFin:new Date(2022,8,17)
@@ -341,8 +341,8 @@ module.exports = function () {
           agricultor:{
           id_agricultor: 3
           },
-          productos:{
-          ID_Producto: 3
+          producto:{
+          id_producto: 3
           }
       },
       {
@@ -351,8 +351,8 @@ module.exports = function () {
           agricultor:{
           id_agricultor: 4
           },
-          productos:{
-          ID_Producto: 2
+          producto:{
+          id_producto: 2
           }
       },
       {
@@ -361,8 +361,8 @@ module.exports = function () {
           agricultor:{
           id_agricultor: 5
           },
-          productos:{
-          ID_Producto: 1
+          producto:{
+          id_producto: 1
           }
       }
   ],

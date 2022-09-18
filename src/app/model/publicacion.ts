@@ -5,5 +5,5 @@ export class Publicacion{
     id_publicacion: number=0;
     contenido: string="";
     agricultor: agricultor = new agricultor()
-    mayorista: Producto = new Producto()
+    producto: Producto = new Producto()
 }
