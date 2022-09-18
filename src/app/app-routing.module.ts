@@ -45,12 +45,12 @@ const routes: Routes = [{
   ]
 },
 {
-  path: 'promocion', component: PromocionComponent, children:[
+  path: 'promociones', component: PromocionComponent, children:[
     
   ]
 },
 {
-  path: 'publicacion', component: PublicacionComponent, children:[
+  path: 'publicaciones', component: PublicacionComponent, children:[
     
   ]
 }
