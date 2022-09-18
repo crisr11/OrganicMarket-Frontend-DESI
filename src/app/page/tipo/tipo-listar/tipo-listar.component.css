@@ -18,17 +18,17 @@ table{
 }
 .logo img{
     display: inline-block;
-    max-width: 70px;
-    max-height: 700px;
+    max-width: 85px;
+    max-height: 750px;
     padding: 0 0;
     margin: 0;
 }
 .nombre-logo{
-    float: right;
-    font-weight: 350;
+    float: rigth;
+    font-weight: bold;
     font-size: 21px;
-    letter-spacing: 0.2px;
-    padding: 1.2rem 0;
+    letter-spacing: 0.7px;
+    padding: 1 rem 0;
 }
 
 th{
@@ -99,3 +99,8 @@ body{
 th{
     text-align: center;
 }
+
+
+
+
+
