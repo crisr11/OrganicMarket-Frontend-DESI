@@ -1,8 +1,8 @@
+import { persona } from "./persona";
+
 export class Mayorista{
     id:number = 0
-    dni:string = ""
-    telefono:string = ""
-    nombre:string = ""
-    correo:string = ""
+    rubro:string = ""
     RUC:string = ""
+    persona_id_persona: persona =new persona()
 }

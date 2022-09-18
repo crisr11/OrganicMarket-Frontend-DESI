@@ -10,7 +10,7 @@ import { MayoristaService } from 'src/app/service/mayorista.service';
 })
 export class MayoristaListarComponent implements OnInit {
   dataSource: MatTableDataSource<Mayorista> = new MatTableDataSource()
-  displayedColumns: string[] = ["ID","DNI","Telefono","Nombre","Correo","RUC"]
+  displayedColumns: string[] = ["id","rubro","RUC","persona_id_persona"]
   constructor(private ms:MayoristaService) { }
 
   ngOnInit(): void {

@@ -78,18 +78,24 @@ module.exports = function () {
       administrador:[
         {
           id_administrador:1,
-          persona_id_persona:6
+          persona_id_persona:{
+            id:6
+          }
         },
         {
           id_administrador:2,
 
-            persona_id_persona:7
+          persona_id_persona:{
+            id:7
+          }
 
         },
         {
           id_administrador:3,
 
-            persona_id_persona:9
+          persona_id_persona:{
+            id:9
+          }
 
         }
       ],
@@ -97,43 +103,41 @@ module.exports = function () {
         {
           id_agricultor: 1,
           direccion: "Mz G Lote 13, Villa el Salvador",
-          persona_id_persona: 1,
-          /*persona_id_persona:{
+          persona_id_persona:{
             id:1
-          }*/
+          }
         },
         {
             id_agricultor: 2,
             direccion: "Mz A Lote 7, Villa Maria del Triunfo",
-            persona_id_persona: 3,
-            /*persona_id_persona:{
+            persona_id_persona:{
               id:3
-            }*/
+            }
         },
         {
             id_agricultor: 3,
             direccion: "Mz F Lote 21, La Molina",
-            persona_id_persona: 2,
-            /*persona_id_persona:{
+         
+            persona_id_persona:{
               id:2
-            }*/
+            }
         },
         {
             id_agricultor: 4,
             direccion: "Mz S Lote 27, San Isidro",
-            persona_id_persona: 4,
-            /*persona_id_persona:{
+         
+            persona_id_persona:{
               id:4
-            }*/
+            }
 
         },
         {
             id_agricultor: 5,
             direccion: "Mz F Lote 19, Ventanilla",
-            persona_id_persona: 5,
-            /*persona_id_persona:{
+          
+            persona_id_persona:{
               id:5
-            }*/
+            }
 
         },
       ],
@@ -147,10 +151,9 @@ module.exports = function () {
             agricultor_id_agricultor:{
                 id_agricultor:1,
               },
-            mayorista_id_mayorista: 1,
-              /*mayorista_id_mayorista:{
+              mayorista_id_mayorista:{
               id:1
-            }*/
+            }
         },
         {
             id_orden:2,
@@ -160,11 +163,10 @@ module.exports = function () {
             cantidad: 17,
             agricultor_id_agricultor:{
                 id_agricultor:3,
-              },
-            mayorista_id_mayorista: 2,
-              /*mayorista_id_mayorista:{
+              },   
+              mayorista_id_mayorista:{
               id:2
-            }*/
+            }
         },
         {
             id_orden:3,
@@ -175,10 +177,9 @@ module.exports = function () {
             agricultor_id_agricultor:{
                 id_agricultor:5,
               },
-            mayorista_id_mayorista: 3,
-              /*mayorista_id_mayorista:{
+              mayorista_id_mayorista:{
               id:3
-            }*/
+            }
         }
       ],
       tipos: [
@@ -236,28 +237,29 @@ module.exports = function () {
       mayoristas: [
         {
             id: 1,
-            dni: "123",
-            telefono: "321",
-            nombre: "Luna",
-            correo: "luna@gmail.com",
-            RUC: "32121"
+            rubro: "Frutas",
+            RUC: "32121",
+            persona_id_persona:{
+              id:2
+            }
         },
         {
-            id: 2,
-            dni: "123",
-            telefono: "321",
-            nombre: "Milena",
-            correo: "milena@gmail.com",
-            RUC: "32121"
+            
+          id: 2,
+          rubro: "Verduras",
+          RUC: "34329",
+          persona_id_persona:{
+            id:1
+          }
         },
         {
             id: 3,
-            dni: "123",
-            telefono: "321",
-            nombre: "Yuli",
-            correo: "yuli@gmail.com",
-            RUC: "32121"
+            rubro: "Frutas",
+            RUC: "9372",
+            persona_id_persona:{
+              id:3
         }
+         }
     ],
     acuerdos: [
         {
