@@ -327,9 +327,39 @@ module.exports = function () {
           id: 3,
           contenido: "legumbres"
       }
-  ]
+  ],
 
+      detalleorden:[
+        {
+          dorden:{
+            id_orden:1,
+          },    
+          producto:{
+            id_producto:1,
+          }                
+        },
+        {
+          dorden:{
+            id_orden:2,
+          },
+          producto:{
+            id_producto:2,
+          }
+        },
+        {
+          dorden:{
+            id_orden:3,
+          },
+          producto:{
+            id_producto:3,
+          }
+        }
+    ]
+      
     }
+    
+
+    
 
     return data
   }

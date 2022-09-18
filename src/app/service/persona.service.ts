@@ -1,4 +1,4 @@
-import { persona } from './../model/persona';
+import { persona } from '../model/persona';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 @Injectable({

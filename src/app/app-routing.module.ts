@@ -1,5 +1,6 @@
+import { DetalleordenComponent } from './page/detalleorden/detalleorden.component';
 import { AgricultorComponent } from './page/agricultor/agricultor.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { OrdenComponent } from './page/orden/orden.component';
 import { ProductoComponent } from './page/producto/producto.component';
@@ -10,6 +11,7 @@ import { MayoristaComponent } from './page/mayorista/mayorista.component';
 import { AcuerdoComponent } from './page/acuerdo/acuerdo.component';
 import { PromocionComponent } from './page/promocion/promocion.component';
 import { PublicacionComponent } from './page/publicacion/publicacion.component';
+
 
 const routes: Routes = [{
   path: 'agricultor', component: AgricultorComponent, children:[
@@ -53,6 +55,12 @@ const routes: Routes = [{
   path: 'publicaciones', component: PublicacionComponent, children:[
     
   ]
+ },
+{
+  path:'detalleorden',component:DetalleordenComponent,children:[
+
+  ]
+
 }
 ];
 

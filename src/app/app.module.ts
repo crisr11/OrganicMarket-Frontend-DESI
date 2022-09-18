@@ -28,6 +28,9 @@ import { PromocionComponent } from './page/promocion/promocion.component';
 import { PublicacionComponent } from './page/publicacion/publicacion.component';
 import { PromocionListarComponent } from './page/promocion/promocion-listar/promocion-listar.component';
 import { PublicacionListarComponent } from './page/publicacion/publicacion-listar/publicacion-listar.component';
+import { DetalleordenComponent } from './page/detalleorden/detalleorden.component';
+import { DetalleordenListarComponent } from './page/detalleorden/detalleorden-listar/detalleorden-listar.component';
+
 
 
 
@@ -47,6 +50,7 @@ import { PublicacionListarComponent } from './page/publicacion/publicacion-lista
     PersonaListarComponent,
     AdministradorComponent,
     AdministradorListarComponent,
+
     AcuerdoComponent,
     AcuerdoListarComponent,
     MayoristaComponent,
@@ -54,7 +58,9 @@ import { PublicacionListarComponent } from './page/publicacion/publicacion-lista
     PromocionComponent,
     PublicacionComponent,
     PromocionListarComponent,
-    PublicacionListarComponent
+    PublicacionListarComponent,
+    DetalleordenComponent,
+    DetalleordenListarComponent
   
   ],
   imports: [
