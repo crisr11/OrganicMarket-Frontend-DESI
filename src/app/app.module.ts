@@ -1,3 +1,4 @@
+import { PersonaCrearpersonaComponent } from 'src/app/page/persona/persona-crearpersona/persona-crearpersona.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -66,8 +67,13 @@ import { FormsModule } from '@angular/forms';
     PublicacionListarComponent,
     DetalleordenComponent,
     DetalleordenListarComponent,
-    TipoCreaeditaComponent
+    TipoCreaeditaComponent,
   
+
+    PersonaCrearpersonaComponent
+
+
+
   ],
   imports: [
     BrowserModule,
@@ -78,7 +84,11 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     FormsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
+    FormsModule,
+    MatIconModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

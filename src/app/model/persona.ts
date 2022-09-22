@@ -1,5 +1,5 @@
 export class persona{
-  id_persona:number=0
+  id:number=0
   nombre:string=""
   dni:number=0
   telefono:number=0

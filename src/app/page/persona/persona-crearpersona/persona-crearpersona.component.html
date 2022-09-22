@@ -1,0 +1,36 @@
+<div class="container">
+
+  <h1>Persona</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id:</mat-label>
+    <input matInput placeholder="Id" [(ngModel)]="persona.id">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre:</mat-label>
+    <input matInput required placeholder="name" [(ngModel)]="persona.nombre">
+
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>DNI:</mat-label>
+    <input type="email" matInput required placeholder="email" [(ngModel)]="persona.dni">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Telefono:</mat-label>
+    <input type="email" matInput required placeholder="telefono" [(ngModel)]="persona.telefono">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Correo:</mat-label>
+    <input type="email" matInput required placeholder="email" [(ngModel)]="persona.correo">
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/persona">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>

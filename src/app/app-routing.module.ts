@@ -12,6 +12,8 @@ import { AcuerdoComponent } from './page/acuerdo/acuerdo.component';
 import { PromocionComponent } from './page/promocion/promocion.component';
 import { PublicacionComponent } from './page/publicacion/publicacion.component';
 import { TipoCreaeditaComponent } from './page/tipo/tipo-creaedita/tipo-creaedita.component';
+import { PersonaCrearpersonaComponent } from './page/persona/persona-crearpersona/persona-crearpersona.component';
+
 
 
 const routes: Routes = [{
@@ -47,17 +49,17 @@ const routes: Routes = [{
   ]
 },{
   path: 'acuerdos', component: AcuerdoComponent, children:[
-    
+
   ]
 },
 {
   path: 'promociones', component: PromocionComponent, children:[
-    
+
   ]
 },
 {
   path: 'publicaciones', component: PublicacionComponent, children:[
-    
+
   ]
  },
 {
@@ -65,6 +67,11 @@ const routes: Routes = [{
 
   ]
 
+},
+{
+  path:'persona-crearpersona',component:PersonaCrearpersonaComponent,children:[
+
+  ]
 }
 ];
 
