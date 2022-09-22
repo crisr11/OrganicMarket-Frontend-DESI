@@ -3,7 +3,7 @@ module.exports = function () {
     var data = {
       persona:[
         {
-          id_persona:1,
+          id:1,
           nombre:"Luis Garcia",
           dni:788901202,
           telefono:921829525,
@@ -11,35 +11,35 @@ module.exports = function () {
 
         },
         {
-          id_persona:2,
+          id:2,
           nombre:"Samanta Chavez",
           dni:720012077,
           telefono:981271231,
           correo:"samchavez021@gmail.com"
         },
         {
-          id_persona:3,
+          id:3,
           nombre:"Gonzalo Lacherre",
           dni:77233900,
           telefono:900132763,
           correo:"gonlach22192@gmail.com"
         },
         {
-          id_persona:4,
+          id:4,
           nombre:"Samuel Martinez",
           dni:70911477,
           telefono:942566772,
           correo:"sammartinez1288800@gmail.com"
         },
         {
-          id_persona:5,
+          id:5,
           nombre:"Jose Madero",
           dni:71823082,
           telefono:981379980,
           correo:"jomadero06@gmail.com"
         },
         {
-          id_persona:6,
+          id:6,
           nombre:"Vicente Torres",
           dni:79272231,
           telefono:917800120,
@@ -47,28 +47,28 @@ module.exports = function () {
 
         },
         {
-          id_persona:7,
+          id:7,
           nombre:"Leonardo Santander",
           dni:78823011,
           telefono:923210111,
           correo:"leosantander201@gmail.com"
         },
         {
-          id_persona:8,
+          id:8,
           nombre:"Domingo Cipria",
           dni:72301399,
           telefono:981234377,
           correo:"domcipria12322@gmail.com"
         },
         {
-          id_persona:9,
+          id:9,
           nombre:"Diana Quintanilla",
           dni:72340033,
           telefono:907821290,
           correo:"dianquinta_129@gmail.com"
         },
         {
-          id_persona:10,
+          id:10,
           nombre:"Cinthia Nuñez",
           dni:72321177,
           telefono:971137842,
@@ -117,7 +117,7 @@ module.exports = function () {
         {
             id_agricultor: 3,
             direccion: "Mz F Lote 21, La Molina",
-         
+
             persona_id_persona:{
               id:2
             }
@@ -125,7 +125,7 @@ module.exports = function () {
         {
             id_agricultor: 4,
             direccion: "Mz S Lote 27, San Isidro",
-         
+
             persona_id_persona:{
               id:4
             }
@@ -134,7 +134,7 @@ module.exports = function () {
         {
             id_agricultor: 5,
             direccion: "Mz F Lote 19, Ventanilla",
-          
+
             persona_id_persona:{
               id:5
             }
@@ -163,7 +163,7 @@ module.exports = function () {
             cantidad: 17,
             agricultor_id_agricultor:{
                 id_agricultor:3,
-              },   
+              },
               mayorista_id_mayorista:{
               id:2
             }
@@ -244,7 +244,7 @@ module.exports = function () {
             }
         },
         {
-            
+
           id: 2,
           rubro: "Verduras",
           RUC: "34329",
@@ -371,10 +371,10 @@ module.exports = function () {
         {
           dorden:{
             id_orden:1,
-          },    
+          },
           producto:{
             id_producto:1,
-          }                
+          }
         },
         {
           dorden:{
@@ -393,11 +393,11 @@ module.exports = function () {
           }
         }
     ]
-      
-    }
-    
 
-    
+    }
+
+
+
 
     return data
   }

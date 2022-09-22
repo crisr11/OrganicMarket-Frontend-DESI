@@ -1,3 +1,4 @@
+import { PersonaCrearpersonaComponent } from 'src/app/page/persona/persona-crearpersona/persona-crearpersona.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -31,8 +32,10 @@ import { PublicacionListarComponent } from './page/publicacion/publicacion-lista
 import { DetalleordenComponent } from './page/detalleorden/detalleorden.component';
 import { DetalleordenListarComponent } from './page/detalleorden/detalleorden-listar/detalleorden-listar.component';
 
-
-
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import{MatIconModule} from'@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -60,15 +63,22 @@ import { DetalleordenListarComponent } from './page/detalleorden/detalleorden-li
     PromocionListarComponent,
     PublicacionListarComponent,
     DetalleordenComponent,
-    DetalleordenListarComponent
-  
+    DetalleordenListarComponent,
+    PersonaCrearpersonaComponent
+
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatButtonModule,
+    FormsModule,
+    MatIconModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

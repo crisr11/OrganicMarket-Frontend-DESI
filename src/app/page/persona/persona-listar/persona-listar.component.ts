@@ -10,13 +10,16 @@ import { persona } from 'src/app/model/persona';
 })
 export class PersonaListarComponent implements OnInit {
   dataSource:MatTableDataSource<persona>=new MatTableDataSource();
-  displayedColumns:string[]=["id_persona","nombre","dni","telefono","correo"]
+  displayedColumns:string[]=["id","nombre","dni","telefono","correo"]
   constructor(private pS:PersonaService) { }
 
   ngOnInit(): void {
     this.pS.listar().subscribe(d=>{
       this.dataSource=new MatTableDataSource(d);
     })
+    this.pS.getLista().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    });
   }
 
 }
