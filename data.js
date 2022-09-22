@@ -184,19 +184,19 @@ module.exports = function () {
       ],
       tipos: [
         {
-          ID_Tipo: 1,
+          id: 1,
           Nombre: "Tuberculos"
         },
         {
-          ID_Tipo: 2,
+          id: 2,
           Nombre: "Semillas"
         },
         {
-          ID_Tipo: 3,
+          id: 3,
           Nombre: "Raíces"
         },
         {
-          ID_Tipo: 4,
+          id: 4,
           Nombre: "Tallos"
         }
       ],

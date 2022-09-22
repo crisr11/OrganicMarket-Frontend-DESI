@@ -15,6 +15,7 @@ import { OrdenListarComponent } from './page/orden/orden-listar/orden-listar.com
 import { OrdenComponent } from './page/orden/orden.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 import{MatTableModule} from '@angular/material/table';
 import { ProductoListarComponent } from './page/producto/producto-listar/producto-listar.component';
 import { TipoListarComponent } from './page/tipo/tipo-listar/tipo-listar.component';
@@ -30,8 +31,12 @@ import { PromocionListarComponent } from './page/promocion/promocion-listar/prom
 import { PublicacionListarComponent } from './page/publicacion/publicacion-listar/publicacion-listar.component';
 import { DetalleordenComponent } from './page/detalleorden/detalleorden.component';
 import { DetalleordenListarComponent } from './page/detalleorden/detalleorden-listar/detalleorden-listar.component';
+import { TipoCreaeditaComponent } from './page/tipo/tipo-creaedita/tipo-creaedita.component';
 
-
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import{MatIconModule} from'@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -60,7 +65,8 @@ import { DetalleordenListarComponent } from './page/detalleorden/detalleorden-li
     PromocionListarComponent,
     PublicacionListarComponent,
     DetalleordenComponent,
-    DetalleordenListarComponent
+    DetalleordenListarComponent,
+    TipoCreaeditaComponent
   
   ],
   imports: [
@@ -68,7 +74,11 @@ import { DetalleordenListarComponent } from './page/detalleorden/detalleorden-li
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

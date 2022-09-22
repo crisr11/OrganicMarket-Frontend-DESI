@@ -19,6 +19,13 @@
             <li><a routerLink="/promociones">Promociones</a></li>
             <li><a routerLink="/publicaciones">Publicaciones</a></li>
             <li><a routerLink="/detalleorden">Detalle Orden</a></li>
+            <div class="example-button-container">
+
+              <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+                routerLink="/tipos/nuevo">
+                <mat-icon>plus_one</mat-icon>
+              </button>
+            </div>
 
           </ul>
         </nav>
@@ -29,7 +36,7 @@
 
     <ng-container matColumnDef="ID_Tipo">
       <th mat-header-cell *matHeaderCellDef> Id </th>
-      <td mat-cell *matCellDef="let element"> {{element.ID_Tipo}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
 
     <ng-container matColumnDef="Nombre">
@@ -39,5 +46,7 @@
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
   </table>
+ 
 </body>

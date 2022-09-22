@@ -17,6 +17,11 @@ export class TipoListarComponent implements OnInit {
     this.ts.listar().subscribe(data=>{
       this.dataSource=new MatTableDataSource(data);
     })
+    this.ts.getLista().subscribe(data=>
+      {
+        this.dataSource=new MatTableDataSource(data);
+      });
   }
+  
 
 }

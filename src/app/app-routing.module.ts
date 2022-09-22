@@ -11,6 +11,7 @@ import { MayoristaComponent } from './page/mayorista/mayorista.component';
 import { AcuerdoComponent } from './page/acuerdo/acuerdo.component';
 import { PromocionComponent } from './page/promocion/promocion.component';
 import { PublicacionComponent } from './page/publicacion/publicacion.component';
+import { TipoCreaeditaComponent } from './page/tipo/tipo-creaedita/tipo-creaedita.component';
 
 
 const routes: Routes = [{
@@ -27,6 +28,9 @@ const routes: Routes = [{
   ]
 },{
   path:'tipos',component:TipoComponent,children:[
+    {path:'nuevo',component:TipoCreaeditaComponent}
+
+    
 
   ]
 },{
