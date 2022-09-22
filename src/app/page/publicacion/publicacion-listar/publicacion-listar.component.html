@@ -1,0 +1,62 @@
+<body>
+  <header class="header">
+    <div class="container logo-nav">
+      <figure class="logo">
+        <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo" >
+        <figcaption class="nombre-logo notranslate">OrganicMarket</figcaption>
+    </figure>
+        <!--Navigation-->
+        <nav class="navbar">
+          <ul>
+            <li><a routerLink="/agricultor">Agricultores</a></li>
+            <li><a routerLink="/orden">Ordenes</a></li>
+            <li><a routerLink="/productos">Productos</a></li>
+            <li><a routerLink="/tipos">Tipos</a></li>
+            <li><a routerLink="/administrador">Administradores</a></li>
+            <li><a routerLink="/persona">Personas</a></li>
+            <li><a routerLink="/mayoristas">Mayoristas</a></li>
+            <li><a routerLink="/acuerdos">Acuerdos</a></li>
+            <li><a routerLink="/promociones">Promociones</a></li>
+            <li><a routerLink="/publicaciones">Publicaciones</a></li>
+            <li><a routerLink="/detalleorden">Detalle Orden</a></li>
+
+          </ul>
+        </nav>
+
+  </div>
+</header>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="ID PUBLICACION">
+      <th mat-header-cell *matHeaderCellDef> ID PUBLICACION </th>
+      <td mat-cell *matCellDef="let element"> {{element.id_publicacion}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="CONTENIDO">
+      <th mat-header-cell *matHeaderCellDef> CONTENIDO </th>
+      <td mat-cell *matCellDef="let element"> {{element.contenido}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="AGRICULTOR ID">
+      <th mat-header-cell *matHeaderCellDef> AGRICULTOR ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.agricultor.id_agricultor}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="PRODUCTO ID">
+      <th mat-header-cell *matHeaderCellDef> PRODUCTO ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.producto.id_producto}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</body>
+  
+  

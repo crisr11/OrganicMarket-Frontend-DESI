@@ -1,0 +1,66 @@
+<body>
+  <header class="header">
+    <div class="container logo-nav">
+      <figure class="logo">
+        <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo" >
+        <figcaption class="nombre-logo notranslate">OrganicMarket</figcaption>
+    </figure>
+        <!--Navigation-->
+        <nav class="navbar">
+          <ul>
+            <li><a routerLink="/agricultor">Agricultores</a></li>
+            <li><a routerLink="/orden">Ordenes</a></li>
+            <li><a routerLink="/productos">Productos</a></li>
+            <li><a routerLink="/tipos">Tipos</a></li>
+            <li><a routerLink="/administrador">Administradores</a></li>
+            <li><a routerLink="/persona">Personas</a></li>
+            <li><a routerLink="/mayoristas">Mayoristas</a></li>
+            <li><a routerLink="/acuerdos">Acuerdos</a></li>
+            <li><a routerLink="/promociones">Promociones</a></li>
+            <li><a routerLink="/publicaciones">Publicaciones</a></li>
+            <li><a routerLink="/detalleorden">Detalle Orden</a></li>
+          </ul>
+        </nav>
+
+  </div>
+</header>
+  <table style="width:50% ;" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="ID">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Descuento">
+      <th mat-header-cell *matHeaderCellDef> Descuento</th>
+      <td mat-cell *matCellDef="let element"> {{element.descuento}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Fecha de inicio">
+      <th mat-header-cell *matHeaderCellDef> Fecha de inicio </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaInicio}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Fecha final">
+      <th mat-header-cell *matHeaderCellDef> Fecha final </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaFin}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Agricultor ID">
+      <th mat-header-cell *matHeaderCellDef> Agricultor ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.agricultor.id}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Mayorista ID">
+      <th mat-header-cell *matHeaderCellDef> Mayorista ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.mayorista.id}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</body>
