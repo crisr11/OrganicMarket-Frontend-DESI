@@ -19,7 +19,13 @@
                 <li><a routerLink="/promociones">Promociones</a></li>
                 <li><a routerLink="/publicaciones">Publicaciones</a></li>
                 <li><a routerLink="/detalleorden">Detalle Orden</a></li>
+                <div class="example-button-container">
 
+                  <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+                    routerLink="/agricultor/nuevo">
+                    <mat-icon>plus_one</mat-icon>
+                  </button>
+                </div>
                </ul>
              </nav>
 
@@ -31,9 +37,9 @@
              The actual rendered columns are set as a property on the row definition" -->
 
      <!-- Position Column -->
-     <ng-container matColumnDef="id_agricultor">
+     <ng-container matColumnDef="id">
        <th mat-header-cell *matHeaderCellDef> AGRICULTOR </th>
-       <td mat-cell *matCellDef="let element"> {{element.id_agricultor}} </td>
+       <td mat-cell *matCellDef="let element"> {{element.id}} </td>
      </ng-container>
 
      <!-- Name Column -->
@@ -45,7 +51,7 @@
      <!-- Weight Column -->
      <ng-container matColumnDef="persona_id_persona">
        <th mat-header-cell *matHeaderCellDef> ID PERSONA </th>
-       <td mat-cell *matCellDef="let element"> {{element.persona_id_persona.id}} </td>
+       <td mat-cell *matCellDef="let element"> {{element.persona_id_persona}} </td>
      </ng-container>
 
 

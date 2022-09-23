@@ -101,43 +101,33 @@ module.exports = function () {
       ],
       agricultor: [
         {
-          id_agricultor: 1,
+          id: 1,
           direccion: "Mz G Lote 13, Villa el Salvador",
-          persona_id_persona:{
-            id:1
-          }
+          persona_id_persona: 1
         },
         {
-            id_agricultor: 2,
+            id: 2,
             direccion: "Mz A Lote 7, Villa Maria del Triunfo",
-            persona_id_persona:{
-              id:3
-            }
+            persona_id_persona: 3
         },
         {
-            id_agricultor: 3,
+            id: 3,
             direccion: "Mz F Lote 21, La Molina",
 
-            persona_id_persona:{
-              id:2
-            }
+            persona_id_persona:2 
         },
         {
-            id_agricultor: 4,
+            id: 4,
             direccion: "Mz S Lote 27, San Isidro",
 
-            persona_id_persona:{
-              id:4
-            }
+            persona_id_persona:4
 
         },
         {
-            id_agricultor: 5,
+            id: 5,
             direccion: "Mz F Lote 19, Ventanilla",
 
-            persona_id_persona:{
-              id:5
-            }
+            persona_id_persona:5
 
         },
       ],
