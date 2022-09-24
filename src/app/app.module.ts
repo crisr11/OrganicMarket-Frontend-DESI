@@ -36,7 +36,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import{MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-
+import { PersonaDialogoComponent } from './page/persona/persona-listar/persona-dialogo/persona-dialogo.component';
+import {MatDialogModule}from '@angular/material/dialog';
+import { PersonaBuscarComponent } from './page/persona/persona-buscar/persona-buscar.component'
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { FormsModule } from '@angular/forms';
     TipoListarComponent,
     PersonaComponent,
     PersonaListarComponent,
+    PersonaDialogoComponent,
+    PersonaCrearpersonaComponent,
     AdministradorComponent,
     AdministradorListarComponent,
 
@@ -64,7 +68,9 @@ import { FormsModule } from '@angular/forms';
     PublicacionListarComponent,
     DetalleordenComponent,
     DetalleordenListarComponent,
-    PersonaCrearpersonaComponent
+    PersonaCrearpersonaComponent,
+    PersonaDialogoComponent,
+    PersonaBuscarComponent
 
 
 
@@ -78,7 +84,8 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     FormsModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

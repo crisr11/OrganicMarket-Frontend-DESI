@@ -30,11 +30,16 @@ const routes: Routes = [{
   path:'tipos',component:TipoComponent,children:[
 
   ]
-},{
-  path:'persona',component:PersonaComponent,children:[
+},
 
+{
+  path:'persona',component:PersonaComponent,children:[
+    {path:'nuevo',component:PersonaCrearpersonaComponent},
+    {path:'edicion/:id',component:PersonaCrearpersonaComponent}
   ]
-},{
+},
+
+{
   path:'administrador',component:AdministradorComponent,children:[
 
   ]
