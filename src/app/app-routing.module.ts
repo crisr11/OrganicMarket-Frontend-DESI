@@ -14,6 +14,7 @@ import { PublicacionComponent } from './page/publicacion/publicacion.component';
 import { TipoCreaeditaComponent } from './page/tipo/tipo-creaedita/tipo-creaedita.component';
 import { PersonaCrearpersonaComponent } from './page/persona/persona-crearpersona/persona-crearpersona.component';
 import { PublicacionCreaeditaComponent } from './page/publicacion/publicacion-creaedita/publicacion-creaedita.component';
+import { MayoristaCreaeditaComponent } from './page/mayorista/mayorista-creaedita/mayorista-creaedita.component';
 
 
 const routes: Routes = [{
@@ -45,7 +46,8 @@ const routes: Routes = [{
   ]
 },{
   path: 'mayoristas', component: MayoristaComponent, children:[
-
+    {path:'nuevo',component:MayoristaCreaeditaComponent}
+    ,{ path: 'edicion/:id', component: MayoristaCreaeditaComponent }
   ]
 },{
   path: 'acuerdos', component: AcuerdoComponent, children:[

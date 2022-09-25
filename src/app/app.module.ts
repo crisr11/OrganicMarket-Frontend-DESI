@@ -19,6 +19,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import{MatTableModule} from '@angular/material/table';
 import { ProductoListarComponent } from './page/producto/producto-listar/producto-listar.component';
+import { MayoristaCreaeditaComponent } from './page/mayorista/mayorista-creaedita/mayorista-creaedita.component';
+import { MayoristaBuscarComponent } from './page/mayorista/mayorista-buscar/mayorista-buscar.component';
+import { MayoristaDialogoComponent } from './page/mayorista/mayorista-listar/mayorista-dialogo/mayorista-dialogo.component';
 import { TipoListarComponent } from './page/tipo/tipo-listar/tipo-listar.component';
 import { ProductoComponent } from './page/producto/producto.component';
 import { TipoComponent } from './page/tipo/tipo.component';
@@ -77,7 +80,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     PersonaCrearpersonaComponent,
     PublicacionCreaeditaComponent,
     PublicacionBuscarComponent,
-    PublicacionDialogoComponent
+    PublicacionDialogoComponent,
+    MayoristaBuscarComponent,
+    MayoristaCreaeditaComponent,
+    MayoristaDialogoComponent
 
 
 

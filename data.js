@@ -239,26 +239,20 @@ module.exports = function () {
             id: 1,
             rubro: "Frutas",
             RUC: "32121",
-            persona_id_persona:{
-              id:2
-            }
+            nombre: "Juan Gonzales"
         },
         {
 
           id: 2,
           rubro: "Verduras",
           RUC: "34329",
-          persona_id_persona:{
-            id:1
-          }
+          nombre: "Nancy Guevara"
         },
         {
             id: 3,
             rubro: "Frutas",
             RUC: "9372",
-            persona_id_persona:{
-              id:3
-        }
+            nombre: "Liliana Prado"
          }
     ],
     acuerdos: [

@@ -1,0 +1,39 @@
+<div class="container">
+
+    <h1>Mayorista</h1>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Mayorista ID</mat-label>
+      <input matInput placeholder="ID" [(ngModel)]="mayorista.id">
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Nombre" [(ngModel)]="mayorista.nombre">
+      </mat-form-field>
+    
+      <br>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Rubro</mat-label>
+      <input matInput required placeholder="Rubro" [(ngModel)]="mayorista.rubro">
+  
+    </mat-form-field>
+  
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>RUC</mat-label>
+        <input matInput required placeholder="RUC" [(ngModel)]="mayorista.RUC">
+      </mat-form-field>
+    
+      <br>
+
+    
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/mayoristas">Cancelar</button>
+    <p>{{mensaje}}</p>
+  
+  </div>
+  

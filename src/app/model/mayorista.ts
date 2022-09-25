@@ -4,5 +4,5 @@ export class Mayorista{
     id:number = 0
     rubro:string = ""
     RUC:string = ""
-    persona_id_persona: persona =new persona()
+    nombre:string = ""
 }
