@@ -13,7 +13,7 @@ import { PromocionComponent } from './page/promocion/promocion.component';
 import { PublicacionComponent } from './page/publicacion/publicacion.component';
 import { TipoCreaeditaComponent } from './page/tipo/tipo-creaedita/tipo-creaedita.component';
 import { PersonaCrearpersonaComponent } from './page/persona/persona-crearpersona/persona-crearpersona.component';
-
+import { PublicacionCreaeditaComponent } from './page/publicacion/publicacion-creaedita/publicacion-creaedita.component';
 
 
 const routes: Routes = [{
@@ -59,6 +59,7 @@ const routes: Routes = [{
 },
 {
   path: 'publicaciones', component: PublicacionComponent, children:[
+    {path:'nuevo',component:PublicacionCreaeditaComponent}
 
   ]
  },

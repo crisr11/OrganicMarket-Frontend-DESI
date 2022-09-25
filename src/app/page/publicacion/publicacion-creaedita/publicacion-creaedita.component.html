@@ -1,0 +1,24 @@
+<div class="container">
+
+    <h1>Publicacion</h1>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="ID_Publicacion" [(ngModel)]="publicacion.id">
+    </mat-form-field>
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Contenido</mat-label>
+      <input matInput required placeholder="Contenido" [(ngModel)]="publicacion.contenido">
+    </mat-form-field>
+    <br>
+
+
+
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/tipos">Cancelar</button>
+    <p>{{mensaje}}</p>
+  
+  </div>
+  

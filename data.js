@@ -336,7 +336,7 @@ module.exports = function () {
   ],
   publicaciones:[
       {
-          id_publicacion: 1,
+          id: 1,
           contenido:"frutas",
           agricultor:{
           id_agricultor: 3
@@ -346,7 +346,7 @@ module.exports = function () {
           }
       },
       {
-          id_publicacion: 2,
+          id: 2,
           contenido: "verduras",
           agricultor:{
           id_agricultor: 4
@@ -356,7 +356,7 @@ module.exports = function () {
           }
       },
       {
-          id_publicacion: 3,
+          id: 3,
           contenido: "legumbres",
           agricultor:{
           id_agricultor: 5
