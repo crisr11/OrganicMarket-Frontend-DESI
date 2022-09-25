@@ -39,6 +39,9 @@ import { MatButtonModule } from '@angular/material/button';
 import{MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { PublicacionCreaeditaComponent } from './page/publicacion/publicacion-creaedita/publicacion-creaedita.component';
+import { PublicacionBuscarComponent } from './page/publicacion/publicacion-buscar/publicacion-buscar.component';
+import { PublicacionDialogoComponent } from './page/publicacion/publicacion-listar/publicacion-dialogo/publicacion-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -72,7 +75,9 @@ import { PublicacionCreaeditaComponent } from './page/publicacion/publicacion-cr
   
 
     PersonaCrearpersonaComponent,
-          PublicacionCreaeditaComponent
+    PublicacionCreaeditaComponent,
+    PublicacionBuscarComponent,
+    PublicacionDialogoComponent
 
 
 
@@ -90,7 +95,8 @@ import { PublicacionCreaeditaComponent } from './page/publicacion/publicacion-cr
     MatButtonModule,
     FormsModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
