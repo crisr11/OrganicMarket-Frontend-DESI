@@ -24,4 +24,10 @@ export class PublicacionService {
   getLista() {
     return this.listaCambio.asObservable();
   }
+  modificar(publicacion: Publicacion) {
+    return this.http.put(this.url + "/" + publicacion.id, publicacion);
+  }
+  listarId(id: number) {
+    return this.http.get<Publicacion>(`${this.url}/${id}`);
+  }
 }
