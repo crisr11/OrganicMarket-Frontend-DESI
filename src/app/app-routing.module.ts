@@ -60,6 +60,7 @@ const routes: Routes = [{
 {
   path: 'publicaciones', component: PublicacionComponent, children:[
     {path:'nuevo',component:PublicacionCreaeditaComponent}
+    ,{ path: 'edicion/:id', component: PublicacionCreaeditaComponent }
 
   ]
  },

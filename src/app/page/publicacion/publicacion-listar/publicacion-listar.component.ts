@@ -11,11 +11,15 @@ import { Publicacion } from 'src/app/model/publicacion';
 })
 export class PublicacionListarComponent implements OnInit {
   dataSource:MatTableDataSource <Publicacion> =new MatTableDataSource();
-  displayedColumns:string[]=['ID PUBLICACION','CONTENIDO','AGRICULTOR ID','PRODUCTO ID'];
+  displayedColumns:string[]=['ID PUBLICACION','CONTENIDO','AGRICULTOR ID','PRODUCTO ID','ACCIONES'];
   constructor(private pU:PublicacionService) { }
 
   ngOnInit(): void {
     this.pU.listar().subscribe(data=>{this.dataSource=new MatTableDataSource(data);})
+    
+    this.pU.getLista().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    });
   }
 
 }
