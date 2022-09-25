@@ -40,6 +40,12 @@ import{MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { AgricultorCreaeditaComponent } from './page/agricultor/agricultor-creaedita/agricultor-creaedita.component';
 
+import { PublicacionCreaeditaComponent } from './page/publicacion/publicacion-creaedita/publicacion-creaedita.component';
+import { PublicacionBuscarComponent } from './page/publicacion/publicacion-buscar/publicacion-buscar.component';
+import { PublicacionDialogoComponent } from './page/publicacion/publicacion-listar/publicacion-dialogo/publicacion-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
+
 
 
 @NgModule({
@@ -69,10 +75,13 @@ import { AgricultorCreaeditaComponent } from './page/agricultor/agricultor-creae
     DetalleordenComponent,
     DetalleordenListarComponent,
     TipoCreaeditaComponent,
-  
-
     PersonaCrearpersonaComponent,
-          AgricultorCreaeditaComponent,
+    AgricultorCreaeditaComponent,
+    PublicacionCreaeditaComponent,
+    PublicacionBuscarComponent,
+    PublicacionDialogoComponent
+
+
 
 
   ],
@@ -89,7 +98,8 @@ import { AgricultorCreaeditaComponent } from './page/agricultor/agricultor-creae
     MatButtonModule,
     FormsModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
