@@ -15,9 +15,9 @@ import { AgricultorListarComponent } from './page/agricultor/agricultor-listar/a
 import { OrdenListarComponent } from './page/orden/orden-listar/orden-listar.component';
 import { OrdenComponent } from './page/orden/orden.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
 import{MatTableModule} from '@angular/material/table';
+
+;
 import { ProductoListarComponent } from './page/producto/producto-listar/producto-listar.component';
 import { MayoristaCreaeditaComponent } from './page/mayorista/mayorista-creaedita/mayorista-creaedita.component';
 import { MayoristaBuscarComponent } from './page/mayorista/mayorista-buscar/mayorista-buscar.component';
@@ -41,10 +41,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import{MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { AgricultorCreaeditaComponent } from './page/agricultor/agricultor-creaedita/agricultor-creaedita.component';
+
 import { PublicacionCreaeditaComponent } from './page/publicacion/publicacion-creaedita/publicacion-creaedita.component';
 import { PublicacionBuscarComponent } from './page/publicacion/publicacion-buscar/publicacion-buscar.component';
 import { PublicacionDialogoComponent } from './page/publicacion/publicacion-listar/publicacion-dialogo/publicacion-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { AgricultorBuscarComponent } from './page/agricultor/agricultor-buscar/agricultor-buscar.component';
+import { AgricultorDialogoComponent } from './page/agricultor/agricultor-listar/agricultor-dialogo/agricultor-dialogo.component';
+
 
 
 
@@ -75,15 +80,17 @@ import { MatDialogModule } from '@angular/material/dialog';
     DetalleordenComponent,
     DetalleordenListarComponent,
     TipoCreaeditaComponent,
-  
-
     PersonaCrearpersonaComponent,
+    AgricultorCreaeditaComponent,
     PublicacionCreaeditaComponent,
     PublicacionBuscarComponent,
     PublicacionDialogoComponent,
     MayoristaBuscarComponent,
     MayoristaCreaeditaComponent,
-    MayoristaDialogoComponent
+    MayoristaDialogoComponent,
+    AgricultorBuscarComponent,
+    AgricultorDialogoComponent
+
 
 
 

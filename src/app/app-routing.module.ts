@@ -1,3 +1,4 @@
+import { agricultor } from 'src/app/model/agricultor';
 import { DetalleordenComponent } from './page/detalleorden/detalleorden.component';
 import { AgricultorComponent } from './page/agricultor/agricultor.component';
 import { NgModule, Component } from '@angular/core';
@@ -13,12 +14,16 @@ import { PromocionComponent } from './page/promocion/promocion.component';
 import { PublicacionComponent } from './page/publicacion/publicacion.component';
 import { TipoCreaeditaComponent } from './page/tipo/tipo-creaedita/tipo-creaedita.component';
 import { PersonaCrearpersonaComponent } from './page/persona/persona-crearpersona/persona-crearpersona.component';
+import { AgricultorCreaeditaComponent } from './page/agricultor/agricultor-creaedita/agricultor-creaedita.component';
 import { PublicacionCreaeditaComponent } from './page/publicacion/publicacion-creaedita/publicacion-creaedita.component';
 import { MayoristaCreaeditaComponent } from './page/mayorista/mayorista-creaedita/mayorista-creaedita.component';
 
 
 const routes: Routes = [{
   path: 'agricultor', component: AgricultorComponent, children:[
+
+    {path:'nuevo',component:AgricultorCreaeditaComponent},
+    { path: 'edicion/:id', component: AgricultorCreaeditaComponent }
 
   ]
 },{
