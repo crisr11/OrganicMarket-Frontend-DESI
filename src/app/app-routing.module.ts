@@ -21,7 +21,8 @@ import { PublicacionCreaeditaComponent } from './page/publicacion/publicacion-cr
 const routes: Routes = [{
   path: 'agricultor', component: AgricultorComponent, children:[
 
-    {path:'nuevo',component:AgricultorCreaeditaComponent}
+    {path:'nuevo',component:AgricultorCreaeditaComponent},
+    { path: 'edicion/:id', component: AgricultorCreaeditaComponent }
 
   ]
 },{

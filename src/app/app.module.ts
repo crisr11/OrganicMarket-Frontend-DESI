@@ -44,6 +44,8 @@ import { PublicacionCreaeditaComponent } from './page/publicacion/publicacion-cr
 import { PublicacionBuscarComponent } from './page/publicacion/publicacion-buscar/publicacion-buscar.component';
 import { PublicacionDialogoComponent } from './page/publicacion/publicacion-listar/publicacion-dialogo/publicacion-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { AgricultorBuscarComponent } from './page/agricultor/agricultor-buscar/agricultor-buscar.component';
+import { AgricultorDialogoComponent } from './page/agricultor/agricultor-listar/agricultor-dialogo/agricultor-dialogo.component';
 
 
 
@@ -79,7 +81,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     AgricultorCreaeditaComponent,
     PublicacionCreaeditaComponent,
     PublicacionBuscarComponent,
-    PublicacionDialogoComponent
+    PublicacionDialogoComponent,
+    AgricultorBuscarComponent,
+    AgricultorDialogoComponent
 
 
 
