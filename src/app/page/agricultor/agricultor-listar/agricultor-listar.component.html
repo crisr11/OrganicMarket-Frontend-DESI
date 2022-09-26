@@ -59,15 +59,15 @@
 
      <ng-container matColumnDef="ACCIÓN 1">
       <th mat-header-cell *matHeaderCellDef>ACCIONES</th>
-      <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-          [routerLink]="['edicion', element?.id2]">Actualizar</button>
+      <td mat-cell *matCellDef="let element"> 
+        <img src="../../../../assets/update.png"   [routerLink]="['edicion', element?.id2]">
       </td>
     </ng-container>
 
     <ng-container matColumnDef="ACCIÓN 2">
       <th mat-header-cell *matHeaderCellDef> ACCIONES </th>
       <td mat-cell *matCellDef="let element">
-        <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button>
+        <img src="../../../../assets/delete.png"  (click)="confirmar(element.id)">
       </td>
     </ng-container>
 
