@@ -1,4 +1,3 @@
-import { PersonaCrearpersonaComponent } from 'src/app/page/persona/persona-crearpersona/persona-crearpersona.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,7 +16,6 @@ import { OrdenComponent } from './page/orden/orden.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import{MatTableModule} from '@angular/material/table';
 
-;
 import { ProductoListarComponent } from './page/producto/producto-listar/producto-listar.component';
 import { MayoristaCreaeditaComponent } from './page/mayorista/mayorista-creaedita/mayorista-creaedita.component';
 import { MayoristaBuscarComponent } from './page/mayorista/mayorista-buscar/mayorista-buscar.component';
@@ -25,8 +23,13 @@ import { MayoristaDialogoComponent } from './page/mayorista/mayorista-listar/may
 import { TipoListarComponent } from './page/tipo/tipo-listar/tipo-listar.component';
 import { ProductoComponent } from './page/producto/producto.component';
 import { TipoComponent } from './page/tipo/tipo.component';
+
+//Persona
 import { PersonaComponent } from './page/persona/persona.component';
 import { PersonaListarComponent } from './page/persona/persona-listar/persona-listar.component';
+import { PersonaBuscarComponent } from './page/persona/persona-buscar/persona-buscar.component';
+import { PersonaCrearpersonaComponent } from 'src/app/page/persona/persona-crearpersona/persona-crearpersona.component';
+
 import { AdministradorComponent } from './page/administrador/administrador.component';
 import { AdministradorListarComponent } from './page/administrador/administrador-listar/administrador-listar.component';
 import { PromocionComponent } from './page/promocion/promocion.component';
@@ -49,6 +52,7 @@ import { PublicacionDialogoComponent } from './page/publicacion/publicacion-list
 import { MatDialogModule } from '@angular/material/dialog';
 import { AgricultorBuscarComponent } from './page/agricultor/agricultor-buscar/agricultor-buscar.component';
 import { AgricultorDialogoComponent } from './page/agricultor/agricultor-listar/agricultor-dialogo/agricultor-dialogo.component';
+import { PersonaDialogoComponent } from './page/persona/persona-listar/persona-dialogo/persona-dialogo.component';
 
 
 
@@ -64,8 +68,7 @@ import { AgricultorDialogoComponent } from './page/agricultor/agricultor-listar/
     TipoComponent,
     ProductoListarComponent,
     TipoListarComponent,
-    PersonaComponent,
-    PersonaListarComponent,
+
     AdministradorComponent,
     AdministradorListarComponent,
 
@@ -80,7 +83,6 @@ import { AgricultorDialogoComponent } from './page/agricultor/agricultor-listar/
     DetalleordenComponent,
     DetalleordenListarComponent,
     TipoCreaeditaComponent,
-    PersonaCrearpersonaComponent,
     AgricultorCreaeditaComponent,
     PublicacionCreaeditaComponent,
     PublicacionBuscarComponent,
@@ -89,7 +91,13 @@ import { AgricultorDialogoComponent } from './page/agricultor/agricultor-listar/
     MayoristaCreaeditaComponent,
     MayoristaDialogoComponent,
     AgricultorBuscarComponent,
-    AgricultorDialogoComponent
+    AgricultorDialogoComponent,
+
+    PersonaComponent,
+    PersonaListarComponent,
+    PersonaCrearpersonaComponent,
+    PersonaBuscarComponent,
+    PersonaDialogoComponent
 
 
 

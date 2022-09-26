@@ -1,6 +1,6 @@
 import { persona } from 'src/app/model/persona';
 import { PersonaService } from './../../../service/persona.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute,Params } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -12,22 +12,45 @@ import { Component, OnInit } from '@angular/core';
 export class PersonaCrearpersonaComponent implements OnInit {
   persona:persona=new persona();
   mensaje:string ="";
-  constructor(private personaService:PersonaService,private router:Router) { }
+  edicion:boolean=false;
+  id:number=0;
+  constructor(private personaService:PersonaService,
+    private router:Router,
+    private route:ActivatedRoute) { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+      this.route.params.subscribe((data:Params)=>{
+        this.id=data['id'];
+        this.edicion=data['id']!=null;
+        this.init();
+      })
+    }
   aceptar():void{
     if(this.persona.nombre.length>0 && this.persona.dni>0){
+      if(this.edicion){
+      this.personaService.modificar(this.persona).subscribe(data=>{
+        this.personaService.listar().subscribe(data=>{
+          this.personaService.setLista(data);
+        })
+      })
+    }else{
       this.personaService.insertar(this.persona).subscribe(data=>{
         this.personaService.listar().subscribe(data=>{
           this.personaService.setLista(data);
         })
       })
-      this.router.navigate(['persona']);
+    }
+    this.router.navigate(['persona']);
 
     }else{
       this.mensaje="Complete los valores requeridos";
     }
   }
-
+  init(){
+    if(this.edicion){
+      this.personaService.listarId(this.id).subscribe(data=>{
+        this.persona=data;
+      })
+    }
+  }
 }

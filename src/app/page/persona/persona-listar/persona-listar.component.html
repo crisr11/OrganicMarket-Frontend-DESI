@@ -24,6 +24,10 @@
 
   </div>
 </header>
+<div class="seccion">
+ <p>Buscar por nombre: <app-persona-buscar></app-persona-buscar></p>
+</div>
+<div>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
@@ -56,10 +60,24 @@
         <th mat-header-cell *matHeaderCellDef> Correo </th>
         <td mat-cell *matCellDef="let element"> {{element.correo}} </td>
       </ng-container>
+      <ng-container matColumnDef="accion1">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let element">
+          <mat-icon style="color: #0fff00;" [routerLink]="['edicion', element?.id]">sync</mat-icon>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="accion2">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let element">
+
+            <mat-icon color="warn" (click)="confirmar(element.id)">cancel</mat-icon>
+        </td>
+      </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+</div>
 <div class="example-button-container ">
     <button mat-mini-fab color="primary" class="botonn" aria-label="Example icon button with a plus one icon"
       routerLink="/persona-crearpersona">
