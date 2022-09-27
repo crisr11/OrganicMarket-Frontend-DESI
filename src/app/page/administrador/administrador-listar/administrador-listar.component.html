@@ -1,30 +1,54 @@
+<html>
 <body>
-  <header class="header">
-    <div class="container logo-nav">
-      <figure class="logo">
-        <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo" >
-        <figcaption class="nombre-logo notranslate">OrganicMarket</figcaption>
-    </figure>
-        <!--Navigation-->
-        <nav class="navbar">
+  <script  src="./assets/js/navegacion/navegacion.js"></script>
+        <!-- partial:index.partial.html -->
+        <header>
+          <span class="menu-anchor" ></span>
+          <h1>ADMINISTRADORES</h1>
+          <div class="seccion">
+          </div>
+        </header>
+        <menu>
           <ul>
-            <li><a routerLink="/agricultor">Agricultores</a></li>
-            <li><a routerLink="/orden">Ordenes</a></li>
-            <li><a routerLink="/productos">Productos</a></li>
-            <li><a routerLink="/tipos">Tipos</a></li>
-            <li><a routerLink="/administrador">Administradores</a></li>
-            <li><a routerLink="/persona">Personas</a></li>
-            <li><a routerLink="/mayoristas">Mayoristas</a></li>
-            <li><a routerLink="/acuerdos">Acuerdos</a></li>
-            <li><a routerLink="/promociones">Promociones</a></li>
-            <li><a routerLink="/publicaciones">Publicaciones</a></li>
-            <li><a routerLink="/detalleorden">Detalle Orden</a></li>
+            <figure class="logo">
+              <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo" >
+              <figcaption class="nombre-logo notranslate">Organic Market</figcaption>
+            </figure>
+            <li></li>
+            <li><a href="http://localhost:4200/productos">Productos</a></li>
+            <li><a href="http://localhost:4200/agricultor">Agricultores</a></li>
+            <li><a href="http://localhost:4200/persona">Personas</a></li>
+            <li><a href="http://localhost:4200/mayoristas">Mayoristas</a></li>
+            <li><a href="http://localhost:4200/publicaciones">Publicaciones</a></li>
+            <li><a href="http://localhost:4200/detalleorden">Detalle Orden</a></li>
+            <li><a href="http://localhost:4200/orden">Ordenes</a></li>
+            <li><a href="http://localhost:4200/tipos">Tipos</a></li>
+            <li><a href="http://localhost:4200/administrador">Administradores</a></li>         
+            <li><a href="http://localhost:4200/acuerdos">Acuerdos</a></li>
+            <li><a href="http://localhost:4200/promociones">Promociones</a></li>       
+            
+            
+            <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+            <li > 	
+              <a href="#">Cerrar sesión <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="-2 -1 16 16">
+              <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z"/>
+              <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+              </svg></a></li>
           </ul>
-        </nav>
+        </menu>
+        <!--se agrega texto-->
+        <section class="main">
+          
+        </section>
+        <!-- partial -->
+        <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        
+        
+    
 
-  </div>
-</header>
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+     
+    <div>
+<table style="width:50% ;" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
             The actual rendered columns are set as a property on the row definition" -->
@@ -44,4 +68,28 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+</div>
+<footer>
+  <div class="f-b-img">
+    <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo">
+</div>
+
+<div class="f-b-redes"> 
+<div>
+  <p class="f-b-redes-cr" >Copyright ©2022</p>
+  <p class="f-b-redes-sg">Follow us on our social networks:</p>
+</div>
+<div>
+  <ul>
+      <li><a href="https://www.facebook.com/" target="blank" rel="noopener" >Facebook</a></li>
+      <li><a href="https://www.instagram.com/" target="blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.twitter.com/" target="blank" rel="noopener">Twitter</a></li>
+      <li><a href="https://www.youtube.com/" target="blank" rel="noopener">YouTube</a></li>
+  </ul>
+</div>
+</div>
+</footer>
+
 </body>
+</html>
+
