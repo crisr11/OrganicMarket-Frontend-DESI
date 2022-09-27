@@ -1,0 +1,23 @@
+<div class="container">
+
+    <h1>Detalle Orden</h1>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>id</mat-label>
+        <input matInput placeholder="id" [(ngModel)]="detalleorden.id">
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput required placeholder="Nombre" [(ngModel)]="detalleorden.nombre">
+
+    </mat-form-field>
+
+    <br>
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/detalleorden">Cancelar</button>
+    <p>{{mensaje}}</p>
+
+</div>

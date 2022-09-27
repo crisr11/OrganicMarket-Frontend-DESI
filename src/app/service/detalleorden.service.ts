@@ -1,3 +1,4 @@
+import { Subject, EMPTY } from 'rxjs';
 import { detalleorden } from '../model/detalleorden';
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
@@ -6,11 +7,44 @@ import { HttpClient } from "@angular/common/http";
     providedIn: 'root'
 })
 
-export class DetalleordenService{
-    url:string="http://localhost:5000/detalleorden"
-    constructor(private http:HttpClient) { }
+export class DetalleordenService {
+    url: string = "http://localhost:5000/detalleorden"
+    private listaCambio = new Subject<detalleorden[]>()
+    private confirmaEliminacion = new Subject<Boolean>()
+    constructor(private http: HttpClient) { }
 
-    listar(){
+    listar() {
         return this.http.get<detalleorden[]>(this.url);
+    }
+    insertar(detalleorden: detalleorden) {
+        return this.http.post(this.url, detalleorden);
+    }
+    setLista(listaNueva: detalleorden[]) {
+        this.listaCambio.next(listaNueva);
+    }
+    getLista() {
+        return this.listaCambio.asObservable();
+    }
+    modificar(detalleorden: detalleorden) {
+        return this.http.put(this.url + "/" + detalleorden.id, detalleorden);
+    }
+    listarId(id: number) {
+        return this.http.get<detalleorden>(`${this.url}/${id}`);
+    }
+    eliminar(id: number) {
+        return this.http.delete(this.url + "/" + id);
+    }
+    getConfirmaEliminacion() {
+        return this.confirmaEliminacion.asObservable();
+    }
+    setConfirmaEliminacion(estado: Boolean) {
+        this.confirmaEliminacion.next(estado);
+    }
+    buscar(texto: string) {
+        if (texto.length != 0) {
+            return this.http.post<detalleorden[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+            });
+        }
+        return EMPTY;
     }
 }
