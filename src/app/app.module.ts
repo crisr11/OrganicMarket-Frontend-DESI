@@ -14,7 +14,7 @@ import { AgricultorListarComponent } from './page/agricultor/agricultor-listar/a
 import { OrdenListarComponent } from './page/orden/orden-listar/orden-listar.component';
 import { OrdenComponent } from './page/orden/orden.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import{MatTableModule} from '@angular/material/table';
+import { MatTableModule} from '@angular/material/table';
 
 import { ProductoListarComponent } from './page/producto/producto-listar/producto-listar.component';
 import { MayoristaCreaeditaComponent } from './page/mayorista/mayorista-creaedita/mayorista-creaedita.component';
@@ -42,7 +42,7 @@ import { TipoCreaeditaComponent } from './page/tipo/tipo-creaedita/tipo-creaedit
 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import{MatIconModule} from'@angular/material/icon';
+import { MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { AgricultorCreaeditaComponent } from './page/agricultor/agricultor-creaedita/agricultor-creaedita.component';
 
@@ -53,6 +53,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { AgricultorBuscarComponent } from './page/agricultor/agricultor-buscar/agricultor-buscar.component';
 import { AgricultorDialogoComponent } from './page/agricultor/agricultor-listar/agricultor-dialogo/agricultor-dialogo.component';
 import { PersonaDialogoComponent } from './page/persona/persona-listar/persona-dialogo/persona-dialogo.component';
+import { ProductoBuscarComponent } from './page/producto/producto-buscar/producto-buscar.component';
+import { ProductoDialogoComponent } from './page/producto/producto-listar/producto-dialogo/producto-dialogo.component';
+import { ProdutoCreaeditaComponent } from './page/producto/produto-creaedita/produto-creaedita.component';
 
 
 
@@ -92,16 +95,14 @@ import { PersonaDialogoComponent } from './page/persona/persona-listar/persona-d
     MayoristaDialogoComponent,
     AgricultorBuscarComponent,
     AgricultorDialogoComponent,
-
     PersonaComponent,
     PersonaListarComponent,
     PersonaCrearpersonaComponent,
     PersonaBuscarComponent,
-    PersonaDialogoComponent
-
-
-
-
+    PersonaDialogoComponent,
+    ProductoBuscarComponent,
+    ProductoDialogoComponent,
+    ProdutoCreaeditaComponent
   ],
   imports: [
     BrowserModule,
@@ -109,10 +110,7 @@ import { PersonaDialogoComponent } from './page/persona/persona-listar/persona-d
     BrowserAnimationsModule,
     HttpClientModule,
     MatTableModule,
-    MatInputModule,
     FormsModule,
-    MatButtonModule,
-    MatIconModule,
     MatButtonModule,
     FormsModule,
     MatIconModule,
