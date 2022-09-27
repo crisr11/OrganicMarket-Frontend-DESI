@@ -72,15 +72,15 @@
 
      <ng-container matColumnDef="ACCIÓN 1">
       <th mat-header-cell *matHeaderCellDef>ACCIONES</th>
-      <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-          [routerLink]="['edicion', element?.id2]">Actualizar</button>
+      <td mat-cell *matCellDef="let element"> 
+        <img src="../../../../assets/update.png"   [routerLink]="['edicion', element?.id2]">
       </td>
     </ng-container>
 
     <ng-container matColumnDef="ACCIÓN 2">
       <th mat-header-cell *matHeaderCellDef> ACCIONES </th>
       <td mat-cell *matCellDef="let element">
-        <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button>
+        <img src="../../../../assets/delete.png" (click)="confirmar(element.id)">
       </td>
     </ng-container>
 
@@ -96,7 +96,26 @@
       <mat-icon>plus_one</mat-icon>
     </button>
   </div>
+  <footer>
+    <div class="f-b-img">
+      <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo">
+  </div>
 
+  <div class="f-b-redes"> 
+  <div>
+    <p class="f-b-redes-cr" >Copyright ©2022</p>
+    <p class="f-b-redes-sg">Follow us on our social networks:</p>
+</div>
+<div>
+    <ul>
+        <li><a href="https://www.facebook.com/" target="blank" rel="noopener" >Facebook</a></li>
+        <li><a href="https://www.instagram.com/" target="blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.twitter.com/" target="blank" rel="noopener">Twitter</a></li>
+        <li><a href="https://www.youtube.com/" target="blank" rel="noopener">YouTube</a></li>
+    </ul>
+</div>
+</div>
+</footer>
 
  
 </body>
