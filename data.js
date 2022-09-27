@@ -192,36 +192,24 @@ module.exports = function () {
       ],
       productos: [
         {
-          ID_Producto: 1,
+          id: 1,
           Nombre: "Haba",
-          Precio: 10,
-          Tipo: {
-            ID_Tipo: 1
-          }
+          Precio: 10
         },
         {
-          ID_Producto: 2,
+          id: 2,
           Nombre: "Papa",
-          Precio: 7,
-          Tipo: {
-            ID_Tipo: 2
-          }
+          Precio: 7
         },
         {
-          ID_Producto: 3,
+          id: 3,
           Nombre: "Rábano",
-          Precio: 6,
-          Tipo: {
-            ID_Tipo: 3
-          }
+          Precio: 6
         },
         {
-          ID_Producto: 4,
+          id: 4,
           Nombre: "Espárrago",
-          Precio: 5,
-          Tipo: {
-            ID_Tipo: 4
-          }
+          Precio: 5
         }
       ],
       mayoristas: [

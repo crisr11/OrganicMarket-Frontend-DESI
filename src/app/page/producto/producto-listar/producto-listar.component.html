@@ -19,16 +19,18 @@
             <li><a routerLink="/promociones">Promociones</a></li>
             <li><a routerLink="/publicaciones">Publicaciones</a></li>
             <li><a routerLink="/detalleorden">Detalle Orden</a></li>
+            <app-producto-buscar></app-producto-buscar>
 
           </ul>
         </nav>
-
   </div>
 </header>
-  <table style="width:50% ;" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    <ng-container matColumnDef="ID_Producto">
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> Id </th>
-      <td mat-cell *matCellDef="let element"> {{element.ID_Producto}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
 
     <ng-container matColumnDef="Nombre">
@@ -41,12 +43,32 @@
       <td mat-cell *matCellDef="let element"> {{element.Precio}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="Tipo">
-      <th mat-header-cell *matHeaderCellDef> ID Tipo </th>
-      <td mat-cell *matCellDef="let element"> {{element.Tipo.ID_Tipo}} </td>
+    <ng-container matColumnDef="accion1">
+      <th mat-header-cell *matHeaderCellDef> Accion 1 </th>
+      <td mat-cell *matCellDef="let element"> 
+        <button mat-raised-button color="primary" [routerLink]="['edicion', element?.id]">Actualizar</button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="accion2">
+      <th mat-header-cell *matHeaderCellDef> Accion 2 </th>
+      <td mat-cell *matCellDef="let element">
+          <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button>
+
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+
+  <div class="example-button-container boton">
+
+    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+      routerLink="/productos/nuevo">
+      <mat-icon>plus_one</mat-icon>
+
+    </button>
+  </div>
+
 </body>
