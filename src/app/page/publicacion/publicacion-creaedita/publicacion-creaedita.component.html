@@ -4,7 +4,7 @@
   
     <mat-form-field class="example-full-width">
       <mat-label>Id</mat-label>
-      <input matInput placeholder="ID_Publicacion" [(ngModel)]="publicacion.id">
+      <input matInput placeholder="Id" [(ngModel)]="publicacion.id">
     </mat-form-field>
     <br>
   
@@ -14,7 +14,17 @@
     </mat-form-field>
     <br>
 
+    <mat-form-field class="example-full-width">
+      <mat-label>Id_Agricultor</mat-label>
+      <input matInput required placeholder="Id_Agricultor" [(ngModel)]="publicacion.id_agricultor">
+    </mat-form-field>
+    <br>
 
+    <mat-form-field class="example-full-width">
+      <mat-label>Id_Producto</mat-label>
+      <input matInput required placeholder="Id_Producto" [(ngModel)]="publicacion.id_producto">
+    </mat-form-field>
+    <br>
 
     <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
     <button mat-raised-button color="warn" routerLink="/publicaciones">Cancelar</button>

@@ -11,7 +11,7 @@ import { PublicacionDialogoComponent } from './publicacion-dialogo/publicacion-d
 })
 export class PublicacionListarComponent implements OnInit {
   dataSource: MatTableDataSource<Publicacion> = new MatTableDataSource();
-  displayedColumns: string[] = ['ID PUBLICACION', 'CONTENIDO', 'AGRICULTOR ID', 'PRODUCTO ID', 'ACCIÓN 1', 'ACCIÓN 2'];
+  displayedColumns: string[] = ['ID PUBLICACION', 'CONTENIDO', 'ID AGRICULTOR', 'ID PRODUCTO', 'ACCIÓN 1', 'ACCIÓN 2'];
   private idMayor = 0;
   constructor(private pU: PublicacionService, private dialog: MatDialog) { }
 
