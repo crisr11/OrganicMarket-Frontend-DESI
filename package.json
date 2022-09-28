@@ -1,10 +1,13 @@
 {
   "name": "organic-market",
   "version": "0.0.0",
+  "engines": {
+    "node": "16.13.1"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "server": "json-server --port 5000 --watch data.js"
