@@ -96,6 +96,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "OrganicMarket:build:production",
+            "firebaseProject": "organicmarket",
+            "firebaseHostingSite": "organicmarket-b0210"
+          }
         }
       }
     }

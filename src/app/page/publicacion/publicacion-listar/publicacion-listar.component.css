@@ -276,3 +276,6 @@ footer ul{
 img:hover{
 	cursor: pointer;
 }
+th,td{
+	text-align: center;
+}
