@@ -310,32 +310,20 @@ module.exports = function () {
       {
         id: 1,
         contenido: "frutas",
-        agricultor: {
-          id_agricultor: 3
-        },
-        producto: {
-          id_producto: 3
-        }
+        id_agricultor: 3,
+        id_producto: 3
       },
       {
         id: 2,
         contenido: "verduras",
-        agricultor: {
-          id_agricultor: 4
-        },
-        producto: {
-          id_producto: 2
-        }
+        id_agricultor: 4,
+        id_producto: 2
       },
       {
         id: 3,
         contenido: "legumbres",
-        agricultor: {
-          id_agricultor: 5
-        },
-        producto: {
-          id_producto: 1
-        }
+        id_agricultor: 5,
+        id_producto: 1,
       }
     ],
 
