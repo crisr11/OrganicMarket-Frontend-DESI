@@ -4,7 +4,7 @@
         <!-- partial:index.partial.html -->
         <header>
           <span class="menu-anchor" ></span>
-          <h1>PERSONAS</h1>
+          <h1 class="titulo">PERSONAS</h1>
           <div class="seccion">
             <app-persona-buscar></app-persona-buscar>
           </div>
@@ -97,33 +97,23 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+  <button routerLink="/persona-crearpersona" class="botoncito">Insertar</button>
 </div>
-<div class="example-button-container">
+<!-- <div class="example-button-container">
   <button mat-mini-fab color="primary" class="boton_personalizado"
     aria-label="Example icon button with a plus one icon" routerLink="/persona-crearpersona">
     <mat-icon>plus_one</mat-icon>
   </button>
-</div>
-<footer>
-  <div class="f-b-img">
-    <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo">
-</div>
-
-<div class="f-b-redes"> 
-<div>
-  <p class="f-b-redes-cr" >Copyright ©2022</p>
-  <p class="f-b-redes-sg">Follow us on our social networks:</p>
-</div>
-<div>
-  <ul>
-      <li><a href="https://www.facebook.com/" target="blank" rel="noopener" >Facebook</a></li>
-      <li><a href="https://www.instagram.com/" target="blank" rel="noopener">Instagram</a></li>
-      <li><a href="https://www.twitter.com/" target="blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://www.youtube.com/" target="blank" rel="noopener">YouTube</a></li>
-  </ul>
-</div>
-</div>
-</footer>
-
+  </div> -->
+  <footer>
+    <div class="f-b-img">
+      <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo">
+    </div>
+  
+    <div class="f-b-redes"> 
+        <p class="f-b-redes-cr" >Copyright ©2022</p>
+        <p class="f-b-redes-sg">Made by PeruInnova</p>
+    </div>
+    </footer>
 </body>
 </html>
