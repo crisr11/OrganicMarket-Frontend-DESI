@@ -7,7 +7,7 @@ import {Subject, EMPTY} from 'rxjs';
   providedIn: 'root'
 })
 export class AgricultorService {
-  url: string = "http://localhost:5000/agricultor"
+  url: string = "http://localhost:8080/agricultor"
   private listaCambio = new Subject<agricultor[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
@@ -24,7 +24,7 @@ export class AgricultorService {
     return this.listaCambio.asObservable();
   }
   modificar(agricultor: agricultor) {
-    return this.http.put(this.url + "/" + agricultor.id, agricultor);
+    return this.http.put(this.url + "/" + agricultor.idAgricultor, agricultor);
   }
   listarId(id: number) {
     return this.http.get<agricultor>(`${this.url}/${id}`);

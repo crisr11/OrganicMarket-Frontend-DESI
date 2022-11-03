@@ -1,7 +1,8 @@
+import { PersonaBuscarComponent } from "../page/persona/persona-buscar/persona-buscar.component";
 import { persona } from "./persona";
 
 export class agricultor{
-    id:number=0
-    direccion:string=""
-    persona_id_persona: number=0
+    idAgricultor:number=0
+    direccionAgricultor:string=""
+    persona:persona=new persona();
 }
