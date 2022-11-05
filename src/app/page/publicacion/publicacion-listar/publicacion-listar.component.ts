@@ -10,17 +10,20 @@ import { PublicacionDialogoComponent } from './publicacion-dialogo/publicacion-d
   styleUrls: ['./publicacion-listar.component.css']
 })
 export class PublicacionListarComponent implements OnInit {
+  lista: Publicacion[] = [];
   dataSource: MatTableDataSource<Publicacion> = new MatTableDataSource();
   displayedColumns: string[] = ['ID PUBLICACION', 'CONTENIDO', 'ID AGRICULTOR', 'ID PRODUCTO', 'ACCIÓN 1', 'ACCIÓN 2'];
-  private idMayor = 0;
+  private idMayor: number = 0;
   constructor(private pU: PublicacionService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.pU.listar().subscribe(data => {
+      this.lista=data;
       this.dataSource = new MatTableDataSource(data);
     })
     this.pU.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
+      console.log(data);
     });
     this.pU.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
@@ -38,6 +41,5 @@ export class PublicacionListarComponent implements OnInit {
         this.pU.setLista(data);
       });
     });
-
   }
 }

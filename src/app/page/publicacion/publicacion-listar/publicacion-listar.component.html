@@ -69,7 +69,7 @@
       <!-- Position Column -->
       <ng-container matColumnDef="ID PUBLICACION">
         <th mat-header-cell *matHeaderCellDef> ID PUBLICACION </th>
-        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.idPublicacion}} </td>
       </ng-container>
 
       <!-- Name Column -->
@@ -81,26 +81,26 @@
       <!-- Weight Column -->
       <ng-container matColumnDef="ID AGRICULTOR">
         <th mat-header-cell *matHeaderCellDef>ID AGRICULTOR</th>
-        <td mat-cell *matCellDef="let element"> {{element.id_agricultor}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.agricultor.idAgricultor} </td>
       </ng-container>
 
       <!-- Symbol Column -->
       <ng-container matColumnDef="ID PRODUCTO">
         <th mat-header-cell *matHeaderCellDef>ID PRODUCTO</th>
-        <td mat-cell *matCellDef="let element"> {{element.id_producto}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.producto.Precio}} </td>
       </ng-container>
 
       <ng-container matColumnDef="ACCIÓN 1">
         <th mat-header-cell *matHeaderCellDef>ACCIONES</th>
         <td mat-cell *matCellDef="let element"> 
-          <img src="../../../../assets/update.png"   [routerLink]="['edicion', element?.id]">
+          <img src="../../../../assets/update.png"   [routerLink]="['edicion', element.idPublicacion]">
         </td>
       </ng-container>
 
       <ng-container matColumnDef="ACCIÓN 2">
         <th mat-header-cell *matHeaderCellDef> ACCIONES </th>
         <td mat-cell *matCellDef="let element">
-          <img src="../../../../assets/delete.png" (click)="confirmar(element.id)">
+          <img src="../../../../assets/delete.png" (click)="confirmar(element.idPublicacion)">
         </td>
       </ng-container>
 
