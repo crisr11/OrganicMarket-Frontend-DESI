@@ -25,7 +25,7 @@ export class ProductoService {
     return this.listaCambio.asObservable();
   }
   modificar(Producto: Producto) {
-    return this.http.put(this.url + "/" + Producto.id, Producto);
+    return this.http.put(this.url + "/" + Producto.idProducto, Producto);
   }
   listarId(id: number) {
     return this.http.get<Producto>(`${this.url}/${id}`);

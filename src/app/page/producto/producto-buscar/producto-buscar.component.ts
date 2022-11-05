@@ -18,7 +18,7 @@ export class ProductoBuscarComponent implements OnInit {
     let array: Producto[] = [];
     this.productoService.listar().subscribe(data => {
       data.forEach((element, index) => {
-        if (element.Nombre.includes(e.target.value)) {
+        if (element.nameProducto.includes(e.target.value)) {
           array.push(data[index]);
         }
       });
