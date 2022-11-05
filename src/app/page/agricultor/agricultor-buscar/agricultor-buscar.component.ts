@@ -17,7 +17,7 @@ export class AgricultorBuscarComponent implements OnInit {
     let array: agricultor[] = [];
     this.agricultorservice.listar().subscribe(data => {
       data.forEach((element, index) => {
-        if (element.direccion.includes(e.target.value)) {
+        if (element.direccionAgricultor.includes(e.target.value)) {
           array.push(data[index]);
         }
       });

@@ -1,10 +1,13 @@
 {
   "name": "organic-market",
   "version": "0.0.0",
+  "engines": {
+    "node": "16.13.1"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "server": "json-server --port 5000 --watch data.js"
@@ -16,6 +19,7 @@
     "@angular/common": "^14.0.0",
     "@angular/compiler": "^14.0.0",
     "@angular/core": "^14.0.0",
+    "@angular/fire": "^7.4.1",
     "@angular/forms": "^14.0.0",
     "@angular/material": "^14.2.2",
     "@angular/platform-browser": "^14.0.0",

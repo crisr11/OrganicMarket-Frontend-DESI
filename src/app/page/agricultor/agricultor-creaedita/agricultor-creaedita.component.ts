@@ -23,7 +23,7 @@ export class AgricultorCreaeditaComponent implements OnInit {
     });
   }
   aceptar(): void {
-    if (this.agricultor.direccion.length > 0 ) {
+    if (this.agricultor.direccionAgricultor.length > 0 ) {
       if (this.edicion) {
         this.agricultorservice.modificar(this.agricultor).subscribe(data => {
           this.agricultorservice.listar().subscribe(data => {

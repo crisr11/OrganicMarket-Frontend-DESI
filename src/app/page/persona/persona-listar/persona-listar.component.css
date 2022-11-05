@@ -4,12 +4,14 @@
 }
 
 
-html, body {overflow-x: hidden;}
+html, body {overflow-x: hidden; margin: 0; padding: 0;}
 
 body {
 	font: 100% arial, verdana, tahoma, sans-serif;
 
 	background-color: #fcfff8;
+
+	margin: 0; padding: 0;
 }
 
 header {
@@ -162,20 +164,6 @@ footer {
 	transform: translateX(220px);
 }
 
-.f-b{
-    display: grid;
-    padding: 1px 1px;
-}
-
-.f-b-img img{
-    max-width: 100px;
-    max-height: 110px;
-    padding: 3px 3px;
-    position: fixed;
-    top: 662px;
-    left: 387px;
-}
-
 .logo-nav{
 	display: flex;
 	justify-content: space-between;
@@ -192,14 +180,13 @@ footer {
 
   }
   .nombre-logo{
-	float: rigth;
+	float: right;
 	font-weight: bold;
 	font-size: 21px;
 	letter-spacing: 0.7px;
-	padding: 1 rem 0;
 	position: relative;
 	color: #FFF;
-	left:27px;
+	right: 27px;
   }
 
   .boton_personalizado{
@@ -217,7 +204,6 @@ font-size: small;
     text-align: center;
     background-color: #e2e8d0;
     color: #060606;
-    text-align: left;
     font-weight: bolder;
 }
   th{
@@ -243,49 +229,53 @@ table{
     top: 25%;
     left: 25%;
 }
-
-
+footer{
+	display: flex;
+	justify-content: center;
+	gap: 100px;
+	flex-wrap: wrap;
+}
+footer img{
+	height: 90px;
+}
+footer ul{
+	display: flex;
+	gap: 10px;
+}
 .f-b-redes{
-    padding: 1px 1px;
-    display: inline;
-    align-items: center;
-    position: fixed;
-    left: 650px;
-    top: 657px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+@media (max-width: 480px) {
+	footer{
+		display: block;
+		height: 150px;
+		text-align: center;
+	}
 }
 .f-b-redes-cr{
-    align-items: center;
-    text-align: left;
-    font-size: 16px;
-    font-weight: 300;
-    padding: 2px 3px;
-    padding-top: 10px;
-    line-height: 16px;
+	font-weight: bold;
+	text-align: center;
 }
-.f-b-redes-sg{
-    align-items: center;
-    text-align: left;
-    font-size: 14px;
-    font-weight: 300;
-    padding: 2px 3px;
-    padding-top: 3px;
-    line-height: 14px;
+.botoncito{
+	border: none;
+	position: absolute;
+	bottom: 50%;
+	left: 80%;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: white;
+	background-color: #5E693F;
+	border-radius: 5px;
 }
-.f-b-redes ul{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding-top: 0px;
+.botoncito:hover{
+	filter: brightness(80%);
 }
-.f-b-redes ul li{
-    display: inline-block;
+img:hover{
+	cursor: pointer;
 }
-.f-b-redes ul li a{
-    display: block;
-    align-items: center;
-    padding: 0 3px;
-    font-size: 14px;
-    line-height: 16px;
-    text-decoration: none;
+th,td{
+	text-align: center;
 }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "organicmarket": {
+      "hosting": {
+        "OrganicMarket": [
+          "organicmarket-b0210"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "organicmarket"
+  }
+}

@@ -11,7 +11,7 @@ import { AgricultorDialogoComponent } from './agricultor-dialogo/agricultor-dial
 })
 export class AgricultorListarComponent implements OnInit {
   dataSource: MatTableDataSource<agricultor>= new MatTableDataSource();
-  displayedColumns:string[]=["id","direccion","persona_id_persona", 'ACCIÓN 1', 'ACCIÓN 2'];
+  displayedColumns:string[]=["idAgricultor","direccionAgricultor","persona", 'ACCIÓN 1', 'ACCIÓN 2'];
   private idMayor = 0;
   constructor(private ps: AgricultorService, private dialog: MatDialog) { }
 
