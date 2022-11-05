@@ -2,19 +2,44 @@ import { Component, OnInit } from '@angular/core';
 import { PromocionService } from 'src/app/service/promocion.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { Promocion } from 'src/app/model/promocion';
-
+import { MatDialog } from '@angular/material/dialog';
+import { PromocionDialogoComponent } from './promocion-dialogo/promocion-dialogo.component';
 @Component({
   selector: 'app-promocion-listar',
   templateUrl: './promocion-listar.component.html',
   styleUrls: ['./promocion-listar.component.css']
 })
 export class PromocionListarComponent implements OnInit {
-  dataSource:MatTableDataSource <Promocion> =new MatTableDataSource();
-  displayedColumns:string[]=['ID PROMOCION','AGRICULTOR ID','PRODUCTO ID','FECHA INICIO','FECHA FIN'];
-  constructor(private pS:PromocionService) { }
+  lista: Promocion[] = [];
+  dataSource: MatTableDataSource<Promocion> = new MatTableDataSource();
+  displayedColumns: string[] = ['ID PROMOCION', 'DESCUENTO','FECHA INICIO','FECHA FIN', 'ID AGRICULTOR', 'ID PRODUCTO', 'ACCIÓN 1', 'ACCIÓN 2'];
+  private idMayor: number = 0;
+  constructor(private pU: PromocionService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.pS.listar().subscribe(data=>{this.dataSource=new MatTableDataSource(data);})
+    this.pU.listar().subscribe(data => {
+      this.lista=data;
+      this.dataSource = new MatTableDataSource(data);
+    })
+    this.pU.getLista().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+      console.log(data);
+    });
+    this.pU.getConfirmaEliminacion().subscribe(data => {
+      data == true ? this.eliminar(this.idMayor) : false;
+    });
   }
 
+  confirmar(id: number) {
+    this.idMayor = id;
+    this.dialog.open(PromocionDialogoComponent);
+  }
+
+  eliminar(id: number) {
+    this.pU.eliminar(id).subscribe(() => {
+      this.pU.listar().subscribe(data => {
+        this.pU.setLista(data);
+      });
+    });
+  }
 }

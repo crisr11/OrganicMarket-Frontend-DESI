@@ -59,6 +59,16 @@ import { ProdutoCreaeditaComponent } from './page/producto/produto-creaedita/pro
 import { DetalleordenDialogoComponent } from './page/detalleorden/detalleorden-listar/detalleorden-dialogo/detalleorden-dialogo.component';
 import { DetalleordenBuscarComponent } from './page/detalleorden/detalleorden-buscar/detalleorden-buscar.component';
 import { DetalleCreaeditaComponent } from './page/detalleorden/detalle-creaedita/detalle-creaedita.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { DateAdapter, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CustomDateAdapter } from './custom-adapter';
+import { PromocionBuscarComponent } from './page/promocion/promocion-buscar/promocion-buscar.component';
+import { PromocionCreaeditaComponent } from './page/promocion/promocion-creaedita/promocion-creaedita.component';
+import { PromocionDialogoComponent } from './page/promocion/promocion-listar/promocion-dialogo/promocion-dialogo.component';
 
 
 
@@ -108,7 +118,10 @@ import { DetalleCreaeditaComponent } from './page/detalleorden/detalle-creaedita
     ProdutoCreaeditaComponent,
     DetalleordenDialogoComponent,
     DetalleordenBuscarComponent,
-    DetalleCreaeditaComponent
+    DetalleCreaeditaComponent,
+    PromocionBuscarComponent,
+    PromocionCreaeditaComponent,
+    PromocionDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -121,9 +134,18 @@ import { DetalleCreaeditaComponent } from './page/detalleorden/detalle-creaedita
     FormsModule,
     MatIconModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatToolbarModule,
+    MatSnackBarModule
   ],
-  providers: [],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'es-ES' },
+  { provide: DateAdapter, useClass: CustomDateAdapter }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

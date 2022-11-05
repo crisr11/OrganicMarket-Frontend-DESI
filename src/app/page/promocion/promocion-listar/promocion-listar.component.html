@@ -6,6 +6,7 @@
           <span class="menu-anchor" ></span>
           <h1>PROMOCIONES</h1>
           <div class="seccion">
+            <app-publicacion-buscar></app-publicacion-buscar>
           </div>
         </header>
         <menu>
@@ -60,60 +61,78 @@
 
      
     <div>
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <!--- Note that these columns can be defined in any order.
+      <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
-  
-    <!-- Position Column -->
-    <ng-container matColumnDef="ID PROMOCION">
-      <th mat-header-cell *matHeaderCellDef> ID PROMOCION </th>
-      <td mat-cell *matCellDef="let element"> {{element.id_promocion}} </td>
-    </ng-container>
-  
-    <!-- Name Column -->
-    <ng-container matColumnDef="AGRICULTOR ID">
-      <th mat-header-cell *matHeaderCellDef> AGRICULTOR ID </th>
-      <td mat-cell *matCellDef="let element"> {{element.agricultor.id_agricultor}} </td>
-    </ng-container>
-  
-    <!-- Weight Column -->
-    <ng-container matColumnDef="PRODUCTO ID">
-      <th mat-header-cell *matHeaderCellDef> PRODUCTO ID </th>
-      <td mat-cell *matCellDef="let element"> {{element.producto.id_producto}} </td>
-    </ng-container>
-  
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="FECHA INICIO">
-      <th mat-header-cell *matHeaderCellDef> FECHA INICIO </th>
-      <td mat-cell *matCellDef="let element"> {{element.fechaInicio}} </td>
-    </ng-container>
 
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="FECHA FIN">
-      <th mat-header-cell *matHeaderCellDef> FECHA FIN </th>
-      <td mat-cell *matCellDef="let element"> {{element.fechaFin}} </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-</div>
-<footer>
-  <div class="f-b-img">
-    <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo">
-</div>
+      <!-- Position Column -->
+      <ng-container matColumnDef="ID PROMOCION">
+        <th mat-header-cell *matHeaderCellDef> ID PROMOCION </th>
+        <td mat-cell *matCellDef="let element"> {{element.idPromocion}} </td>
+      </ng-container>
 
-<div class="f-b-redes"> 
-<div>
-  <p class="f-b-redes-cr" >Copyright ©2022</p>
-  <p class="f-b-redes-sg">Made by PeruInnova</p>
+      <!-- Name Column -->
+      <ng-container matColumnDef="DESCUENTO">
+        <th mat-header-cell *matHeaderCellDef> CONTENIDO </th>
+        <td mat-cell *matCellDef="let element"> {{element.descuento}} </td>
+      </ng-container>
+
+       <!-- Name Column -->
+       <ng-container matColumnDef="FECHA INICIO">
+        <th mat-header-cell *matHeaderCellDef> CONTENIDO </th>
+        <td mat-cell *matCellDef="let element"> {{element.fechaInicio}} </td>
+      </ng-container>
+
+       <!-- Name Column -->
+       <ng-container matColumnDef="FECHA FIN">
+        <th mat-header-cell *matHeaderCellDef> CONTENIDO </th>
+        <td mat-cell *matCellDef="let element"> {{element.fechaFin}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="ID AGRICULTOR">
+        <th mat-header-cell *matHeaderCellDef>ID AGRICULTOR</th>
+        <td mat-cell *matCellDef="let element"> {{element.agricultor.direccion} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="ID PRODUCTO">
+        <th mat-header-cell *matHeaderCellDef>ID PRODUCTO</th>
+        <td mat-cell *matCellDef="let element"> {{element.producto.name_producto}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ACCIÓN 1">
+        <th mat-header-cell *matHeaderCellDef>ACCIONES</th>
+        <td mat-cell *matCellDef="let element"> 
+          <img src="../../../../assets/update.png"   [routerLink]="['edicion', element.idPromocion]">
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ACCIÓN 2">
+        <th mat-header-cell *matHeaderCellDef> ACCIONES </th>
+        <td mat-cell *matCellDef="let element">
+          <img src="../../../../assets/delete.png" (click)="confirmar(element.idPromocion)">
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <button routerLink="/promociones/nuevo" class="botoncito">Insertar</button>
+  </div>
+  <footer>
+    <div class="f-b-img">
+      <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo">
+  </div>
+
+  <div class="f-b-redes"> 
+  <div>
+    <p class="f-b-redes-cr" >Copyright ©2022</p>
+    <p class="f-b-redes-sg">Made by PeruInnova</p>
 </div>
 </div>
 </footer>
 
 </body>
 </html>
-
-  
-  
