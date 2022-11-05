@@ -7,7 +7,7 @@ import { Subject, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductoService {
-  url: string = "http://localhost:5000/productos"
+  url: string = "http://localhost:8080/productos"
   private listaCambio = new Subject<Producto[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
@@ -25,7 +25,7 @@ export class ProductoService {
     return this.listaCambio.asObservable();
   }
   modificar(Producto: Producto) {
-    return this.http.put(this.url + "/" + Producto.idProducto, Producto);
+    return this.http.put(this.url, Producto);
   }
   listarId(id: number) {
     return this.http.get<Producto>(`${this.url}/${id}`);

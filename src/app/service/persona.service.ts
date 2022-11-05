@@ -6,7 +6,7 @@ import { Subject,EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class PersonaService {
-  url: string = "http://localhost:5000/persona"
+  url: string = "http://localhost:8080/persona"
   private listaCambio=new Subject<persona[]>()
   private confirmaEliminacion=new Subject<Boolean>();
   constructor(private http: HttpClient) { }

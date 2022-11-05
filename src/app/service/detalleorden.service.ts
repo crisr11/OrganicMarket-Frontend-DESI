@@ -8,7 +8,7 @@ import { HttpClient } from "@angular/common/http";
 })
 
 export class DetalleordenService {
-    url: string = "http://localhost:5000/detalleorden"
+    url: string = "http://localhost:4200/detalleorden"
     private listaCambio = new Subject<detalleorden[]>()
     private confirmaEliminacion = new Subject<Boolean>()
     constructor(private http: HttpClient) { }
