@@ -24,7 +24,7 @@ export class ProdutoCreaeditaComponent implements OnInit {
     });
   }
   aceptar(): void {
-    if (this.producto.Nombre.length > 0) {
+    if (this.producto.nameProducto.length > 0) {
       if (this.edicion) {
         this.productoService.modificar(this.producto).subscribe(data => {
           this.productoService.listar().subscribe(data => {

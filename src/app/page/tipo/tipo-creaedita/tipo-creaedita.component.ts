@@ -15,7 +15,7 @@ export class TipoCreaeditaComponent implements OnInit {
   ngOnInit(): void {
   }
   aceptar(): void {
-    if (this.tipo.Nombre.length > 0) {
+    if (this.tipo.nameTipo.length > 0) {
 
       this.tiposervice.insertar(this.tipo).subscribe(data => {
         this.tiposervice.listar().subscribe(data => {

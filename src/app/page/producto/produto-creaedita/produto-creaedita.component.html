@@ -27,23 +27,29 @@
   
     <mat-form-field class="example-full-width">
       <mat-label>Id</mat-label>
-      <input matInput placeholder="id" [(ngModel)]="producto.id">
+      <input matInput placeholder="id" [(ngModel)]="producto.idProducto">
     </mat-form-field>
   
     <br>
   
     <mat-form-field class="example-full-width">
       <mat-label>Nombre</mat-label>
-      <input matInput required placeholder="Nombre" [(ngModel)]="producto.Nombre">
+      <input matInput required placeholder="Nombre" [(ngModel)]="producto.nameProducto">
   
     </mat-form-field>
   
     <br>
     <mat-form-field class="example-full-width">
       <mat-label>Precio</mat-label>
-      <input type="Precio" matInput required placeholder="Precio" [(ngModel)]="producto.Precio">
+      <input type="Precio" matInput required placeholder="Precio" [(ngModel)]="producto.precio">
     </mat-form-field>
   
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Precio</mat-label>
+      <input type="Precio" matInput required placeholder="Tipo ID" [(ngModel)]="producto.tipo">
+    </mat-form-field>
+
     <br>
     <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
     <button mat-raised-button color="warn" routerLink="/productos">Cancelar</button>

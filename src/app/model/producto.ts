@@ -1,5 +1,8 @@
+import { Tipo } from "./tipo"
+
 export class Producto{
-  id:number=0
-  Nombre:string=""
-  Precio:number=0
+  idProducto:number=0
+  nameProducto:string=""
+  precio:number=0
+  tipo:Tipo=new Tipo()
 }

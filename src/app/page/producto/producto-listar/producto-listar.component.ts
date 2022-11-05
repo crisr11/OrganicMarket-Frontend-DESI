@@ -13,7 +13,7 @@ import { ProductoDialogoComponent } from './producto-dialogo/producto-dialogo.co
 export class ProductoListarComponent implements OnInit {
 
   dataSource: MatTableDataSource<Producto> = new MatTableDataSource();
-  displayedColumns:string[]=['id','Nombre','Precio','accion1','accion2'];
+  displayedColumns:string[]=['id','Nombre','Precio','Tipo ID','accion1','accion2'];
   private idMayor: number = 0;
   constructor(private Ps: ProductoService, private dialog: MatDialog) { }
 
