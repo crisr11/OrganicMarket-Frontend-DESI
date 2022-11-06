@@ -27,29 +27,29 @@
 
   <mat-form-field class="example-full-width">
     <mat-label>Id:</mat-label>
-    <input matInput placeholder="Id" [(ngModel)]="persona.id">
+    <input matInput placeholder="Id" [(ngModel)]="persona.idPersona">
   </mat-form-field>
 
   <br>
 
   <mat-form-field class="example-full-width">
     <mat-label>Nombre:</mat-label>
-    <input matInput required placeholder="name" [(ngModel)]="persona.nombre">
+    <input matInput required placeholder="name" [(ngModel)]="persona.nombrePersona">
 
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>DNI:</mat-label>
-    <input type="email" matInput required placeholder="email" [(ngModel)]="persona.dni">
+    <input type="email" matInput required placeholder="email" [(ngModel)]="persona.dniPersona">
   </mat-form-field>
   <mat-form-field class="example-full-width">
     <mat-label>Telefono:</mat-label>
-    <input type="email" matInput required placeholder="telefono" [(ngModel)]="persona.telefono">
+    <input type="email" matInput required placeholder="telefono" [(ngModel)]="persona.telefonoPersona">
   </mat-form-field>
   <mat-form-field class="example-full-width">
     <mat-label>Correo:</mat-label>
-    <input type="email" matInput required placeholder="email" [(ngModel)]="persona.correo">
+    <input type="email" matInput required placeholder="email" [(ngModel)]="persona.correoPersona">
   </mat-form-field>
   <br>
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
