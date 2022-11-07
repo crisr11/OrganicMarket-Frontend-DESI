@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PromocionService } from 'src/app/service/promocion.service';
+import { MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-promocion-dialogo',
   templateUrl: './promocion-dialogo.component.html',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PromocionDialogoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private promocionservice: PromocionService,
+    private dialogRef: MatDialogRef<PromocionDialogoComponent>
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  confirmar(estado: boolean) {
+    this.promocionservice.setConfirmaEliminacion(estado);
+    this.dialogRef.close();
   }
-
 }

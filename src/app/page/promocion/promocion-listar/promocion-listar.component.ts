@@ -12,7 +12,7 @@ import { PromocionDialogoComponent } from './promocion-dialogo/promocion-dialogo
 export class PromocionListarComponent implements OnInit {
   lista: Promocion[] = [];
   dataSource: MatTableDataSource<Promocion> = new MatTableDataSource();
-  displayedColumns: string[] = ['ID PROMOCION', 'DESCUENTO','FECHA INICIO','FECHA FIN', 'ID AGRICULTOR', 'ID PRODUCTO', 'ACCIÓN 1', 'ACCIÓN 2'];
+  displayedColumns: string[] = ['Id Promocion', 'Agricultor', 'Producto','Descuento','Fecha Inicio','Fecha Fin', 'Editar', 'Eliminar'];
   private idMayor: number = 0;
   constructor(private pU: PromocionService, private dialog: MatDialog) { }
 
