@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class OrdenService {
-  url:string="http://localhost:5000/orden"
+  url:string="http://localhost:8080/orden"
   constructor(private http:HttpClient) { }
   listar(){
     return this.http.get<orden[]>(this.url);

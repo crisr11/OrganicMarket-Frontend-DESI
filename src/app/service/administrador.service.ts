@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http'
   providedIn: 'root'
 })
 export class AdministradorService {
-  url: string = "http://localhost:5000/administrador"
+  url: string = "http://localhost:8080/administrador"
   constructor(private http: HttpClient) { }
   listar() {
     return this.http.get<administrador[]>(this.url);
