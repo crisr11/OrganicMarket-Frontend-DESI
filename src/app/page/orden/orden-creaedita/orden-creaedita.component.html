@@ -60,12 +60,12 @@
 
     <mat-form-field class="example-full-width">
       <mat-label>id</mat-label>
-      <input matInput required placeholder="id" [(ngModel)]="orden.id">
+      <input matInput required placeholder="id" [(ngModel)]="orden.idMayorista">
     </mat-form-field>
     <br>
 
     <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
-    <button mat-raised-button color="warn" routerLink="/publicaciones">Cancelar</button>
+    <button mat-raised-button color="warn" routerLink="/orden">Cancelar</button>
     <p>{{mensaje}}</p>
   
   </div>
