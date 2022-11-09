@@ -1,7 +1,6 @@
 import { AdministradorDialogoComponent } from './page/administrador/administrador-listar/administrador-dialogo/administrador-dialogo.component';
 import { AdministradorCrearadministradorComponent } from './page/administrador/administrador-crearadministrador/administrador-crearadministrador.component';
 import { AdministradorBuscarComponent } from './page/administrador/administrador-buscar/administrador-buscar.component';
-import { PersonaCrearpersonaComponent } from 'src/app/page/persona/persona-crearpersona/persona-crearpersona.component';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -51,9 +50,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { PersonaDialogoComponent } from './page/persona/persona-listar/persona-dialogo/persona-dialogo.component';
-import {MatDialogModule}from '@angular/material/dialog';
-import { PersonaBuscarComponent } from './page/persona/persona-buscar/persona-buscar.component'
-import { MatSelectModule } from '@angular/material/select';
 import { AgricultorCreaeditaComponent } from './page/agricultor/agricultor-creaedita/agricultor-creaedita.component';
 
 import { PublicacionCreaeditaComponent } from './page/publicacion/publicacion-creaedita/publicacion-creaedita.component';
@@ -62,7 +58,6 @@ import { PublicacionDialogoComponent } from './page/publicacion/publicacion-list
 import { MatDialogModule } from '@angular/material/dialog';
 import { AgricultorBuscarComponent } from './page/agricultor/agricultor-buscar/agricultor-buscar.component';
 import { AgricultorDialogoComponent } from './page/agricultor/agricultor-listar/agricultor-dialogo/agricultor-dialogo.component';
-import { PersonaDialogoComponent } from './page/persona/persona-listar/persona-dialogo/persona-dialogo.component';
 import { ProductoBuscarComponent } from './page/producto/producto-buscar/producto-buscar.component';
 import { ProductoDialogoComponent } from './page/producto/producto-listar/producto-dialogo/producto-dialogo.component';
 import { ProdutoCreaeditaComponent } from './page/producto/produto-creaedita/produto-creaedita.component';
@@ -120,7 +115,7 @@ import { OrdenDialogoComponent } from './page/orden/orden-listar/orden-dialogo/o
     DetalleordenListarComponent,
     PersonaCrearpersonaComponent,
     PersonaDialogoComponent,
-    PersonaBuscarComponent
+    PersonaBuscarComponent,
 
 
 
