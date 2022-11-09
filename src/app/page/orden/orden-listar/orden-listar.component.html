@@ -5,6 +5,9 @@
         <header>
           <span class="menu-anchor" ></span>
           <h1>ORDENES</h1>
+          <div class="seccion">
+            <app-orden-buscar></app-orden-buscar>
+          </div>
         </header>
         <menu>
           <ul>
@@ -52,8 +55,6 @@
         </section>
         <!-- partial -->
         <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        
-        
     
 
      
@@ -64,26 +65,26 @@
             The actual rendered columns are set as a property on the row definition" -->
 
     <!-- Position Column -->
-    <ng-container matColumnDef="id_orden">
+    <ng-container matColumnDef="idOrden">
       <th mat-header-cell *matHeaderCellDef> ID ORDEN</th>
-      <td mat-cell *matCellDef="let element"> {{element.id_orden}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.idOrden}} </td>
     </ng-container>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="fechacompra">
+    <ng-container matColumnDef="fechaCompra">
       <th mat-header-cell *matHeaderCellDef> Fecha de Compra </th>
-      <td mat-cell *matCellDef="let element"> {{element.fechacompra}}  </td>
+      <td mat-cell *matCellDef="let element"> {{element.fechaCompra}}  </td>
     </ng-container>
 
     <!-- Weight Column -->
-    <ng-container matColumnDef="fechaenvio">
+    <ng-container matColumnDef="fechaEnvio">
       <th mat-header-cell *matHeaderCellDef> Fecha de Envio </th>
-      <td mat-cell *matCellDef="let element"> {{element.fechaenvio}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.fechaEnvio}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="fechaentrega">
+    <ng-container matColumnDef="fechaEntrega">
         <th mat-header-cell *matHeaderCellDef> Fecha de Entrega </th>
-        <td mat-cell *matCellDef="let element"> {{element.fechaentrega}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.fechaEntrega}} </td>
       </ng-container>
 
       <ng-container matColumnDef="cantidad">
@@ -91,39 +92,52 @@
         <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="agricultor_id_agricultor">
+      <ng-container matColumnDef="agricultor">
         <th mat-header-cell *matHeaderCellDef>  ID AGRICULTOR</th>
-        <td mat-cell *matCellDef="let element"> {{element.agricultor_id_agricultor.id_agricultor}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.agricultor.idAgricultor}} </td>
       </ng-container>
-      <ng-container matColumnDef="mayorista_id_mayorista">
+      <ng-container matColumnDef="mayorista">
         <th mat-header-cell *matHeaderCellDef> ID MAYORISTA </th>
-        <td mat-cell *matCellDef="let element"> {{element.mayorista_id_mayorista.id}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.mayorista.id}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Accion1">
+        <th mat-header-cell *matHeaderCellDef>Accion1</th>
+        <td mat-cell *matCellDef="let element"> 
+          <img src="../../../../assets/update.png"   [routerLink]="['edicion', element?.id]">
+        </td>
       </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-</div>
-<footer>
-  <div class="f-b-img">
-    <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo">
-</div>
+      <ng-container matColumnDef="Accion2">
+        <th mat-header-cell *matHeaderCellDef>Accion2</th>
+        <td mat-cell *matCellDef="let element">
+          <img src="../../../../assets/delete.png" (click)="confirmar(element.id)">
+        </td>
+      </ng-container>
 
-<div class="f-b-redes"> 
-<div>
-  <p class="f-b-redes-cr" >Copyright ©2022</p>
-  <p class="f-b-redes-sg">Follow us on our social networks:</p>
-</div>
-<div>
-  <ul>
-      <li><a href="https://www.facebook.com/" target="blank" rel="noopener" >Facebook</a></li>
-      <li><a href="https://www.instagram.com/" target="blank" rel="noopener">Instagram</a></li>
-      <li><a href="https://www.twitter.com/" target="blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://www.youtube.com/" target="blank" rel="noopener">YouTube</a></li>
-  </ul>
-</div>
-</div>
-</footer>
-
-</body>
-</html>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <button routerLink="/orden/nuevo" class="botoncito">Insertar</button>
+  </div>
+  <!-- <div class="example-button-container">
+    <button mat-mini-fab color="primary" class="boton_personalizado"
+      aria-label="Example icon button with a plus one icon" routerLink="/mayoristas/nuevo">
+      <mat-icon>plus_one</mat-icon>
+    </button>
+  </div> -->
+  <footer>
+    <div class="f-b-img">
+      <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo">
+  </div>
+  
+  <div class="f-b-redes"> 
+  <div>
+    <p class="f-b-redes-cr" >Copyright ©2022</p>
+    <p class="f-b-redes-sg">Made by PeruInnova</p>
+  </div>
+  </div>
+  </footer>
+  
+  </body>
+  </html>
+  

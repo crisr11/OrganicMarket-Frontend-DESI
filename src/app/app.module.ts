@@ -69,6 +69,9 @@ import { DateAdapter, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/mate
 import { CustomDateAdapter } from './custom-adapter';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { OrdenBuscarComponent } from './page/orden/orden-buscar/orden-buscar.component';
+import { OrdenCreaeditaComponent } from './page/orden/orden-creaedita/orden-creaedita.component';
+import { OrdenDialogoComponent } from './page/orden/orden-listar/orden-dialogo/orden-dialogo.component';
 
 
 
@@ -121,7 +124,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     DetalleCreaeditaComponent,
     PromocionCreaeditaComponent,
     PromocionBuscarComponent,
-    PromocionDialogoComponent
+    PromocionDialogoComponent,
+    OrdenBuscarComponent,
+    OrdenCreaeditaComponent,
+    OrdenDialogoComponent
   ],
   imports: [
     BrowserModule,

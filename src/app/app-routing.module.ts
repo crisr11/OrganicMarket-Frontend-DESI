@@ -20,6 +20,7 @@ import { AgricultorCreaeditaComponent } from './page/agricultor/agricultor-creae
 import { PublicacionCreaeditaComponent } from './page/publicacion/publicacion-creaedita/publicacion-creaedita.component';
 import { MayoristaCreaeditaComponent } from './page/mayorista/mayorista-creaedita/mayorista-creaedita.component';
 import { ProdutoCreaeditaComponent } from './page/producto/produto-creaedita/produto-creaedita.component';
+import { OrdenCreaeditaComponent } from './page/orden/orden-creaedita/orden-creaedita.component';
 
 const routes: Routes = [{
   path: 'agricultor', component: AgricultorComponent, children: [
@@ -30,7 +31,8 @@ const routes: Routes = [{
   ]
 }, {
   path: 'orden', component: OrdenComponent, children: [
-
+    {path: 'nuevo', component: OrdenCreaeditaComponent},
+    {path: 'edicion/:id', component: OrdenCreaeditaComponent}
   ]
 }, {
   path: 'productos', component: ProductoComponent, children: [
