@@ -19,7 +19,7 @@ export class DetalleordenBuscarComponent implements OnInit {
     let array: detalleorden[] = [];
     this.detalleordenService.listar().subscribe(d => {
       d.forEach((element, index) => {
-        if (element.nombre.includes(e.target.value)) {
+        if (element.producto.nameProducto.includes(e.target.value)) {
           array.push(d[index]);
         }
       });

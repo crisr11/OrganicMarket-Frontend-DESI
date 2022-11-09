@@ -2,13 +2,14 @@ import { Subject, EMPTY } from 'rxjs';
 import { detalleorden } from '../model/detalleorden';
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { environment } from 'src/environments/environment';
 
 @Injectable({
     providedIn: 'root'
 })
 
 export class DetalleordenService {
-    url: string = "http://localhost:8080/detalleorden"
+    private url: string = `${environment.host}/detalleorden`
     private listaCambio = new Subject<detalleorden[]>()
     private confirmaEliminacion = new Subject<Boolean>()
     constructor(private http: HttpClient) { }
@@ -26,13 +27,13 @@ export class DetalleordenService {
         return this.listaCambio.asObservable();
     }
     modificar(detalleorden: detalleorden) {
-        return this.http.put(this.url + "/" + detalleorden.id, detalleorden);
+        return this.http.put(this.url, detalleorden);
     }
     listarId(id: number) {
         return this.http.get<detalleorden>(`${this.url}/${id}`);
     }
     eliminar(id: number) {
-        return this.http.delete(this.url + "/" + id);
+        return this.http.delete(`${this.url}/${id}`);
     }
     getConfirmaEliminacion() {
         return this.confirmaEliminacion.asObservable();
@@ -42,8 +43,7 @@ export class DetalleordenService {
     }
     buscar(texto: string) {
         if (texto.length != 0) {
-            return this.http.post<detalleorden[]>(`${this.url}/buscar`, texto.toLowerCase(), {
-            });
+            return this.http.post<detalleorden[]>(`${this.url}/buscar`, texto.toLowerCase(), {});
         }
         return EMPTY;
     }

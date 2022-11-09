@@ -1,4 +1,6 @@
+import { Producto } from "./producto"
+
 export class detalleorden {
-    id: number = 0
-    nombre: string = ""
+    idOrden: number = 0
+    producto: Producto = new Producto();
 }

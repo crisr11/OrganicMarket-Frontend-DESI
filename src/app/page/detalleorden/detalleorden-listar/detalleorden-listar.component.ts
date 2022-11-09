@@ -11,6 +11,7 @@ import { DetalleordenDialogoComponent } from './detalleorden-dialogo/detalleorde
   styleUrls: ['./detalleorden-listar.component.css']
 })
 export class DetalleordenListarComponent implements OnInit {
+  lista: detalleorden[] = [];
   dataSource: MatTableDataSource<detalleorden> = new MatTableDataSource();
   displayedColumns: string[] = ['id', 'nombre', 'accion1', 'accion2'];
   private idMayor: number = 0;
@@ -18,10 +19,12 @@ export class DetalleordenListarComponent implements OnInit {
 
   ngOnInit(): void {
     this.ds.listar().subscribe(data => {
+      this.lista = data;
       this.dataSource = new MatTableDataSource(data);
     })
     this.ds.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
+      console.log(data);
     });
     this.ds.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;

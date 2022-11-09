@@ -26,9 +26,9 @@
             <li><a href="http://localhost:4200/detalleorden">Detalle Orden</a></li>
             <li><a href="http://localhost:4200/orden">Ordenes</a></li>
             <li><a href="http://localhost:4200/tipos">Tipos</a></li>
-            <li><a href="http://localhost:4200/administrador">Administradores</a></li>         
+            <li><a href="http://localhost:4200/administrador">Administradores</a></li>
             <li><a href="http://localhost:4200/acuerdos">Acuerdos</a></li>
-            <li><a href="http://localhost:4200/promociones">Promociones</a></li>  
+            <li><a href="http://localhost:4200/promociones">Promociones</a></li>
             <!-- <li><a href="https://organicmarket-b0210.web.app/productos">Productos</a></li>
             <li><a href="https://organicmarket-b0210.web.app/agricultor">Agricultores</a></li>
             <li><a href="https://organicmarket-b0210.web.app/persona">Personas</a></li>
@@ -40,7 +40,7 @@
             <li><a href="https://organicmarket-b0210.web.app/administrador">Administradores</a></li>         
             <li><a href="https://organicmarket-b0210.web.app/acuerdos">Acuerdos</a></li>
             <li><a href="https://organicmarket-b0210.web.app/promociones">Promociones</a></li>  -->
-            
+
 
             <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
             <li>
@@ -71,28 +71,28 @@
         <!-- Position Column -->
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef> Id Orden </th>
-            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.idOrden}} </td>
         </ng-container>
 
         <!-- Name Column -->
 
         <ng-container matColumnDef="nombre">
             <th mat-header-cell *matHeaderCellDef> Nombre Producto</th>
-            <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.producto.nameProducto}} </td>
         </ng-container>
 
         <ng-container matColumnDef="accion1">
             <th mat-header-cell *matHeaderCellDef> Acciones </th>
-            <td mat-cell *matCellDef="let element"> 
-                <img src="../../../../assets/update.png"   [routerLink]="['edicion', element?.id]">
-              </td>
-            </ng-container>
+            <td mat-cell *matCellDef="let element">
+                <img src="../../../../assets/update.png" [routerLink]="['edicion', element?.idOrden]">
+            </td>
+        </ng-container>
         <ng-container matColumnDef="accion2">
             <th mat-header-cell *matHeaderCellDef> Acciones </th>
             <td mat-cell *matCellDef="let element">
-                <img src="../../../../assets/delete.png" (click)="confirmar(element.id)">
+                <img src="../../../../assets/delete.png" (click)="confirmar(element.idOrden)">
             </td>
-          </ng-container>
+        </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns">
         </tr>

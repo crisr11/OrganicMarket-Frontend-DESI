@@ -1,73 +1,76 @@
 <html>
+
 <body>
-        <!-- partial:index.partial.html -->
-        <script  src="./assets/js/navegacion/navegacion.js"></script>
-        <header>
-         
-          <h1>DETALLE ORDEN</h1>
-          <div class="seccion">
-          </div>
-        </header>
-      
-        <!--se agrega texto-->
-        <section class="main">
-          
-        </section>
-        <!-- partial -->
-        <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        
-        
-    
+  <!-- partial:index.partial.html -->
+  <script src="./assets/js/navegacion/navegacion.js"></script>
+  <header>
 
-     
-    <div>
+    <h1>DETALLE ORDEN</h1>
+    <div class="seccion">
+    </div>
+  </header>
 
-<div class="container">
+  <!--se agrega texto-->
+  <section class="main">
 
-    <h1>Detalle Orden</h1>
+  </section>
+  <!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-    <mat-form-field class="example-full-width">
+
+
+
+
+  <div>
+
+    <div class="container">
+
+      <h1>Detalle Orden</h1>
+
+      <mat-form-field class="example-full-width">
         <mat-label>id</mat-label>
-        <input matInput placeholder="id" [(ngModel)]="detalleorden.id">
-    </mat-form-field>
+        <input matInput placeholder="id" [(ngModel)]="detalleorden.idOrden">
+      </mat-form-field>
 
-    <br>
+      <br>
 
-    <mat-form-field class="example-full-width">
-        <mat-label>Nombre</mat-label>
-        <input matInput required placeholder="Nombre" [(ngModel)]="detalleorden.nombre">
+      <mat-form-field appearance="fill">
+        <mat-label> Seleccione Producto </mat-label>
+        <mat-select [(value)]="idProductoSeleccionado" required>
+          <mat-option *ngFor="let p of listaProductos" [value]="p.idProducto">
+            {{p.nameProducto}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
 
-    </mat-form-field>
+      <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+      <button mat-raised-button color="warn" routerLink="/detalleorden">Cancelar</button>
+      <p>{{mensaje}}</p>
 
-    <br>
-    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
-    <button mat-raised-button color="warn" routerLink="/detalleorden">Cancelar</button>
-    <p>{{mensaje}}</p>
+    </div>
+  </div>
 
-</div>
-
-
-</div>
-
-<!-- <div class="example-button-container">
+  <!-- <div class="example-button-container">
   <button mat-mini-fab color="primary" class="boton_personalizado"
     aria-label="Example icon button with a plus one icon" routerLink="/agricultor/nuevo">
     <mat-icon>plus_one</mat-icon>
   </button>
 </div> -->
-<footer>
-  <div class="f-b-img">
-    <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo">
-</div>
+  <footer>
+    <div class="f-b-img">
+      <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo">
+    </div>
 
-<div class="f-b-redes"> 
-<div>
-  <p class="f-b-redes-cr" >Copyright ©2022</p>
-  <p class="f-b-redes-sg">Made by PeruInnova</p>
-</div>
-</div>
-</footer>
+    <div class="f-b-redes">
+      <div>
+        <p class="f-b-redes-cr">Copyright ©2022</p>
+        <p class="f-b-redes-sg">Made by PeruInnova</p>
+      </div>
+    </div>
+  </footer>
 
 
 </body>
+
 </html>
