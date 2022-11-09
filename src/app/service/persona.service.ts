@@ -24,7 +24,7 @@ export class PersonaService {
     return this.listaCambio.asObservable();
   }
   modificar(persona:persona){
-    return this.http.put(this.url+"/"+persona.idPersona,persona);
+    return this.http.post(this.url, persona);
   }
   listarId(id:Number){
     return this.http.get<persona>(`${this.url}/${id}`);
