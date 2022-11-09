@@ -133,7 +133,6 @@ header, .main {
 	-moz-transform: translateX(0);
 	-ms-transform: translateX(0);
 	transform: translateX(0);
-
 	-webkit-transition: all .25s linear;
 	-moz-transition: all .25s linear;
 	-ms-transition: all .25s linear;
@@ -211,7 +210,6 @@ font-size: small;
     text-align: center;
 }
 
-
 .container{
     width: 90%;
     max-width: 1200px;
@@ -280,5 +278,4 @@ img:hover{
 }
 th,td{
 	text-align: center;
-
 }

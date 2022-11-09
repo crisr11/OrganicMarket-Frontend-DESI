@@ -1,3 +1,4 @@
+import { AdministradorCrearadministradorComponent } from './page/administrador/administrador-crearadministrador/administrador-crearadministrador.component';
 import { PromocionCreaeditaComponent } from './page/promocion/promocion-creaedita/promocion-creaedita.component';
 import { DetalleCreaeditaComponent } from './page/detalleorden/detalle-creaedita/detalle-creaedita.component';
 import { agricultor } from 'src/app/model/agricultor';
@@ -39,12 +40,25 @@ const routes: Routes = [{
     { path: 'nuevo', component: ProdutoCreaeditaComponent },
     { path: 'edicion/:id', component: ProdutoCreaeditaComponent }
   ]
+},
+
+{
+  path:'persona',component:PersonaComponent,children:[
+    {path:'nuevo',component:PersonaCrearpersonaComponent},
+    {path:'edicion/:id',component:PersonaCrearpersonaComponent}
+  ]
+},
+
 }, {
   path: 'tipos', component: TipoComponent, children: [
     { path: 'nuevo', component: TipoCreaeditaComponent }
 
 
 
+{
+  path:'administrador',component:AdministradorComponent,children:[
+    {path:'nuevo',component:AdministradorCrearadministradorComponent},
+    {path:'edicion/:id',component:AdministradorCrearadministradorComponent}
   ]
 }, {
   path: 'persona', component: PersonaComponent, children: [

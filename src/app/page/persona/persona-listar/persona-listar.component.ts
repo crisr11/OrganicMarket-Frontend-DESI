@@ -1,9 +1,10 @@
 import { PersonaDialogoComponent } from './persona-dialogo/persona-dialogo.component';
-import { MatDialog } from '@angular/material/dialog';
+
 import { PersonaService } from './../../../service/persona.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
 import { persona } from 'src/app/model/persona';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-persona-listar',
@@ -11,6 +12,7 @@ import { persona } from 'src/app/model/persona';
   styleUrls: ['./persona-listar.component.css']
 })
 export class PersonaListarComponent implements OnInit {
+  lista: persona[]=[];
   dataSource:MatTableDataSource<persona>=new MatTableDataSource();
   displayedColumns:string[]=["id","nombre","dni","telefono","correo","accion1","accion2"]
   private idMayor:number=0;
@@ -19,6 +21,7 @@ export class PersonaListarComponent implements OnInit {
 
   ngOnInit(): void {
     this.pS.listar().subscribe(d=>{
+      this.lista=d;
       this.dataSource=new MatTableDataSource(d);
     })
     this.pS.getLista().subscribe(data => {
@@ -26,7 +29,8 @@ export class PersonaListarComponent implements OnInit {
     });
     this.pS.getConfirmaEliminacion().subscribe(data=>{
       data==true? this.eliminar(this.idMayor):false;
-    })
+    });
+
   }
   confirmar(id:number){
     this.idMayor=id;
@@ -39,5 +43,4 @@ export class PersonaListarComponent implements OnInit {
       })
     })
   }
-
 }

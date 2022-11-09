@@ -1,6 +1,7 @@
 import { persona } from 'src/app/model/persona';
 import { PersonaService } from './../../../service/persona.service';
-import { Router, ActivatedRoute,Params } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+
 import { Component, OnInit } from '@angular/core';
 
 
@@ -18,13 +19,14 @@ export class PersonaCrearpersonaComponent implements OnInit {
     private router:Router,
     private route:ActivatedRoute) { }
 
-    ngOnInit(): void {
-      this.route.params.subscribe((data:Params)=>{
-        this.id=data['id'];
-        this.edicion=data['id']!=null;
-        this.init();
-      })
-    }
+  ngOnInit(): void {
+    this.route.params.subscribe((data:Params)=>{
+      this.id=data['id'];
+      this.edicion=data['id']!=null;
+      this.init();
+    })
+  }
+
   aceptar():void{
     if(this.persona.nombrePersona.length>0 && this.persona.dniPersona>0){
       if(this.edicion){

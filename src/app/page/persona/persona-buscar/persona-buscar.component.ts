@@ -1,5 +1,6 @@
+import { PersonaService } from 'src/app/service/persona.service';
 import { persona } from './../../../model/persona';
-import { PersonaService } from './../../../service/persona.service';
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -25,5 +26,4 @@ export class PersonaBuscarComponent implements OnInit {
     })
   }
 }
-
 
