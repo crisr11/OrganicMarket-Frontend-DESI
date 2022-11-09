@@ -29,7 +29,11 @@ export class PublicacionService {
   }
   buscar(texto: string) {
 
-    return this.http.post<Publicacion[]>(`${this.url}/buscar`, texto);
+    if(texto.length!=0){
+      return this.http.post<Publicacion[]>(`${this.url}/buscar`,texto.toLowerCase(),{});
+    }
+    return EMPTY;
+  
   }
   listarId(id: number) {
 

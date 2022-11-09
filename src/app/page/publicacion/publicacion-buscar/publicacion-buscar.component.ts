@@ -13,8 +13,14 @@ export class PublicacionBuscarComponent implements OnInit {
   ngOnInit(): void {
   }
   buscar(e: any) {
-    this.publicacionservice.buscar(e.target.value).subscribe(data=>{
-      this.publicacionservice.setLista(data);
-    });
+    let array: Publicacion[] = [];
+    this.publicacionservice.listar().subscribe(data => {
+      data.forEach((element, index) => {
+        if (element.contenido.includes(e.target.value)) {
+          array.push(data[index]);
+        }
+      });
+      this.publicacionservice.setLista(array);
+    })
   }
 }
