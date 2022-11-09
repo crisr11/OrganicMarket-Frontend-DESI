@@ -12,7 +12,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class MayoristaListarComponent implements OnInit {
   dataSource: MatTableDataSource<Mayorista> = new MatTableDataSource()
-  displayedColumns: string[] = ["ID","Rubro","RUC","Nombre","Accion1","Accion2"]
+  displayedColumns: string[] = ["idMayorista","Rubro","RUC","Nombre","Accion1","Accion2"]
   private idMayor: number = 0;
   constructor(private ms:MayoristaService, private dialog: MatDialog) { }
 

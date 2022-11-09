@@ -8,5 +8,5 @@ export class Orden{
   fechaEntrega: string=""
   cantidad: number=0
   idAgricultor:agricultor=new agricultor()
-  id:Mayorista=new Mayorista()
+  idMayorista:Mayorista=new Mayorista()
 }
