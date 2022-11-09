@@ -1,6 +1,7 @@
-import { MatDialogRef } from '@angular/material/dialog';
-import { PersonaService } from './../../../../service/persona.service';
+import { PersonaService } from 'src/app/service/persona.service';
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-persona-dialogo',
@@ -13,9 +14,9 @@ export class PersonaDialogoComponent implements OnInit {
     private dialogRef:MatDialogRef<PersonaDialogoComponent>) { }
 
   ngOnInit(): void {
-
   }
-  confirmar(estado:boolean){
+  confirmar(estado:Boolean){
+
     this.personaService.setConfirmaEliminacion(estado);
     this.dialogRef.close();
   }

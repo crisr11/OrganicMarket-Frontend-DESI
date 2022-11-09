@@ -25,7 +25,7 @@ export class MayoristaService {
     return this.listaCambio.asObservable();
   }
   modificar(mayorista: Mayorista) {
-    return this.http.put(this.url + "/" + mayorista.id, mayorista);
+    return this.http.put(this.url + "/" + mayorista.idMayorista, mayorista);
   }
   listarId(id: number) {
     return this.http.get<Mayorista>(`${this.url}/${id}`);
