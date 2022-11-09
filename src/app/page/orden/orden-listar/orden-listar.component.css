@@ -1,3 +1,235 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+html, body {overflow-x: hidden;}
+
+body {
+	font: 100% arial, verdana, tahoma, sans-serif;
+
+	background-color: #fcfff8;
+}
+
+header {
+	background: #e2e8d0;
+	padding: 30px;
+	overflow: hidden;
+}
+
+header h1 {
+		position: absolute;
+		width: 518px;
+		height: 30x;
+		left: 700px;
+		top: 0px;
+		
+		font-family: 'Open Sans';
+		font-style: normal;
+		font-weight: bold;;
+		font-size: 20px;
+		line-height: 72px;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		color: #5E693F;
+		
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+	
+
+header input {
+	float: right;
+	padding: 10px;
+	width: 200px;
+	border: none;
+}
+
+.main {
+	padding: 30px;
+}
+.main p {
+	font-size: .9em;
+	line-height: 1.2em;
+	margin-bottom: 20px;
+}
+
+.menu-anchor {
+	width: 40px;
+	height: 32px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	text-indent: -9999px;
+	overflow: hidden;
+	cursor: pointer;
+	background: #FFF;
+}
+
+.menu-anchor:before {
+	content: "";
+	display: block;
+	margin: 7px auto;
+	width: 70%;
+	height: 0.25em;
+	background: #799B5E;
+	box-shadow: 0 .45em 0 0 #799B5E, 0 .9em 0 0 #799B5E;
+}
+
+.menu-active .menu-anchor {background: #47672c}
+
+menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 220px;
+	height: 100%;
+	padding-top: 10px;
+	background: #A3B68E;
+	box-shadow: inset -5px -10px 10px 0 rgba(0,0,0,.3)
+}
+
+menu li a {
+	display: block;
+	border-bottom: 1px solid rgba(255,255,255,.3);
+	margin: 0 10px;
+	padding: 10px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+menu li a:hover {
+	background: #3E7581;
+	color: #FFF;
+}
+
+
+
+
+/*
+	Aqui você esconde o menu para fora da tela 
+	O valor é exatamente a largura da sidebar
+*/
+menu {
+	-webkit-transform: translateX(-220px);
+	-moz-transform: translateX(-220px);
+	-ms-transform: translateX(-220px);
+	transform: translateX(-220px);
+	-webkit-transition: all .25s linear;
+	-moz-transition: all .25s linear;
+	-ms-transition: all .25s linear;
+	transition: all .25s linear;
+}
+
+/*
+	Essa é a posição original do HEADER e do MAIN
+*/
+header, .main {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	transform: translateX(0);
+	-webkit-transition: all .25s linear;
+	-moz-transition: all .25s linear;
+	-ms-transition: all .25s linear;
+	transition: all .25s linear;
+}
+
+/*
+   Com a classe menu-active na tag HTML
+*/
+.menu-active menu {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	transform: translateX(0);
+}
+footer {
+    background-color: #F5F0D0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 92px;
+    color: #000000;
+}
+.menu-active header, 
+.menu-active .main {
+	-webkit-transform: translateX(220px);
+	-moz-transform: translateX(220px);
+	-ms-transform: translateX(220px);
+	transform: translateX(220px);
+}
+
+.f-b{
+    display: grid;
+    padding: 1px 1px;
+}
+
+.f-b-img img{
+    max-width: 100px;
+    max-height: 110px;
+    padding: 3px 3px;
+    position: fixed;
+    top: 662px;
+    left: 387px;
+}
+
+.logo-nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  .logo img{
+	display: inline-block;
+	max-width: 85px;
+	max-height: 750px;
+	padding: 0 0;
+	margin: 0;
+	position: relative;
+	left:62px;
+
+  }
+  .nombre-logo{
+	float: rigth;
+	font-weight: bold;
+	font-size: 21px;
+	letter-spacing: 0.7px;
+	padding: 1 rem 0;
+	position: relative;
+	color: #FFF;
+	left:27px;
+  }
+
+  .boton_personalizado{
+    position: absolute;
+    top: 220px;
+    left: 300px;
+  }
+  .seccion{
+position:relative;
+
+left: 665px;
+font-size: small;
+  }
+  th{
+    text-align: center;
+    background-color: #e2e8d0;
+    color: #060606;
+    text-align: left;
+    font-weight: bolder;
+}
+  th{
+    text-align: center;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 table{
     border-collapse: collapse;
     margin: 25px 0;
@@ -11,96 +243,49 @@ table{
     top: 25%;
     left: 25%;
 }
-.logo-nav{
-    display: flex;
-    justify-content: space-between;
+
+
+.f-b-redes{
+    padding: 1px 1px;
+    display: inline;
     align-items: center;
+    position: fixed;
+    left: 650px;
+    top: 657px;
 }
-.logo img{
-    display: inline-block;
-    max-width: 85px;
-    max-height: 750px;
-    padding: 0 0;
-    margin: 0;
-}
-.nombre-logo{
-    float: rigth;
-    font-weight: bold;
-    font-size: 21px;
-    letter-spacing: 0.7px;
-    padding: 1 rem 0;
-}
-
-th{
-    text-align: center;
-    background-color: #e2e8d0;
-    color: #060606;
+.f-b-redes-cr{
+    align-items: center;
     text-align: left;
-    font-weight: bolder;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 2px 3px;
+    padding-top: 10px;
+    line-height: 16px;
 }
-nav{
-    display: flex;
-    gap: 15px;
-    justify-content: flex-end;
+.f-b-redes-sg{
+    align-items: center;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 2px 3px;
+    padding-top: 3px;
+    line-height: 14px;
 }
-a{
-    text-decoration: none;
-    font-size: 20px;
-    padding: 10px;
-}
-body{
-    text-align: center;
-    font: 300 20px/1.7 'Open Sans';
-    background:#fcfff8;
-    margin: 0;
-}
-
-.navbar ul{
-    margin: 0;
-    padding: 0;
+.f-b-redes ul{
     list-style: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 0px;
 }
-.navbar ul li{
+.f-b-redes ul li{
     display: inline-block;
 }
-.navbar ul li a{
+.f-b-redes ul li a{
     display: block;
-    padding:1rem 1rem;
-    transition: all 0.4s linear;
-    border-radius: 5px;
-}
-.navbar ul li a:hover{
-    background: #FFFED9;
-}
-
-.container{
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.header{
-    background:#e2e8d0;
-    font-style: normal;
-    color:#5E693F;
-    letter-spacing: 0.02em;
-    padding: 0.2rem 0;
-    position:fixed;
-    left: 0;
-    top: 0;
-    right: 0; /*width: 100%*/
-    z-index: 999; /*traer al frente*/
-}
-.header a{
-    color:#5E693F;
-    font-weight: 400;
-    font-size: 20px;
+    align-items: center;
+    padding: 0 3px;
+    font-size: 14px;
+    line-height: 16px;
     text-decoration: none;
 }
-th{
-    text-align: center;
-}
-
-
-
-
-

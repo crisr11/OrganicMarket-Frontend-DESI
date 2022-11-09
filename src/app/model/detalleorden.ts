@@ -1,8 +1,6 @@
-import { Producto } from './producto';
-import { orden } from './orden';
+import { Producto } from "./producto"
 
-export class detalleorden{
-
-    id_dorden:orden=new orden()
-    producto:Producto=new Producto()
+export class detalleorden {
+    idOrden: number = 0
+    producto: Producto = new Producto();
 }

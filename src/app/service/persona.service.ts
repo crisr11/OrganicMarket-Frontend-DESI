@@ -3,11 +3,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Subject,EMPTY } from 'rxjs';
 import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class PersonaService {
   private url: string = `${environment.host}/personas`;
+
   private listaCambio=new Subject<persona[]>()
   private confirmaEliminacion=new Subject<Boolean>();
   constructor(private http: HttpClient) { }
@@ -26,6 +28,7 @@ export class PersonaService {
   }
   modificar(persona:persona){
     return this.http.put(this.url,persona);
+
 
   }
   listarId(id:Number){

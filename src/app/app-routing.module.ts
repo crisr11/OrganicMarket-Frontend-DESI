@@ -1,4 +1,7 @@
 import { AdministradorCrearadministradorComponent } from './page/administrador/administrador-crearadministrador/administrador-crearadministrador.component';
+import { PromocionCreaeditaComponent } from './page/promocion/promocion-creaedita/promocion-creaedita.component';
+import { DetalleCreaeditaComponent } from './page/detalleorden/detalle-creaedita/detalle-creaedita.component';
+import { agricultor } from 'src/app/model/agricultor';
 import { DetalleordenComponent } from './page/detalleorden/detalleorden.component';
 import { AgricultorComponent } from './page/agricultor/agricultor.component';
 import { NgModule, Component } from '@angular/core';
@@ -12,24 +15,30 @@ import { MayoristaComponent } from './page/mayorista/mayorista.component';
 import { AcuerdoComponent } from './page/acuerdo/acuerdo.component';
 import { PromocionComponent } from './page/promocion/promocion.component';
 import { PublicacionComponent } from './page/publicacion/publicacion.component';
+import { TipoCreaeditaComponent } from './page/tipo/tipo-creaedita/tipo-creaedita.component';
 import { PersonaCrearpersonaComponent } from './page/persona/persona-crearpersona/persona-crearpersona.component';
-
+import { AgricultorCreaeditaComponent } from './page/agricultor/agricultor-creaedita/agricultor-creaedita.component';
+import { PublicacionCreaeditaComponent } from './page/publicacion/publicacion-creaedita/publicacion-creaedita.component';
+import { MayoristaCreaeditaComponent } from './page/mayorista/mayorista-creaedita/mayorista-creaedita.component';
+import { ProdutoCreaeditaComponent } from './page/producto/produto-creaedita/produto-creaedita.component';
+import { OrdenCreaeditaComponent } from './page/orden/orden-creaedita/orden-creaedita.component';
 
 const routes: Routes = [{
-  path: 'agricultor', component: AgricultorComponent, children:[
+  path: 'agricultor', component: AgricultorComponent, children: [
+
+    { path: 'nuevo', component: AgricultorCreaeditaComponent },
+    { path: 'edicion/:id', component: AgricultorCreaeditaComponent }
 
   ]
-},{
-  path:'orden',component:OrdenComponent,children:[
-
+}, {
+  path: 'orden', component: OrdenComponent, children: [
+    {path: 'nuevo', component: OrdenCreaeditaComponent},
+    {path: 'edicion/:id', component: OrdenCreaeditaComponent}
   ]
-},{
-  path:'productos',component:ProductoComponent,children:[
-
-  ]
-},{
-  path:'tipos',component:TipoComponent,children:[
-
+}, {
+  path: 'productos', component: ProductoComponent, children: [
+    { path: 'nuevo', component: ProdutoCreaeditaComponent },
+    { path: 'edicion/:id', component: ProdutoCreaeditaComponent }
   ]
 },
 
@@ -40,38 +49,58 @@ const routes: Routes = [{
   ]
 },
 
+}, {
+  path: 'tipos', component: TipoComponent, children: [
+    { path: 'nuevo', component: TipoCreaeditaComponent }
+
+
+
 {
   path:'administrador',component:AdministradorComponent,children:[
     {path:'nuevo',component:AdministradorCrearadministradorComponent},
     {path:'edicion/:id',component:AdministradorCrearadministradorComponent}
   ]
-},{
-  path: 'mayoristas', component: MayoristaComponent, children:[
+}, {
+  path: 'persona', component: PersonaComponent, children: [
+    { path: 'nuevo', component: PersonaCrearpersonaComponent },
+    { path: 'edicion/:id', component: PersonaCrearpersonaComponent }
+  ]
+}, {
+  path: 'administrador', component: AdministradorComponent, children: [
 
   ]
-},{
-  path: 'acuerdos', component: AcuerdoComponent, children:[
+}, {
+  path: 'mayoristas', component: MayoristaComponent, children: [
+    { path: 'nuevo', component: MayoristaCreaeditaComponent }
+    , { path: 'edicion/:id', component: MayoristaCreaeditaComponent }
+  ]
+}, {
+  path: 'acuerdos', component: AcuerdoComponent, children: [
 
   ]
 },
 {
-  path: 'promociones', component: PromocionComponent, children:[
+  path: 'promociones', component: PromocionComponent, children: [
+    { path: 'nuevo', component: PromocionCreaeditaComponent }
+    , { path: 'edicion/:id', component: PromocionCreaeditaComponent }
+  ]
+},
+{
+  path: 'publicaciones', component: PublicacionComponent, children: [
+    { path: 'nuevo', component: PublicacionCreaeditaComponent }
+    , { path: 'edicion/:id', component: PublicacionCreaeditaComponent }
 
   ]
 },
 {
-  path: 'publicaciones', component: PublicacionComponent, children:[
-
-  ]
- },
-{
-  path:'detalleorden',component:DetalleordenComponent,children:[
-
+  path: 'detalleorden', component: DetalleordenComponent, children: [
+    { path: 'nuevo', component: DetalleCreaeditaComponent },
+    { path: 'edicion/:id', component: DetalleCreaeditaComponent }
   ]
 
 },
 {
-  path:'persona-crearpersona',component:PersonaCrearpersonaComponent,children:[
+  path: 'persona-crearpersona', component: PersonaCrearpersonaComponent, children: [
 
   ]
 }

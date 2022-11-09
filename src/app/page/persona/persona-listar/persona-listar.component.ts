@@ -1,4 +1,5 @@
 import { PersonaDialogoComponent } from './persona-dialogo/persona-dialogo.component';
+
 import { PersonaService } from './../../../service/persona.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
@@ -29,6 +30,7 @@ export class PersonaListarComponent implements OnInit {
     this.pS.getConfirmaEliminacion().subscribe(data=>{
       data==true? this.eliminar(this.idMayor):false;
     });
+
   }
   confirmar(id:number){
     this.idMayor=id;

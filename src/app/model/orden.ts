@@ -1,12 +1,12 @@
 import { agricultor } from "./agricultor";
 import { Mayorista } from "./mayorista";
 
-export class orden{
-  id_orden:number=0;
-  fechacompra:string=""
-  fechaenvio:string=""
-  fechaentrega: string=""
+export class Orden{
+  idOrden:number=0;
+  fechaCompra:string=""
+  fechaEnvio:string=""
+  fechaEntrega: string=""
   cantidad: number=0
-  agricultor_id_agricultor:agricultor=new agricultor()
-  mayorista_id_mayorista: Mayorista=new Mayorista()
+  idAgricultor:agricultor=new agricultor()
+  idMayorista:Mayorista=new Mayorista()
 }

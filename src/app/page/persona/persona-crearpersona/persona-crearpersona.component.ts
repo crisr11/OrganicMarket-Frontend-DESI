@@ -1,6 +1,7 @@
 import { persona } from 'src/app/model/persona';
 import { PersonaService } from './../../../service/persona.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+
 import { Component, OnInit } from '@angular/core';
 
 
@@ -14,7 +15,6 @@ export class PersonaCrearpersonaComponent implements OnInit {
   mensaje:string ="";
   edicion:boolean=false;
   id:number=0;
-
   constructor(private personaService:PersonaService,
     private router:Router,
     private route:ActivatedRoute) { }
@@ -26,6 +26,7 @@ export class PersonaCrearpersonaComponent implements OnInit {
       this.init();
     })
   }
+
   aceptar():void{
     if(this.persona.nombrePersona.length>0 && this.persona.dniPersona>0){
       if(this.edicion){

@@ -1,8 +1,8 @@
-import { Tipo } from "./tipo";
+import { Tipo } from "./tipo"
 
 export class Producto{
-  ID_Producto:number=0
-  Nombre:string=""
-  Precio:number=0
-  Tipo:Tipo=new Tipo()
+  idProducto:number=0
+  nameProducto:string=""
+  precio:number=0
+  tipo:Tipo=new Tipo()
 }
