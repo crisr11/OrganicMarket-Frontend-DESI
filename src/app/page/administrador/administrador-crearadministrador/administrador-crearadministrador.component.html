@@ -1,0 +1,68 @@
+<html>
+<body>
+        <!-- partial:index.partial.html -->
+        <script  src="./assets/js/navegacion/navegacion.js"></script>
+        <header>
+         
+          <h1>ADMINISTRADOR</h1>
+          <div class="seccion">
+          </div>
+        </header>
+      
+        <!--se agrega texto-->
+        <section class="main">
+          
+        </section>
+        <!-- partial -->
+        <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        
+        
+    
+
+     
+    <div>
+<div class="container">
+
+  <h1>Persona</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id:</mat-label>
+    <input matInput placeholder="Id" [(ngModel)]="admin.idAdministrador">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label> Selecione Persona</mat-label>
+    <mat-select [(value)]="idPersonaSelecionada" required>
+      <mat-option *ngFor="let p of listaPersonas" [value]="p.idPersona">
+        {{p.nombrePersona}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/administrador">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>
+
+</div>
+
+
+<footer>
+  <div class="f-b-img">
+    <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo">
+</div>
+
+<div class="f-b-redes"> 
+<div>
+  <p class="f-b-redes-cr" >Copyright ©2022</p>
+  <p class="f-b-redes-sg">Made by PeruInnova</p>
+</div>
+</div>
+</footer>
+
+
+</body>
+</html>

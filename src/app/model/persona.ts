@@ -1,7 +1,7 @@
 export class persona{
-  id:number=0
-  nombre:string=""
-  dni:number=0
-  telefono:number=0
-  correo:string=""
+  idPersona:number=0
+  nombrePersona:string=""
+  dniPersona:number=0
+  telefonoPersona:number=0
+  correoPersona:string=""
 }

@@ -27,7 +27,7 @@ export class PersonaCrearpersonaComponent implements OnInit {
     })
   }
   aceptar():void{
-    if(this.persona.nombre.length>0 && this.persona.dni>0){
+    if(this.persona.nombrePersona.length>0 && this.persona.dniPersona>0){
       if(this.edicion){
       this.personaService.modificar(this.persona).subscribe(data=>{
         this.personaService.listar().subscribe(data=>{

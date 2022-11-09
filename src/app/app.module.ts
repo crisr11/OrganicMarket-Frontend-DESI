@@ -1,3 +1,6 @@
+import { AdministradorDialogoComponent } from './page/administrador/administrador-listar/administrador-dialogo/administrador-dialogo.component';
+import { AdministradorCrearadministradorComponent } from './page/administrador/administrador-crearadministrador/administrador-crearadministrador.component';
+import { AdministradorBuscarComponent } from './page/administrador/administrador-buscar/administrador-buscar.component';
 import { PersonaCrearpersonaComponent } from 'src/app/page/persona/persona-crearpersona/persona-crearpersona.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -39,6 +42,7 @@ import { FormsModule } from '@angular/forms';
 import { PersonaDialogoComponent } from './page/persona/persona-listar/persona-dialogo/persona-dialogo.component';
 import {MatDialogModule}from '@angular/material/dialog';
 import { PersonaBuscarComponent } from './page/persona/persona-buscar/persona-buscar.component'
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -55,8 +59,12 @@ import { PersonaBuscarComponent } from './page/persona/persona-buscar/persona-bu
     PersonaListarComponent,
     PersonaDialogoComponent,
     PersonaCrearpersonaComponent,
+    
     AdministradorComponent,
     AdministradorListarComponent,
+    AdministradorBuscarComponent,
+    AdministradorCrearadministradorComponent,
+    AdministradorDialogoComponent,
 
     AcuerdoComponent,
     AcuerdoListarComponent,
@@ -85,7 +93,8 @@ import { PersonaBuscarComponent } from './page/persona/persona-buscar/persona-bu
     FormsModule,
     MatIconModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

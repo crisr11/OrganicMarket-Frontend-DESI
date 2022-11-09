@@ -17,7 +17,7 @@ export class PersonaBuscarComponent implements OnInit {
     let array:persona[]=[];
     this.personaService.listar().subscribe(data=>{
       data.forEach((element,index)=>{
-        if(element.nombre.includes(e.target.value)){
+        if(element.nombrePersona.includes(e.target.value)){
           array.push(data[index]);
         }
       });

@@ -11,6 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./persona-listar.component.css']
 })
 export class PersonaListarComponent implements OnInit {
+  lista: persona[]=[];
   dataSource:MatTableDataSource<persona>=new MatTableDataSource();
   displayedColumns:string[]=["id","nombre","dni","telefono","correo","accion1","accion2"]
   private idMayor:number=0;
@@ -19,6 +20,7 @@ export class PersonaListarComponent implements OnInit {
 
   ngOnInit(): void {
     this.pS.listar().subscribe(d=>{
+      this.lista=d;
       this.dataSource=new MatTableDataSource(d);
     })
     this.pS.getLista().subscribe(data => {

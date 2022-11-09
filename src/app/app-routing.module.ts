@@ -1,3 +1,4 @@
+import { AdministradorCrearadministradorComponent } from './page/administrador/administrador-crearadministrador/administrador-crearadministrador.component';
 import { DetalleordenComponent } from './page/detalleorden/detalleorden.component';
 import { AgricultorComponent } from './page/agricultor/agricultor.component';
 import { NgModule, Component } from '@angular/core';
@@ -41,7 +42,8 @@ const routes: Routes = [{
 
 {
   path:'administrador',component:AdministradorComponent,children:[
-
+    {path:'nuevo',component:AdministradorCrearadministradorComponent},
+    {path:'edicion/:id',component:AdministradorCrearadministradorComponent}
   ]
 },{
   path: 'mayoristas', component: MayoristaComponent, children:[
