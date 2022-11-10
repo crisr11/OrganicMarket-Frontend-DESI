@@ -1,3 +1,4 @@
+import { TipoService } from './../../../service/tipo.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Producto } from 'src/app/model/producto';
@@ -16,8 +17,10 @@ export class ProdutoCreaeditaComponent implements OnInit {
   id: number = 0;
   idTipoSeleccionado: number = 0;
   nameTipoSeleccionado: string = ""
+  listaTipos: Tipo[] = [];
+  
 
-  constructor(private productoService: ProductoService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private productoService: ProductoService, private router: Router, private route: ActivatedRoute, private TipoService: TipoService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data:Params) =>{
@@ -25,14 +28,18 @@ export class ProdutoCreaeditaComponent implements OnInit {
       this.edicion=data['id']!=null;
       this.init();
     });
+    this.TipoService.listar().subscribe(data => { this.listaTipos = data });
   }
   aceptar(): void {
     if (this.producto.nameProducto.length > 0) {
-      let tipo = new Tipo()
-      tipo.idTipo= this.idTipoSeleccionado
-      this.producto.tipo=tipo
+      let p = new Tipo();
+      //Despues cambiar por idPersona
+      p.idTipo = this.idTipoSeleccionado;
+      this.producto.tipo = p;
 
-      this.producto.tipo = tipo
+     
+
+    
       if (this.edicion) {
         this.productoService.modificar(this.producto).subscribe(data => {
           this.productoService.listar().subscribe(data => {
@@ -55,7 +62,8 @@ export class ProdutoCreaeditaComponent implements OnInit {
     if (this.edicion) {
       this.productoService.listarId(this.id).subscribe(data => {
         this.producto = data;
-        this.idTipoSeleccionado=data.tipo.idTipo
+        console.log(data);
+        this.idTipoSeleccionado = data.tipo.idTipo;
       })
     }
   }
