@@ -24,7 +24,7 @@ export class MayoristaCreaeditaComponent implements OnInit {
     });
   }
   aceptar(): void {
-    if (this.mayorista.nombre.length > 0) {
+    if (this.mayorista.nameMayorista.length > 0) {
 
       if (this.edicion) {
         this.mayoristaService.modificar(this.mayorista).subscribe(data => {

@@ -18,7 +18,7 @@ export class MayoristaBuscarComponent implements OnInit {
     this.mayoristaService.listar().subscribe(data => {
       data.forEach((element, index) => {
         //e.target.value = e.target.value.toLocaleUpperCase()
-        if (element.nombre.toLocaleUpperCase().includes(e.target.value.toLocaleUpperCase())) {
+        if (element.nameMayorista.toLocaleUpperCase().includes(e.target.value.toLocaleUpperCase())) {
           array.push(data[index]);
         }
       });
