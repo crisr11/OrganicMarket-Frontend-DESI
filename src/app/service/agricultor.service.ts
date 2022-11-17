@@ -40,7 +40,7 @@ export class AgricultorService {
   }
   buscar(texto: string) {
     if (texto.length != 0) {
-      return this.http.post<agricultor[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      return this.http.post<agricultor[]>(`${this.url}/buscardirecciones`, texto.toLowerCase(), {
       });
     }
     return EMPTY;
