@@ -1,3 +1,4 @@
+import { AgricultorFiltrarComponent } from './page/agricultor/agricultor-filtrar/agricultor-filtrar.component';
 import { AdministradorCrearadministradorComponent } from './page/administrador/administrador-crearadministrador/administrador-crearadministrador.component';
 import { PromocionCreaeditaComponent } from './page/promocion/promocion-creaedita/promocion-creaedita.component';
 import { DetalleCreaeditaComponent } from './page/detalleorden/detalle-creaedita/detalle-creaedita.component';
@@ -27,7 +28,8 @@ const routes: Routes = [
   {
     path: 'agricultor', component: AgricultorComponent, children: [
       { path: 'nuevo', component: AgricultorCreaeditaComponent },
-      { path: 'edicion/:id', component: AgricultorCreaeditaComponent }
+      { path: 'edicion/:id', component: AgricultorCreaeditaComponent },
+      { path: 'filtrarmiraflores', component: AgricultorFiltrarComponent }
     ]
   },
   {

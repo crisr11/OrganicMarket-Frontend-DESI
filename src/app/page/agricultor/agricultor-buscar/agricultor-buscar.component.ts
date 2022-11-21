@@ -14,7 +14,11 @@ export class AgricultorBuscarComponent implements OnInit {
   ngOnInit(): void {
   }
   buscar(e: any) {
-    let array: agricultor[] = [];
+
+    this.agricultorservice.buscar(e.target.value).subscribe(data=>{
+      this.agricultorservice.setLista(data);
+    });
+   /* let array: agricultor[] = [];
     this.agricultorservice.listar().subscribe(data => {
       data.forEach((element, index) => {
         if (element.direccionAgricultor.includes(e.target.value)) {
@@ -22,6 +26,6 @@ export class AgricultorBuscarComponent implements OnInit {
         }
       });
       this.agricultorservice.setLista(array);
-    })
+    })*/
   }
 }

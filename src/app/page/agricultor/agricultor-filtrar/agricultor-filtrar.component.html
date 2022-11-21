@@ -4,13 +4,7 @@
         <script  src="./assets/js/navegacion/navegacion.js"></script>
         <header>
           <span class="menu-anchor" ></span>
-          <h1>AGRICULTORES</h1>
-          <button routerLink="/agricultor/filtrarmiraflores" class="botoncito2">Reporte distrito miraflores</button>
-   <button routerLink="/agricultor/nuevo" class="botoncito3">Falta</button>
-          <div class="seccion">
-            <app-agricultor-buscar></app-agricultor-buscar>
-      
-          </div>
+          <h1>REPORTE DISTRITO DE MIRAFLORES</h1>
         </header>
         <menu>
           <ul>
@@ -106,34 +100,10 @@
       <td mat-cell *matCellDef="let element"> {{element.persona.nombrePersona}} </td>
   </ng-container>
 
-     <ng-container matColumnDef="ACCIÓN 1">
-      <th mat-header-cell *matHeaderCellDef>ACCIONES</th>
-      <td mat-cell *matCellDef="let element"> 
-        <img src="../../../../assets/update.png"   [routerLink]="['edicion', element?.idAgricultor]">
-      </td>
-    </ng-container>
-
-    <ng-container matColumnDef="ACCIÓN 2">
-      <th mat-header-cell *matHeaderCellDef> ACCIONES </th>
-      <td mat-cell *matCellDef="let element">
-        <img src="../../../../assets/delete.png" (click)="confirmar(element.idAgricultor)">
-      </td>
-    </ng-container>
-
 
      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
    </table>
-   <button routerLink="/agricultor/nuevo" class="botoncito">Insertar</button>
-
- 
-   
-
-<br>
-<br>
-<br>
-
-
   </div>
 
   <!-- <div class="example-button-container">

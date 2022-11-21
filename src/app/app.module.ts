@@ -76,6 +76,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { OrdenBuscarComponent } from './page/orden/orden-buscar/orden-buscar.component';
 import { OrdenCreaeditaComponent } from './page/orden/orden-creaedita/orden-creaedita.component';
 import { OrdenDialogoComponent } from './page/orden/orden-listar/orden-dialogo/orden-dialogo.component';
+import { AgricultorFiltrarComponent } from './page/agricultor/agricultor-filtrar/agricultor-filtrar.component';
 
 
 
@@ -145,7 +146,8 @@ import { OrdenDialogoComponent } from './page/orden/orden-listar/orden-dialogo/o
     PromocionDialogoComponent,
     OrdenBuscarComponent,
     OrdenCreaeditaComponent,
-    OrdenDialogoComponent
+    OrdenDialogoComponent,
+    AgricultorFiltrarComponent
   ],
   imports: [
     BrowserModule,

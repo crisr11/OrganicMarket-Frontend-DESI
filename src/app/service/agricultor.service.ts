@@ -14,6 +14,9 @@ export class AgricultorService {
   listar() {
     return this.http.get<agricultor[]>(this.url);
   }
+  filtrardistrito() {
+    return this.http.get<agricultor[]>(`${this.url}/filtrarmiraflores`);
+  }
   insertar(agricultor: agricultor) {
     return this.http.post(this.url, agricultor);
   }
@@ -40,7 +43,7 @@ export class AgricultorService {
   }
   buscar(texto: string) {
     if (texto.length != 0) {
-      return this.http.post<agricultor[]>(`${this.url}/buscardirecciones`, texto.toLowerCase(), {
+      return this.http.post<agricultor[]>(`${this.url}/buscardirecciones`, texto.toString(), {
       });
     }
     return EMPTY;
