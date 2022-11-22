@@ -98,14 +98,7 @@
           }
         },
         "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {
-            "prerender": false,
-            "ssr": false,
-            "browserTarget": "OrganicMarket:build:production",
-            "firebaseProject": "organicmarket-b30bd",
-            "firebaseHostingSite": "organicmarket-b30bd"
-          }
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
