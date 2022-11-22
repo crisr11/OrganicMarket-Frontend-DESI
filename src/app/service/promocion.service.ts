@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import { Promocion } from '../model/promocion';
 import {Subject, EMPTY} from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { ResultadoAgricultor } from '../model/resultadoagricultor';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,9 @@ export class PromocionService {
   
   listar(){
     return this.http.get<Promocion[]>(this.url);
+  }
+  promonavidad(){
+    return this.http.get<ResultadoAgricultor[]>(`${this.url}/promonavidad`);
   }
   insertar(promocion: Promocion) {
     return this.http.post(this.url, promocion);

@@ -65,46 +65,27 @@
 
      
     <div>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <h1 style="text-align: center;"> Productos en promocion por navidad </h1>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <!-- Position Column -->
+            <ng-container matColumnDef="producto">
+                <th mat-header-cell *matHeaderCellDef> Producto </th>
+                <td mat-cell *matCellDef="let element"> {{element.producto}} </td>
+            </ng-container>
+            <!-- Name Column -->
+            <ng-container matColumnDef="fechaInicio">
+                <th mat-header-cell *matHeaderCellDef> Fecha de inicio </th>
+                <td mat-cell *matCellDef="let element"> {{element.fechaInicio}} </td>
+            </ng-container>
 
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef> Id </th>
-      <td mat-cell *matCellDef="let element"> {{element.idProducto}} </td>
-    </ng-container>
+            <ng-container matColumnDef="fechaFin">
+                <th mat-header-cell *matHeaderCellDef> Fecha final </th>
+                <td mat-cell *matCellDef="let element"> {{element.fechaFin}} </td>
+            </ng-container>
 
-    <ng-container matColumnDef="Nombre">
-      <th mat-header-cell *matHeaderCellDef> Nombre </th>
-      <td mat-cell *matCellDef="let element"> {{element.nameProducto}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="Precio">
-      <th mat-header-cell *matHeaderCellDef> Precio </th>
-      <td mat-cell *matCellDef="let element"> {{element.precio}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="Tipo ID">
-      <th mat-header-cell *matHeaderCellDef> Tipo de producto </th>
-      <td mat-cell *matCellDef="let element"> {{element.tipo.nameTipo}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="accion1">
-      <th mat-header-cell *matHeaderCellDef> Accion 1 </th>
-        <td mat-cell *matCellDef="let element"> 
-          <img src="../../../../assets/update.png"   [routerLink]="['edicion', element.idProducto]">
-        </td>
-      </ng-container>
-
-    <ng-container matColumnDef="accion2">
-      <th mat-header-cell *matHeaderCellDef> Accion 2 </th>
-      <td mat-cell *matCellDef="let element">
-        <img src="../../../../assets/delete.png" (click)="confirmar(element.idProducto)">
-      </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-  <button routerLink="/productos/nuevo" class="botoncito">Insertar</button>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
 </div>
   <footer>
     <div class="f-b-img">

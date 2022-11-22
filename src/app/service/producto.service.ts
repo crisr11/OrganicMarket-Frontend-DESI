@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Producto } from '../model/producto';
 import { Subject, EMPTY } from 'rxjs';
+import { ResultadoAgricultor } from '../model/resultadoagricultor';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,12 @@ export class ProductoService {
   
   listar() {
     return this.http.get<Producto[]>(this.url);
+  }
+  promonavidad(){
+    return this.http.get<ResultadoAgricultor[]>(`${this.url}/promonavidad`);
+  }
+  productocaro(){
+    return this.http.get<Producto[]>(`${this.url}/expensiveproduct`);
   }
   insertar(producto: Producto) {
     return this.http.post(this.url, producto);

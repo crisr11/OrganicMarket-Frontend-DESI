@@ -78,6 +78,8 @@ import { OrdenCreaeditaComponent } from './page/orden/orden-creaedita/orden-crea
 import { OrdenDialogoComponent } from './page/orden/orden-listar/orden-dialogo/orden-dialogo.component';
 import { AgricultorFiltrarComponent } from './page/agricultor/agricultor-filtrar/agricultor-filtrar.component';
 import { AgricultorDatosComponent } from './page/agricultor/agricultor-datos/agricultor-datos.component';
+import { ProductoCostosoComponent } from './page/producto/producto-costoso/producto-costoso.component';
+import { PromocionNavidadComponent } from './page/promocion/promocion-navidad/promocion-navidad.component';
 
 
 
@@ -149,7 +151,9 @@ import { AgricultorDatosComponent } from './page/agricultor/agricultor-datos/agr
     OrdenCreaeditaComponent,
     OrdenDialogoComponent,
     AgricultorFiltrarComponent,
-    AgricultorDatosComponent
+    AgricultorDatosComponent,
+    ProductoCostosoComponent,
+    PromocionNavidadComponent
   ],
   imports: [
     BrowserModule,

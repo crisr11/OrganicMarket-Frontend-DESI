@@ -24,6 +24,8 @@ import { PublicacionCreaeditaComponent } from './page/publicacion/publicacion-cr
 import { MayoristaCreaeditaComponent } from './page/mayorista/mayorista-creaedita/mayorista-creaedita.component';
 import { ProdutoCreaeditaComponent } from './page/producto/produto-creaedita/produto-creaedita.component';
 import { OrdenCreaeditaComponent } from './page/orden/orden-creaedita/orden-creaedita.component';
+import { ProductoCostosoComponent } from './page/producto/producto-costoso/producto-costoso.component';
+import { PromocionNavidadComponent } from './page/promocion/promocion-navidad/promocion-navidad.component';
 
 const routes: Routes = [
   {
@@ -43,7 +45,8 @@ const routes: Routes = [
   {
     path: 'productos', component: ProductoComponent, children: [
       { path: 'nuevo', component: ProdutoCreaeditaComponent },
-      { path: 'edicion/:id', component: ProdutoCreaeditaComponent }
+      { path: 'edicion/:id', component: ProdutoCreaeditaComponent },
+      { path: 'productocaro', component: ProductoCostosoComponent}
     ]
   },
   {
@@ -84,7 +87,8 @@ const routes: Routes = [
   {
     path: 'promociones', component: PromocionComponent, children: [
       { path: 'nuevo', component: PromocionCreaeditaComponent }
-      , { path: 'edicion/:id', component: PromocionCreaeditaComponent }
+      , { path: 'edicion/:id', component: PromocionCreaeditaComponent },
+      { path: 'promonavidad', component: PromocionNavidadComponent}
     ]
   },
   {
