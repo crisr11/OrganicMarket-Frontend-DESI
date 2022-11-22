@@ -6,9 +6,16 @@
           "organicmarket-b0210"
         ]
       }
+    },
+    "organicmarket-b30bd": {
+      "hosting": {
+        "OrganicMarket": [
+          "organicmarket-b30bd"
+        ]
+      }
     }
   },
   "projects": {
-    "default": "organicmarket"
+    "default": "organicmarket-b30bd"
   }
 }

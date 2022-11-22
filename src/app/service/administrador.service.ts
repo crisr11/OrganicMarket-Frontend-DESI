@@ -8,7 +8,8 @@ import { Subject,EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class AdministradorService {
-  private url: string = `${environment.host}/administradores`;
+  //private url: string = `${environment.host}/administradores`;
+  url: string = "http://localhost:8080/administradores"
   private listaCambio = new Subject<administrador[]>()
   private confirmarEliminacion=new Subject<Boolean>()
 

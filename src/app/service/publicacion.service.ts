@@ -8,7 +8,8 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PublicacionService {
-  private url: string = `${environment.host}/publicaciones`
+  //private url: string = `${environment.host}/publicaciones`
+  url: string = "http://localhost:8080/publicaciones"
   private listaCambio = new Subject<Publicacion[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }

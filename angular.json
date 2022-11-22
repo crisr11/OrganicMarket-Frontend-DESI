@@ -23,7 +23,6 @@
               "src/assets"
             ],
             "styles": [
-
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
@@ -34,8 +33,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -104,8 +103,8 @@
             "prerender": false,
             "ssr": false,
             "browserTarget": "OrganicMarket:build:production",
-            "firebaseProject": "organicmarket",
-            "firebaseHostingSite": "organicmarket-b0210"
+            "firebaseProject": "organicmarket-b30bd",
+            "firebaseHostingSite": "organicmarket-b30bd"
           }
         }
       }
