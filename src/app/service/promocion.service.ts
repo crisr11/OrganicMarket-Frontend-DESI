@@ -9,7 +9,8 @@ import { ResultadoAgricultor } from '../model/resultadoagricultor';
   providedIn: 'root'
 })
 export class PromocionService {
-  private url: string = `${environment.host}/promociones`
+  //private url: string = `${environment.host}/promociones`
+  url: string = "http://localhost:8080/promociones"
   private listaCambio = new Subject<Promocion[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }

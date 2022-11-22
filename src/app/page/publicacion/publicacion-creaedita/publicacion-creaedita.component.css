@@ -279,3 +279,7 @@ img:hover{
 th,td{
 	text-align: center;
 }
+
+.contenido{
+	height: 150px;
+}
