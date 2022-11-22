@@ -13,7 +13,7 @@ import { DetalleordenDialogoComponent } from './detalleorden-dialogo/detalleorde
 export class DetalleordenListarComponent implements OnInit {
   lista: detalleorden[] = [];
   dataSource: MatTableDataSource<detalleorden> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'nombre', 'accion1', 'accion2'];
+  displayedColumns: string[] = ['id', 'nombre', 'cantidad', 'accion1', 'accion2'];
   private idMayor: number = 0;
   constructor(private ds: DetalleordenService, private dialog: MatDialog) { }
 
