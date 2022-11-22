@@ -77,6 +77,7 @@ import { OrdenBuscarComponent } from './page/orden/orden-buscar/orden-buscar.com
 import { OrdenCreaeditaComponent } from './page/orden/orden-creaedita/orden-creaedita.component';
 import { OrdenDialogoComponent } from './page/orden/orden-listar/orden-dialogo/orden-dialogo.component';
 import { AgricultorFiltrarComponent } from './page/agricultor/agricultor-filtrar/agricultor-filtrar.component';
+import { AgricultorDatosComponent } from './page/agricultor/agricultor-datos/agricultor-datos.component';
 
 
 
@@ -147,7 +148,8 @@ import { AgricultorFiltrarComponent } from './page/agricultor/agricultor-filtrar
     OrdenBuscarComponent,
     OrdenCreaeditaComponent,
     OrdenDialogoComponent,
-    AgricultorFiltrarComponent
+    AgricultorFiltrarComponent,
+    AgricultorDatosComponent
   ],
   imports: [
     BrowserModule,

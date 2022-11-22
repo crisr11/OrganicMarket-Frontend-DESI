@@ -1,4 +1,5 @@
 import { agricultor } from '../model/agricultor';
+import { ResultadoAgricultor } from '../model/resultadoagricultor';
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Subject, EMPTY} from 'rxjs';
@@ -17,6 +18,10 @@ export class AgricultorService {
   filtrardistrito() {
     return this.http.get<agricultor[]>(`${this.url}/filtrarmiraflores`);
   }
+  listardatos(){
+    return this.http.get<ResultadoAgricultor[]>(`${this.url}/datos`);
+  }
+
   insertar(agricultor: agricultor) {
     return this.http.post(this.url, agricultor);
   }
