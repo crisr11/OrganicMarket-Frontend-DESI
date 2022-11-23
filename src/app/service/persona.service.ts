@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class PersonaService {
   //private url: string = `${environment.host}/personas`;
-  url:string="http://localhost:8080/personas";
+  url:string="https://organicmarket-back.herokuapp.com/personas";
 
   private listaCambio=new Subject<persona[]>()
   private confirmaEliminacion=new Subject<Boolean>();

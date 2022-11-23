@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class PublicacionService {
   //private url: string = `${environment.host}/publicaciones`
-  url: string = "http://localhost:8080/publicaciones"
+  url: string = "https://organicmarket-back.herokuapp.com/publicaciones"
   private listaCambio = new Subject<Publicacion[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }

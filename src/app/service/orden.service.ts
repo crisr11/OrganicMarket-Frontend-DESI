@@ -7,7 +7,7 @@ import { Subject, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class OrdenService {
-  url:string="http://localhost:8080/orden";
+  url:string="https://organicmarket-back.herokuapp.com/orden";
   private listaCambio = new Subject<Orden[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }
