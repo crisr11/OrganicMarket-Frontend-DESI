@@ -33,9 +33,9 @@ export class MayoristaCreaeditaComponent implements OnInit {
   aceptar(): void {
     if (this.mayorista.RUCMayorista.length > 0 && this.mayorista.rubroMayorista.length > 0) {
  
-      let p = new persona()
-      p.idPersona=this.idPersonaseleccionada
-      this.mayorista.persona=p
+      let p = new persona();
+      p.idPersona=this.idPersonaseleccionada;
+      this.mayorista.persona=p;
 
       if (this.edicion) {
         this.mayoristaService.modificar(this.mayorista).subscribe(data => {
@@ -48,10 +48,10 @@ export class MayoristaCreaeditaComponent implements OnInit {
         this.mayoristaService.insertar(this.mayorista).subscribe(data => {
           this.mayoristaService.listar().subscribe(data => {
             this.mayoristaService.setLista(data);
-          })
+          });
         }, err => {
           console.log(err);
-        })
+        });
       }
       this.router.navigate(['mayoristas']);
     } else {
