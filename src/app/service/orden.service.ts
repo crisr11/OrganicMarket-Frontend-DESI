@@ -25,7 +25,7 @@ export class OrdenService {
     return this.listaCambio.asObservable();
   }
   modificar(orden: Orden) {
-    return this.http.put(this.url + "/" + orden.idOrden, orden);
+    return this.http.put(this.url, orden);
   }
   listarId(id: number) {
     return this.http.get<Orden>(`${this.url}/${id}`);

@@ -43,7 +43,7 @@ export class OrdenCreaeditaComponent implements OnInit {
     this.mayoristaService.listar().subscribe(data=>{this.listaMayoristas=data});
   }
   aceptar(): void {
-    if (this.orden.fechaCompra.length > 0 && this.idAgricultorSeleccionado>0 && this.idMayoristaSeleccionado>0) {
+    if (2 > 1) {
       let a=new agricultor();
       let m=new Mayorista();
 
@@ -74,7 +74,7 @@ export class OrdenCreaeditaComponent implements OnInit {
           console.log(err);
         });
       }
-      this.router.navigate(['ordenes']);
+      this.router.navigate(['orden']);
     } else {
       this.mensaje = "Complete los valores requeridos";
     }
