@@ -1,0 +1,109 @@
+<html>
+<body>
+  <script  src="./assets/js/navegacion/navegacion.js"></script>
+        <!-- partial:index.partial.html -->
+        <header>
+          <span class="menu-anchor" ></span>
+          <h1 class="titulo">PERSONAS</h1>
+          <div class="seccion">
+            <app-persona-buscar></app-persona-buscar>
+          </div>
+        </header>
+        <menu>
+          <ul>
+            <figure class="logo">
+              <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo" >
+              <figcaption class="nombre-logo notranslate">Organic Market</figcaption>
+            </figure>
+            <br><br>
+            <li></li>
+            <li><a href="http://localhost:4200/productos">Productos</a></li>
+            <li><a href="http://localhost:4200/agricultor">Agricultores</a></li>
+            <li><a href="http://localhost:4200/persona">Personas</a></li>
+            <li><a href="http://localhost:4200/mayoristas">Mayoristas</a></li>
+            <li><a href="http://localhost:4200/publicaciones">Publicaciones</a></li>
+            <li><a href="http://localhost:4200/detalleorden">Detalle Orden</a></li>
+            <li><a href="http://localhost:4200/orden">Ordenes</a></li>
+            <li><a href="http://localhost:4200/tipos">Tipos</a></li>
+            <li><a href="http://localhost:4200/administrador">Administradores</a></li>         
+            <li><a href="http://localhost:4200/acuerdos">Acuerdos</a></li>
+            <li><a href="http://localhost:4200/promociones">Promociones</a></li>  
+            <!-- <li><a href="https://organicmarket-b0210.web.app/productos">Productos</a></li>
+            <li><a href="https://organicmarket-b0210.web.app/agricultor">Agricultores</a></li>
+            <li><a href="https://organicmarket-b0210.web.app/persona">Personas</a></li>
+            <li><a href="https://organicmarket-b0210.web.app/mayoristas">Mayoristas</a></li>
+            <li><a href="https://organicmarket-b0210.web.app/publicaciones">Publicaciones</a></li>
+            <li><a href="https://organicmarket-b0210.web.app/detalleorden">Detalle Orden</a></li>
+            <li><a href="https://organicmarket-b0210.web.app/orden">Ordenes</a></li>
+            <li><a href="https://organicmarket-b0210.web.app/tipos">Tipos</a></li>
+            <li><a href="https://organicmarket-b0210.web.app/administrador">Administradores</a></li>         
+            <li><a href="https://organicmarket-b0210.web.app/acuerdos">Acuerdos</a></li>
+            <li><a href="https://organicmarket-b0210.web.app/promociones">Promociones</a></li>       -->
+            
+            
+            <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+            <li > 	
+              <a href="#">Cerrar sesión <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="-2 -1 16 16">
+              <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z"/>
+              <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+              </svg></a></li>
+          </ul>
+        </menu>
+        <!--se agrega texto-->
+        <section class="main">
+          
+        </section>
+        <!-- partial -->
+        <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        
+        
+    
+
+        <h1 style="align-items: center;position: relative;width: 518px;
+		height: 30x;
+		left: 700px;
+		top: 0px;"><strong>Reporte detalles de personas por DNI</strong></h1>
+
+    <div >
+       
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="dni">
+      <th mat-header-cell *matHeaderCellDef> DNI</th>
+      <td mat-cell *matCellDef="let element"> {{element.dniPersona}} </td>
+    </ng-container>
+
+   
+    <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let element"> {{element.nombrePersona}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="correo">
+        <th mat-header-cell *matHeaderCellDef> Correo </th>
+        <td mat-cell *matCellDef="let element"> {{element.correoPersona}} </td>
+      </ng-container>
+     
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+<!-- <div class="example-button-container">
+  <button mat-mini-fab color="primary" class="boton_personalizado"
+    aria-label="Example icon button with a plus one icon" routerLink="/persona-crearpersona">
+    <mat-icon>plus_one</mat-icon>
+  </button>
+  </div> -->
+  <footer>
+    <div class="f-b-img">
+      <img src="https://i.ibb.co/W0NPQ1N/Organic-Market-Logo.png" alt="logo">
+    </div>
+  
+    <div class="f-b-redes"> 
+        <p class="f-b-redes-cr" >Copyright ©2022</p>
+        <p class="f-b-redes-sg">Made by PeruInnova</p>
+    </div>
+    </footer>
+</body>
+</html>
