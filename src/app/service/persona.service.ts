@@ -1,3 +1,5 @@
+import { ReporteP2 } from './../model/reporteP2';
+import { ReporteP1 } from './../model/reporteP1';
 import { persona } from '../model/persona';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
@@ -8,8 +10,8 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PersonaService {
-  //private url: string = `${environment.host}/personas`;
-  url: string = "http://localhost:8080/personas"
+  private url: string = `${environment.host}/personas`;
+
   private listaCambio=new Subject<persona[]>()
   private confirmaEliminacion=new Subject<Boolean>();
   constructor(private http: HttpClient) { }
@@ -49,6 +51,15 @@ export class PersonaService {
       return this.http.post<persona[]>(`${this.url}/buscar`,texto.toLowerCase(),{});
     }
     return EMPTY;
+  }
+  buscarDniAsc(){
+    return this.http.get<ReporteP1[]>(`${this.url}/filtrarDniASC`);
+  }
+  buscarDniDesc(){
+    return this.http.get<ReporteP1[]>(`${this.url}/filtrarDniDESC`);
+  }
+  buscarComprasAño(){
+    return this.http.get<ReporteP2[]>(`${this.url}/buscarCompras`);
   }
 
 }
