@@ -30,6 +30,9 @@ import { OrdenCreaeditaComponent } from './page/orden/orden-creaedita/orden-crea
 import { ProductoCostosoComponent } from './page/producto/producto-costoso/producto-costoso.component';
 import { PromocionNavidadComponent } from './page/promocion/promocion-navidad/promocion-navidad.component';
 import { PromocionVencimientosComponent } from './page/promocion/promocion-vencimientos/promocion-vencimientos.component';
+import { PersonaReporteDniDESCComponent } from './page/persona/persona-reporte-dni-desc/persona-reporte-dni-desc.component';
+import { PersonaReportecomprasComponent } from './page/persona/persona-reportecompras/persona-reportecompras.component';
+import { PersonaReporteDniComponent } from './page/persona/persona-reporte-dni/persona-reporte-dni.component';
 
 const routes: Routes = [
   {
@@ -72,7 +75,10 @@ const routes: Routes = [
   }, {
     path: 'persona', component: PersonaComponent, children: [
       { path: 'nuevo', component: PersonaCrearpersonaComponent },
-      { path: 'edicion/:id', component: PersonaCrearpersonaComponent }
+      { path: 'edicion/:id', component: PersonaCrearpersonaComponent },
+       {path:'dni',component:PersonaReporteDniComponent},
+      {path:'dni2',component:PersonaReporteDniDESCComponent},
+      {path:'compras',component:PersonaReportecomprasComponent}
     ]
   }, {
     path: 'administrador', component: AdministradorComponent, children: [
