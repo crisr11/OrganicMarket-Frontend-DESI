@@ -6,8 +6,10 @@
     <header>
         <span class="menu-anchor"></span>
         <h1>DETALLE ORDEN</h1>
-        <button routerLink="/detalleorden/buscarproductos" class="botoncito2">Reporte producto con mas cantidad</button>
-        <button routerLink="/detalleorden/buscarcantidades" class="botoncito3">Reporte de cantidad de veces</button>
+        <div class="reportes">
+            <button routerLink="/detalleorden/buscarproductos" class="reporte">Reporte producto con mas cantidad</button>
+            <button routerLink="/detalleorden/buscarcantidades" class="reporte">Reporte de cantidad de veces</button>
+        </div>
         <div class="seccion">
             <app-detalleorden-buscar></app-detalleorden-buscar>
         </div>
