@@ -9,7 +9,7 @@ import { EMPTY, Subject } from 'rxjs';
 export class MayoristaService {
   private listaCambio = new Subject<Mayorista[]>()
   private confirmaEliminacion = new Subject<Boolean>()
-  url: string = "http://localhost:8080/mayoristas"
+  url: string = "https://organicmarket-back.herokuapp.com/mayoristas"
   constructor(private http:HttpClient) {}
 
   listar(){

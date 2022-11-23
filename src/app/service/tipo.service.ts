@@ -7,7 +7,7 @@ import { Tipo } from '../model/tipo';
   providedIn: 'root'
 })
 export class TipoService {
-  url: string = "http://localhost:8080/tipos"
+  url: string = "https://organicmarket-back.herokuapp.com/tipos"
   private listaCambio = new Subject<Tipo[]>()
   constructor(private http: HttpClient) { }
 
