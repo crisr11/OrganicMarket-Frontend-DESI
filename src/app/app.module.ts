@@ -85,6 +85,11 @@ import { ProductoCostosoComponent } from './page/producto/producto-costoso/produ
 import { PromocionNavidadComponent } from './page/promocion/promocion-navidad/promocion-navidad.component';
 import { DetalleordenCantidadesComponent } from './page/detalleorden/detalleorden-cantidades/detalleorden-cantidades.component';
 import { DetalleordenproductoComponent } from './page/detalleorden/detalleordenproducto/detalleordenproducto.component';
+import { PersonaReporteDniComponent } from './page/persona/persona-reporte-dni/persona-reporte-dni.component';
+import { PersonaReportecomprasComponent } from './page/persona/persona-reportecompras/persona-reportecompras.component';
+import { PersonaReporteDniDESCComponent } from './page/persona/persona-reporte-dni-desc/persona-reporte-dni-desc.component';
+
+
 
 
 
@@ -162,7 +167,10 @@ import { DetalleordenproductoComponent } from './page/detalleorden/detalleordenp
     PublicacionNumeropublicacionesComponent,
     PromocionVencimientosComponent,
     DetalleordenCantidadesComponent,
-    DetalleordenproductoComponent
+    DetalleordenproductoComponent,
+    PersonaReporteDniComponent,
+    PersonaReportecomprasComponent,
+    PersonaReporteDniDESCComponent
   ],
   imports: [
     BrowserModule,
