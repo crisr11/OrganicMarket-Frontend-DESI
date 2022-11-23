@@ -9,7 +9,8 @@
             <app-persona-buscar></app-persona-buscar>
           </div>
           <div class="reportes">
-            <button style="position: relative;" routerLink="/persona/dni" class="reporte">Detalle de personas x DNI descendente</button>
+            <button style="position: relative;" routerLink="/persona/dni" class="reporte">Detalle de personas x DNI ascendente</button>
+              <button style="position: relative;"routerLink="/persona/dni2" class="botoncito">Detalle de personas x DNI descendente</button>
             <button style="position: relative;"routerLink="/persona/compras" class="reporte">Compras de este año</button>
           </div>
         </header>
@@ -126,15 +127,8 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
- <br><br><br><br>
-  <button style="position: relative; "routerLink="/persona-crearpersona" class="botoncito">Insertar</button>
-  <br> <br> <br>
-  <button style="position: relative;"routerLink="/persona/dni" class="botoncito">Reporte detalles de personas por DNI Ascendente</button>
-  <br> <br> <br>
-  <button style="position: relative;"routerLink="/persona/dni2" class="botoncito">Reporte detalles de personas por DNI Descendente</button>
-  <br> <br> <br>
-  <button style="position: relative;"routerLink="/persona/compras" class="botoncito">Reporte compras de este año</button>
-  <br>
+ 
+  
 </div>
 <!-- <div class="example-button-container">
   <button mat-mini-fab color="primary" class="boton_personalizado"
