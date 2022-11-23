@@ -31,38 +31,51 @@
     </mat-form-field>
     <br>
   
-    <mat-form-field class="example-full-width">
-        <mat-label>fechaCompra</mat-label>
-        <input matInput required placeholder="fechaCompra" [(ngModel)]="orden.fechaCompra">
-      </mat-form-field>
-      <br>
-      <mat-form-field class="example-full-width">
-        <mat-label>fechaEnvio</mat-label>
-        <input matInput required placeholder="fechaEnvio" [(ngModel)]="orden.fechaEnvio">
-      </mat-form-field>
-      <br>
-      <mat-form-field class="example-full-width">
-        <mat-label>fechaEntrega</mat-label>
-        <input matInput required placeholder="fechaEntrega" [(ngModel)]="orden.fechaEntrega">
-      </mat-form-field>
-      <br>
-    <mat-form-field class="example-full-width">
-      <mat-label>cantidad</mat-label>
-      <input matInput required placeholder="cantidad" [(ngModel)]="orden.cantidad">
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha Compra</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="fechaSeleccionada1" [min]="fechaDefault">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
     <br>
 
-    <mat-form-field class="example-full-width">
-      <mat-label>idAgricultor</mat-label>
-      <input matInput required placeholder="idAgricultor" [(ngModel)]="orden.idAgricultor.idAgricultor">
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha Envio</mat-label>
+      <input matInput [matDatepicker]="picker2" [(ngModel)]="fechaSeleccionada2" [min]="fechaDefault">
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
     </mat-form-field>
     <br>
 
-    <mat-form-field class="example-full-width">
-      <mat-label>id</mat-label>
-      <input matInput required placeholder="id" [(ngModel)]="orden.idMayorista.idMayorista">
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha Entrega</mat-label>
+      <input matInput [matDatepicker]="picker3" [(ngModel)]="fechaSeleccionada3" [min]="fechaDefault">
+      <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+      <mat-datepicker #picker3></mat-datepicker>
     </mat-form-field>
     <br>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Seleccione Agricultor</mat-label>
+        <mat-select [(value)]="idAgricultorSeleccionado" required>
+          <mat-option *ngFor="let a of listaAgricultores" [value]="a.idAgricultor">
+            {{a.persona.nombrePersona}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Seleccione Mayorista</mat-label>
+        <mat-select [(value)]="idMayoristaSeleccionado" required>
+          <mat-option *ngFor="let m of listaMayoristas" [value]="m.idMayorista">
+            {{m.persona.nombrePersona}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+
 
     <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
     <button mat-raised-button color="warn" routerLink="/orden">Cancelar</button>

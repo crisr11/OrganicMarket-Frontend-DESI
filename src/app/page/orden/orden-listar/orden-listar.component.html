@@ -87,18 +87,14 @@
         <td mat-cell *matCellDef="let element"> {{element.fechaEntrega}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="cantidad">
-        <th mat-header-cell *matHeaderCellDef> Cantidad </th>
-        <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
+      <ng-container matColumnDef="agricultor">
+        <th mat-header-cell *matHeaderCellDef> AGRICULTOR</th>
+        <td mat-cell *matCellDef="let element"> {{element.agricultor.persona.nombrePersona}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="agricultor">
-        <th mat-header-cell *matHeaderCellDef>  ID AGRICULTOR</th>
-        <td mat-cell *matCellDef="let element"> {{element.agricultor.idAgricultor}} </td>
-      </ng-container>
       <ng-container matColumnDef="mayorista">
-        <th mat-header-cell *matHeaderCellDef> ID MAYORISTA </th>
-        <td mat-cell *matCellDef="let element"> {{element.mayorista.id}} </td>
+        <th mat-header-cell *matHeaderCellDef> MAYORISTA </th>
+        <td mat-cell *matCellDef="let element"> {{element.mayorista.persona.nombrePersona}} </td>
       </ng-container>
       <ng-container matColumnDef="Accion1">
         <th mat-header-cell *matHeaderCellDef>Accion1</th>

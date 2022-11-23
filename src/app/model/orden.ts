@@ -6,7 +6,6 @@ export class Orden{
   fechaCompra:string=""
   fechaEnvio:string=""
   fechaEntrega: string=""
-  cantidad: number=0
-  idAgricultor:agricultor=new agricultor()
-  idMayorista:Mayorista=new Mayorista()
+  agricultor:agricultor=new agricultor()
+  mayorista:Mayorista=new Mayorista()
 }

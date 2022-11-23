@@ -12,7 +12,7 @@ import { OrdenDialogoComponent } from './orden-dialogo/orden-dialogo.component';
 })
 export class OrdenListarComponent implements OnInit {
   dataSource: MatTableDataSource<Orden> = new MatTableDataSource();
-  displayedColumns:string[]=["idOrden","fechaCompra","fechaEnvio","fechaEntrega","cantidad","agricultor","mayorista","Accion1","Accion2"]
+  displayedColumns:string[]=["idOrden","fechaCompra","fechaEnvio","fechaEntrega","agricultor","mayorista","Accion1","Accion2"]
   private idMayor = 0;
   constructor(private Os: OrdenService, private dialog: MatDialog) { }
   ngOnInit(): void {

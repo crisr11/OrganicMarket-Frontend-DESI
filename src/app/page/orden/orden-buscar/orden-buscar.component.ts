@@ -15,14 +15,8 @@ export class OrdenBuscarComponent implements OnInit {
   ngOnInit(): void {
   }
   buscar(e: any) {
-    let array: Orden[] = [];
-    this.ordenservice.listar().subscribe(data => {
-      data.forEach((element, index) => {
-        if (element.fechaCompra.includes(e.target.value)) {
-          array.push(data[index]);
-        }
-      });
-      this.ordenservice.setLista(array);
+    this.ordenservice.buscar(e.target.value).subscribe(data=>{
+      this.ordenservice.setLista(data);
     })
   }
 }
