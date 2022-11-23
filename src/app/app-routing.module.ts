@@ -1,3 +1,6 @@
+import { DetalleordenCantidadesComponent } from './page/detalleorden/detalleorden-cantidades/detalleorden-cantidades.component';
+import { DetalleordenproductoComponent } from './page/detalleorden/detalleordenproducto/detalleordenproducto.component';
+import { PublicacionNumeropublicacionesComponent } from './page/publicacion/publicacion-numeropublicaciones/publicacion-numeropublicaciones.component';
 import { AgricultorDatosComponent } from './page/agricultor/agricultor-datos/agricultor-datos.component';
 import { AgricultorFiltrarComponent } from './page/agricultor/agricultor-filtrar/agricultor-filtrar.component';
 import { AdministradorCrearadministradorComponent } from './page/administrador/administrador-crearadministrador/administrador-crearadministrador.component';
