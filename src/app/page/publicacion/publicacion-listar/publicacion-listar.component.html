@@ -8,9 +8,6 @@
           <div class="seccion">
             <app-publicacion-buscar></app-publicacion-buscar>
           </div>
-          <div class="reportes">
-            <button routerLink="/publicaciones/top-publicaciones" class="reporte">Top Publicaciones</button>
-          </div>
         </header>
         <menu>
           <ul>
@@ -117,6 +114,9 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
     <button routerLink="/publicaciones/nuevo" class="botoncito">Insertar</button>
+    <div class="reportes">
+      <button routerLink="/publicaciones/top-publicaciones" class="reporte">Top Publicaciones</button>
+    </div>
   </div>
   <footer>
     <div class="f-b-img">

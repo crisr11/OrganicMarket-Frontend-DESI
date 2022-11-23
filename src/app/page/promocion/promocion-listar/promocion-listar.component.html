@@ -8,9 +8,7 @@
           <div class="seccion">
             <app-promocion-buscar></app-promocion-buscar>
           </div>
-          <div class="reportes">
-            <button routerLink="/promociones/proximos-a-vencer" class="reporte">Proximos a vencer</button>
-          </div>
+
         </header>
         <menu>
           <ul>
@@ -130,6 +128,9 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
     <button routerLink="/promociones/nuevo" class="botoncito">Insertar</button>
+    <div class="reportes">
+      <button routerLink="/promociones/proximos-a-vencer" class="reporte">Proximos a vencer</button>
+    </div>
   </div>
   <footer>
     <div class="f-b-img">
