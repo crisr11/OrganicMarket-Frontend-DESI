@@ -342,16 +342,17 @@ th,td{
 	max-width: 200px;
 	margin: 10px;
 	border: none;
-	background-color: #5E693F;
+	background-color: #2F4858;
 	color: white;
 	padding: 5px;
 	border-radius: 5px;
 	text-transform: uppercase;
 	font-weight: bold;
+	margin-right: 200px;
 }
 .reportes{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+
+	align-items: flex-end;
 }

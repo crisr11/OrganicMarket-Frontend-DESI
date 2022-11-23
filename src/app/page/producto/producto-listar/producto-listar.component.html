@@ -8,10 +8,6 @@
           <div class="seccion">
             <app-producto-buscar></app-producto-buscar>
           </div>
-          <div class="reportes">
-            <button class="reporte" routerLink="/promociones/promonavidad">Productos en promocion por navidad</button>
-            <button class="reporte" routerLink="/productos/productocaro">Producto mas caro</button>
-          </div>
         </header>
         <menu>
           <ul>
@@ -118,6 +114,10 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
   <button routerLink="/productos/nuevo" class="botoncito">Insertar</button>
+  <div class="reportes">
+    <button class="reporte" routerLink="/promociones/promonavidad">Productos en promocion por navidad</button>
+    <button class="reporte" routerLink="/productos/productocaro">Producto mas caro</button>
+  </div>
 </div>
   <footer>
     <div class="f-b-img">

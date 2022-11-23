@@ -9,10 +9,6 @@
             <app-agricultor-buscar></app-agricultor-buscar>
       
           </div>
-          <div class="reportes">
-            <button routerLink="/agricultor/filtrarmiraflores" class="reporte">Reporte distrito miraflores</button>
-            <button routerLink="/agricultor/datosubicacion" class="reporte">Reporte datos para ubicar</button>
-          </div>
         </header>
         <menu>
           <ul>
@@ -140,6 +136,10 @@
      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
    </table>
    <button routerLink="/agricultor/nuevo" class="botoncito">Insertar</button>
+   <div class="reportes">
+    <button routerLink="/agricultor/filtrarmiraflores" class="reporte">Reporte distrito miraflores</button>
+    <button routerLink="/agricultor/datosubicacion" class="reporte">Reporte datos para ubicar</button>
+  </div>
 
  
    

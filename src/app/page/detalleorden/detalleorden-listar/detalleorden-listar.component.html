@@ -6,10 +6,6 @@
     <header>
         <span class="menu-anchor"></span>
         <h1>DETALLE ORDEN</h1>
-        <div class="reportes">
-            <button routerLink="/detalleorden/buscarproductos" class="reporte">Reporte producto con mas cantidad</button>
-            <button routerLink="/detalleorden/buscarcantidades" class="reporte">Reporte de cantidad de veces</button>
-        </div>
         <div class="seccion">
             <app-detalleorden-buscar></app-detalleorden-buscar>
         </div>
@@ -121,6 +117,10 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
     <button routerLink="/detalleorden/nuevo" class="botoncito">Insertar</button>
+    <div class="reportes">
+        <button routerLink="/detalleorden/buscarproductos" class="reporte">Reporte producto con mas cantidad</button>
+        <button routerLink="/detalleorden/buscarcantidades" class="reporte">Reporte de cantidad de veces</button>
+    </div>
     <!-- <div class="example-button-container">
         <button mat-mini-fab color="primary" class="boton_personalizado"
             aria-label="Example icon button with a plus one icon" routerLink="/detalleorden/nuevo">
