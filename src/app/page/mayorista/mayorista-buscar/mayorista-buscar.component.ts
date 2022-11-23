@@ -14,16 +14,19 @@ export class MayoristaBuscarComponent implements OnInit {
   ngOnInit(): void {
   }
   buscar(e: any) {
-    let array: Mayorista[] = [];
-    this.mayoristaService.listar().subscribe(data => {
-      data.forEach((element, index) => {
-        //e.target.value = e.target.value.toLocaleUpperCase()
-        if (element.nameMayorista.toLocaleUpperCase().includes(e.target.value.toLocaleUpperCase())) {
-          array.push(data[index]);
-        }
-      });
-      this.mayoristaService.setLista(array);
+    this.mayoristaService.buscar(e.target.value).subscribe(data=>{
+      this.mayoristaService.setLista(data)
     })
+    // let array: Mayorista[] = [];
+    // this.mayoristaService.listar().subscribe(data => {
+    //   data.forEach((element, index) => {
+    //     //e.target.value = e.target.value.toLocaleUpperCase()
+    //     if (element.nameMayorista.toLocaleUpperCase().includes(e.target.value.toLocaleUpperCase())) {
+    //       array.push(data[index]);
+    //     }
+    //   });
+    //   this.mayoristaService.setLista(array);
+    // })
   }
 
 }

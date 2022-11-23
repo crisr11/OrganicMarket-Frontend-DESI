@@ -25,13 +25,13 @@ export class MayoristaService {
     return this.listaCambio.asObservable();
   }
   modificar(mayorista: Mayorista) {
-    return this.http.put(this.url, mayorista);
+    return this.http.post(this.url, mayorista);
   }
   listarId(id: number) {
     return this.http.get<Mayorista>(`${this.url}/${id}`);
   }
   eliminar(id: number) {
-    return this.http.delete(this.url + "/" + id);
+    return this.http.delete(`${this.url}/${id}`);
   }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();
