@@ -64,7 +64,8 @@ const routes: Routes = [
   },
   {
     path: 'tipos', component: TipoComponent, children: [
-      { path: 'nuevo', component: TipoCreaeditaComponent }
+      { path: 'nuevo', component: TipoCreaeditaComponent },
+      { path: 'edicion/:id', component: TipoCreaeditaComponent }
     ]
   },
   {

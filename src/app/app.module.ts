@@ -88,6 +88,7 @@ import { DetalleordenproductoComponent } from './page/detalleorden/detalleordenp
 import { PersonaReporteDniComponent } from './page/persona/persona-reporte-dni/persona-reporte-dni.component';
 import { PersonaReportecomprasComponent } from './page/persona/persona-reportecompras/persona-reportecompras.component';
 import { PersonaReporteDniDESCComponent } from './page/persona/persona-reporte-dni-desc/persona-reporte-dni-desc.component';
+import { TipoDialogoComponent } from './page/tipo/tipo-listar/tipo-dialogo/tipo-dialogo.component';
 
 
 
@@ -170,7 +171,8 @@ import { PersonaReporteDniDESCComponent } from './page/persona/persona-reporte-d
     DetalleordenproductoComponent,
     PersonaReporteDniComponent,
     PersonaReportecomprasComponent,
-    PersonaReporteDniDESCComponent
+    PersonaReporteDniDESCComponent,
+    TipoDialogoComponent
   ],
   imports: [
     BrowserModule,

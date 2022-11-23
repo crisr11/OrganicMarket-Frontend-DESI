@@ -8,6 +8,7 @@ import { Tipo } from '../model/tipo';
 })
 export class TipoService {
   url: string = "https://organicmarket-back.herokuapp.com/tipos"
+  private confirmaEliminacion=new Subject<Boolean>();
   private listaCambio = new Subject<Tipo[]>()
   constructor(private http: HttpClient) { }
 
@@ -22,5 +23,21 @@ export class TipoService {
   }
   getLista() {
     return this.listaCambio.asObservable();
+  }
+  modificar(tipo:Tipo){
+    return this.http.put(this.url,tipo);
+  }
+  listarId(id:Number){
+    return this.http.get<Tipo>(`${this.url}/${id}`);
+  }
+  //Function delete
+  eliminar(id:number){
+    return this.http.delete(this.url+"/"+id);
+  }
+  getConfirmaEliminacion(){
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado:Boolean){
+    this.confirmaEliminacion.next(estado);
   }
 }
