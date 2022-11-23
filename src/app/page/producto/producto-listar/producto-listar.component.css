@@ -340,6 +340,14 @@ th,td{
 }
 .reporte{
 	max-width: 200px;
+	margin: 10px;
+	border: none;
+	background-color: #5E693F;
+	color: white;
+	padding: 5px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 .reportes{
 	display: flex;
