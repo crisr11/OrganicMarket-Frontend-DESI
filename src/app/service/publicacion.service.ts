@@ -1,3 +1,4 @@
+import { ResultadoPublicacion } from './../model/resultadopublicacion';
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Publicacion } from '../model/publicacion';
@@ -31,10 +32,12 @@ export class PublicacionService {
   buscar(texto: string) {
 
     if(texto.length!=0){
-      return this.http.post<Publicacion[]>(`${this.url}/buscar`,texto.toLowerCase(),{});
+      return this.http.post<Publicacion[]>(`${this.url}/buscar`,texto,{});
     }
     return EMPTY;
-  
+  }
+  buscarpublicacionesporagricultor(){
+    return this.http.get<ResultadoPublicacion[]>(`${this.url}/numero-de-publicaciones`);
   }
   listarId(id: number) {
 

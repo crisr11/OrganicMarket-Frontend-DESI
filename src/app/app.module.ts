@@ -1,3 +1,6 @@
+import { PromocionVencimientosComponent } from './page/promocion/promocion-vencimientos/promocion-vencimientos.component';
+import { ResultadoPublicacion } from './model/resultadopublicacion';
+import { PublicacionNumeropublicacionesComponent } from './page/publicacion/publicacion-numeropublicaciones/publicacion-numeropublicaciones.component';
 import { AdministradorDialogoComponent } from './page/administrador/administrador-listar/administrador-dialogo/administrador-dialogo.component';
 import { AdministradorCrearadministradorComponent } from './page/administrador/administrador-crearadministrador/administrador-crearadministrador.component';
 import { AdministradorBuscarComponent } from './page/administrador/administrador-buscar/administrador-buscar.component';
@@ -80,8 +83,8 @@ import { AgricultorFiltrarComponent } from './page/agricultor/agricultor-filtrar
 import { AgricultorDatosComponent } from './page/agricultor/agricultor-datos/agricultor-datos.component';
 import { ProductoCostosoComponent } from './page/producto/producto-costoso/producto-costoso.component';
 import { PromocionNavidadComponent } from './page/promocion/promocion-navidad/promocion-navidad.component';
-import { DetalleordenproductoComponent } from './page/detalleorden/detalleordenproducto/detalleordenproducto.component';
 import { DetalleordenCantidadesComponent } from './page/detalleorden/detalleorden-cantidades/detalleorden-cantidades.component';
+import { DetalleordenproductoComponent } from './page/detalleorden/detalleordenproducto/detalleordenproducto.component';
 
 
 
@@ -156,8 +159,10 @@ import { DetalleordenCantidadesComponent } from './page/detalleorden/detalleorde
     AgricultorDatosComponent,
     ProductoCostosoComponent,
     PromocionNavidadComponent,
-    DetalleordenproductoComponent,
-    DetalleordenCantidadesComponent
+    PublicacionNumeropublicacionesComponent,
+    PromocionVencimientosComponent,
+    DetalleordenCantidadesComponent,
+    DetalleordenproductoComponent
   ],
   imports: [
     BrowserModule,

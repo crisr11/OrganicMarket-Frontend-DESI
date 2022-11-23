@@ -1,5 +1,6 @@
 import { DetalleordenCantidadesComponent } from './page/detalleorden/detalleorden-cantidades/detalleorden-cantidades.component';
 import { DetalleordenproductoComponent } from './page/detalleorden/detalleordenproducto/detalleordenproducto.component';
+import { PublicacionNumeropublicacionesComponent } from './page/publicacion/publicacion-numeropublicaciones/publicacion-numeropublicaciones.component';
 import { AgricultorDatosComponent } from './page/agricultor/agricultor-datos/agricultor-datos.component';
 import { AgricultorFiltrarComponent } from './page/agricultor/agricultor-filtrar/agricultor-filtrar.component';
 import { AdministradorCrearadministradorComponent } from './page/administrador/administrador-crearadministrador/administrador-crearadministrador.component';
@@ -28,6 +29,7 @@ import { ProdutoCreaeditaComponent } from './page/producto/produto-creaedita/pro
 import { OrdenCreaeditaComponent } from './page/orden/orden-creaedita/orden-creaedita.component';
 import { ProductoCostosoComponent } from './page/producto/producto-costoso/producto-costoso.component';
 import { PromocionNavidadComponent } from './page/promocion/promocion-navidad/promocion-navidad.component';
+import { PromocionVencimientosComponent } from './page/promocion/promocion-vencimientos/promocion-vencimientos.component';
 
 const routes: Routes = [
   {
@@ -90,13 +92,15 @@ const routes: Routes = [
     path: 'promociones', component: PromocionComponent, children: [
       { path: 'nuevo', component: PromocionCreaeditaComponent }
       , { path: 'edicion/:id', component: PromocionCreaeditaComponent },
-      { path: 'promonavidad', component: PromocionNavidadComponent }
+      { path: 'promonavidad', component: PromocionNavidadComponent},
+      { path: 'proximos-a-vencer', component: PromocionVencimientosComponent}
     ]
   },
   {
     path: 'publicaciones', component: PublicacionComponent, children: [
       { path: 'nuevo', component: PublicacionCreaeditaComponent }
-      , { path: 'edicion/:id', component: PublicacionCreaeditaComponent }
+      , { path: 'edicion/:id', component: PublicacionCreaeditaComponent },
+      { path: 'top-publicaciones', component: PublicacionNumeropublicacionesComponent }
 
     ]
   },

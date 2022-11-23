@@ -34,11 +34,16 @@ export class PromocionService {
   }
   buscar(texto: string) {
 
-    return this.http.post<Promocion[]>(`${this.url}/buscar`, texto);
-  }
+    if(texto.length!=0){
+      return this.http.post<Promocion[]>(`${this.url}/buscar`,texto,{});
+    }
+    return EMPTY;  }
   listarId(id: number) {
 
     return this.http.get<Promocion>(`${this.url}/${id}`);
+  }
+  reportedevencimientos(){
+    return this.http.get<Promocion[]>(`${this.url}/proximosvencimientos`);
   }
   getLista() {
     return this.listaCambio.asObservable();
