@@ -31,7 +31,7 @@ export class MayoristaCreaeditaComponent implements OnInit {
     })
   }
   aceptar(): void {
-    if (this.mayorista.RUCMayorista.length > 0 && this.mayorista.rubroMayorista.length > 0) {
+    if (this.mayorista.rucmayorista.length > 0 && this.mayorista.rubroMayorista.length > 0) {
  
       let p = new persona();
       p.idPersona=this.idPersonaseleccionada;
