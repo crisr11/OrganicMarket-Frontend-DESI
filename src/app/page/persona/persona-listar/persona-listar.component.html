@@ -122,7 +122,15 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-  <button routerLink="/persona-crearpersona" class="botoncito">Insertar</button>
+  <br><br><br><br>
+  <button style="position: relative; "routerLink="/persona-crearpersona" class="botoncito">Insertar</button>
+  <br> <br> <br>
+  <button style="position: relative;"routerLink="/persona/dni" class="botoncito">Reporte detalles de personas por DNI Ascendente</button>
+  <br> <br> <br>
+  <button style="position: relative;"routerLink="/persona/dni2" class="botoncito">Reporte detalles de personas por DNI Descendente</button>
+  <br> <br> <br>
+  <button style="position: relative;"routerLink="/persona/compras" class="botoncito">Reporte compras de este año</button>
+  <br>
 </div>
 <!-- <div class="example-button-container">
   <button mat-mini-fab color="primary" class="boton_personalizado"
