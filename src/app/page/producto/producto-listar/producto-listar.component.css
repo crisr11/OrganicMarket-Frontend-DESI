@@ -284,3 +284,23 @@ th,td{
 	margin: 10px auto;
 	
 }
+.boton1{
+	border: none;
+	padding: 5px;
+	background-color: #00C0F1;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+}
+.boton2{
+	border: none;
+	padding: 5px;
+	background-color: crimson;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+}

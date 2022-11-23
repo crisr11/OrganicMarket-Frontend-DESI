@@ -31,7 +31,7 @@ export class MayoristaService {
     return this.http.get<Mayorista>(`${this.url}/${id}`);
   }
   eliminar(id: number) {
-    return this.http.delete(this.url + "/" + id);
+    return this.http.delete(`${this.url}/${id}`);
   }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();

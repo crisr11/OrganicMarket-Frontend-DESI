@@ -1,4 +1,3 @@
-import { PublicacionNumeropublicacionesComponent } from './page/publicacion/publicacion-numeropublicaciones/publicacion-numeropublicaciones.component';
 import { AgricultorDatosComponent } from './page/agricultor/agricultor-datos/agricultor-datos.component';
 import { AgricultorFiltrarComponent } from './page/agricultor/agricultor-filtrar/agricultor-filtrar.component';
 import { AdministradorCrearadministradorComponent } from './page/administrador/administrador-crearadministrador/administrador-crearadministrador.component';
@@ -48,7 +47,7 @@ const routes: Routes = [
     path: 'productos', component: ProductoComponent, children: [
       { path: 'nuevo', component: ProdutoCreaeditaComponent },
       { path: 'edicion/:id', component: ProdutoCreaeditaComponent },
-      { path: 'productocaro', component: ProductoCostosoComponent}
+      { path: 'productocaro', component: ProductoCostosoComponent }
     ]
   },
   {
@@ -90,9 +89,7 @@ const routes: Routes = [
     path: 'promociones', component: PromocionComponent, children: [
       { path: 'nuevo', component: PromocionCreaeditaComponent }
       , { path: 'edicion/:id', component: PromocionCreaeditaComponent },
-      { path: 'promonavidad', component: PromocionNavidadComponent},
-      { path: 'proximos-a-vencer', component: PromocionVencimientosComponent},
-
+      { path: 'promonavidad', component: PromocionNavidadComponent}
     ]
   },
   {
@@ -106,7 +103,9 @@ const routes: Routes = [
   {
     path: 'detalleorden', component: DetalleordenComponent, children: [
       { path: 'nuevo', component: DetalleCreaeditaComponent },
-      { path: 'edicion/:id', component: DetalleCreaeditaComponent }
+      { path: 'edicion/:id', component: DetalleCreaeditaComponent },
+      { path: 'buscarproductos', component: DetalleordenproductoComponent },
+      { path: 'buscarcantidades', component: DetalleordenCantidadesComponent }
     ]
 
   },

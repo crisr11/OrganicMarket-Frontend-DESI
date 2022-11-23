@@ -80,8 +80,6 @@ import { AgricultorFiltrarComponent } from './page/agricultor/agricultor-filtrar
 import { AgricultorDatosComponent } from './page/agricultor/agricultor-datos/agricultor-datos.component';
 import { ProductoCostosoComponent } from './page/producto/producto-costoso/producto-costoso.component';
 import { PromocionNavidadComponent } from './page/promocion/promocion-navidad/promocion-navidad.component';
-import { PromocionVencimientosComponent } from './page/promocion/promocion-vencimientos/promocion-vencimientos.component';
-import { PublicacionNumeropublicacionesComponent } from './page/publicacion/publicacion-numeropublicaciones/publicacion-numeropublicaciones.component';
 
 
 
@@ -155,9 +153,7 @@ import { PublicacionNumeropublicacionesComponent } from './page/publicacion/publ
     AgricultorFiltrarComponent,
     AgricultorDatosComponent,
     ProductoCostosoComponent,
-    PromocionNavidadComponent,
-    PromocionVencimientosComponent,
-    PublicacionNumeropublicacionesComponent
+    PromocionNavidadComponent
   ],
   imports: [
     BrowserModule,

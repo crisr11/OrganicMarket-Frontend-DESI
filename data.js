@@ -330,19 +330,23 @@ module.exports = function () {
     detalleorden: [
       {
         id: 1,
-        nombre: "Papa"
+        nombre: "Papa",
+        cantidad: 12
       },
       {
         id: 2,
-        nombre: "Tomate"
+        nombre: "Tomate",
+        cantidad: 24
       },
       {
         id: 3,
-        nombre: "Lechuga"
+        nombre: "Lechuga",
+        cantidad: 20
       },
       {
         id: 4,
-        nombre: "Manzana"
+        nombre: "Manzana",
+        cantidad: 23
       }
     ]
 

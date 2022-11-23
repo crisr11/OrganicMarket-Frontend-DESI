@@ -1,3 +1,4 @@
+import { ResultadoDetalleOrden } from './../model/resultadodetalleorden';
 import { Subject, EMPTY } from 'rxjs';
 import { detalleorden } from '../model/detalleorden';
 import { Injectable } from "@angular/core";
@@ -17,6 +18,12 @@ export class DetalleordenService {
 
     listar() {
         return this.http.get<detalleorden[]>(this.url);
+    }
+    buscarpapa() {
+        return this.http.get<detalleorden[]>(`${this.url}/buscarpapas`);
+    }
+    buscarcantidad() {
+        return this.http.get<ResultadoDetalleOrden[]>(`${this.url}/productoscantidad`);
     }
     insertar(detalleorden: detalleorden) {
         return this.http.post(this.url, detalleorden);
@@ -44,7 +51,9 @@ export class DetalleordenService {
     }
     buscar(texto: string) {
         if (texto.length != 0) {
-            return this.http.post<detalleorden[]>(`${this.url}/buscar`, texto.toLowerCase(), {});
+            return this.http.post<detalleorden[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+
+            });
         }
         return EMPTY;
     }

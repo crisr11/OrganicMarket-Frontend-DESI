@@ -87,14 +87,16 @@
       <ng-container matColumnDef="Editar">
         <th mat-header-cell *matHeaderCellDef>Editar</th>
         <td mat-cell *matCellDef="let element"> 
-          <img src="../../../../assets/update.png"   [routerLink]="['edicion', element.idPublicacion]">
+          <!-- <img src="../../../../assets/update.png"   [routerLink]="['edicion', element.idPublicacion]"> -->
+          <button [routerLink]="['edicion', element?.idPublicacion]" class="boton1">Actualizar</button>
         </td>
       </ng-container>
 
       <ng-container matColumnDef="Eliminar">
         <th mat-header-cell *matHeaderCellDef>Eliminar</th>
         <td mat-cell *matCellDef="let element">
-          <img src="../../../../assets/delete.png" (click)="confirmar(element.idPublicacion)">
+          <!-- <img src="../../../../assets/delete.png" (click)="confirmar(element.idPublicacion)"> -->
+          <button class="boton2" (click)="confirmar(element.idPublicacion)">Eliminar</button>
         </td>
       </ng-container>
 
