@@ -92,7 +92,8 @@ const routes: Routes = [
     path: 'promociones', component: PromocionComponent, children: [
       { path: 'nuevo', component: PromocionCreaeditaComponent }
       , { path: 'edicion/:id', component: PromocionCreaeditaComponent },
-      { path: 'promonavidad', component: PromocionNavidadComponent}
+      { path: 'promonavidad', component: PromocionNavidadComponent},
+      { path: 'proximos-a-vencer', component: PromocionVencimientosComponent}
     ]
   },
   {
