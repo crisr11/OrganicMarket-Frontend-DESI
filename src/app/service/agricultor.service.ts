@@ -8,7 +8,9 @@ import {Subject, EMPTY} from 'rxjs';
   providedIn: 'root'
 })
 export class AgricultorService {
-  url: string = "https://organicmarket-back.herokuapp.com/agricultores"
+  //url: string = "https://organicmarket-back.herokuapp.com/agricultores"
+  url: string = "http://localhost:8080/agricultores"
+
   private listaCambio = new Subject<agricultor[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }

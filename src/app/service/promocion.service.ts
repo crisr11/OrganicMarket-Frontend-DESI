@@ -10,11 +10,13 @@ import { ResultadoAgricultor } from '../model/resultadoagricultor';
 })
 export class PromocionService {
   //private url: string = `${environment.host}/promociones`
-  url: string = "https://organicmarket-back.herokuapp.com/promociones"
+  //url: string = "https://organicmarket-back.herokuapp.com/promociones"
+  url: string = "http://localhost:8080/promociones"
+
   private listaCambio = new Subject<Promocion[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }
-  
+
   listar(){
     return this.http.get<Promocion[]>(this.url);
   }

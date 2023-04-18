@@ -6,7 +6,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AcuerdoService {
-  url: string = "https://organicmarket-back.herokuapp.com/acuerdos"
+  //url: string = "https://organicmarket-back.herokuapp.com/acuerdos"
+  url: string = "http://localhost:8080/acuerdos"
+
   constructor(private http:HttpClient) {}
 
   listar(){

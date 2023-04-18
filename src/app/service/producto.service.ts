@@ -8,11 +8,12 @@ import { ResultadoAgricultor } from '../model/resultadoagricultor';
   providedIn: 'root'
 })
 export class ProductoService {
-  url: string = "https://organicmarket-back.herokuapp.com/productos"
+  //url: string = "https://organicmarket-back.herokuapp.com/productos"
+  url: string = "http://localhost:8080/productos"
   private listaCambio = new Subject<Producto[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
-  
+
   listar() {
     return this.http.get<Producto[]>(this.url);
   }

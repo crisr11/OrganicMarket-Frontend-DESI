@@ -9,7 +9,9 @@ import { Subject,EMPTY } from 'rxjs';
 })
 export class AdministradorService {
   //private url: string = `${environment.host}/administradores`;
-  url: string = "https://organicmarket-back.herokuapp.com/administradores"
+  //url: string = "https://organicmarket-back.herokuapp.com/administradores"
+  url: string = "http://localhost:8080/administradores"
+
   private listaCambio = new Subject<administrador[]>()
   private confirmarEliminacion=new Subject<Boolean>()
 

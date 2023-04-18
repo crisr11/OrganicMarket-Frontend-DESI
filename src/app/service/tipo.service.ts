@@ -7,7 +7,9 @@ import { Tipo } from '../model/tipo';
   providedIn: 'root'
 })
 export class TipoService {
-  url: string = "https://organicmarket-back.herokuapp.com/tipos"
+  //url: string = "https://organicmarket-back.herokuapp.com/tipos"
+  url: string = "http://localhost:8080/tipos"
+  //url: string = `${environment.host}/tipos`
   private confirmaEliminacion=new Subject<Boolean>();
   private listaCambio = new Subject<Tipo[]>()
   constructor(private http: HttpClient) { }

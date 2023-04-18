@@ -11,7 +11,9 @@ import { environment } from 'src/environments/environment';
 
 export class DetalleordenService {
     //private url: string = `${environment.host}/detalleorden`
-    url: string = "https://organicmarket-back.herokuapp.com/detalleorden"
+    //url: string = "https://organicmarket-back.herokuapp.com/detalleorden"
+    url: string = "http://localhost:8080/detalleorden"
+
     private listaCambio = new Subject<detalleorden[]>()
     private confirmaEliminacion = new Subject<Boolean>()
     constructor(private http: HttpClient) { }
