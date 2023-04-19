@@ -1,6 +1,8 @@
 # OrganicMarket
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+Also, this is a Fork oriented to the implementation of new features and/or readjustment of the pages.
+When finished, the changes will be synchronized to the original repository.
 
 ## Development server
 
