@@ -3,13 +3,15 @@ import { ResultadoAgricultor } from '../model/resultadoagricultor';
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Subject, EMPTY} from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AgricultorService {
+  private url: string = `${environment.host}/agricultores`
   //url: string = "https://organicmarket-back.herokuapp.com/agricultores"
-  url: string = "http://localhost:8080/agricultores"
+  //url: string = "http://localhost:8080/agricultores"
 
   private listaCambio = new Subject<agricultor[]>()
   private confirmaEliminacion = new Subject<Boolean>()

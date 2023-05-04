@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Mayorista } from '../model/mayorista';
 import { HttpClient } from '@angular/common/http';
 import { EMPTY, Subject } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,8 @@ export class MayoristaService {
   private listaCambio = new Subject<Mayorista[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   //url: string = "https://organicmarket-back.herokuapp.com/mayoristas"
-  url: string = "http://localhost:8080/mayoristas"
+  //url: string = "http://localhost:8080/mayoristas"
+  private url: string = `${environment.host}/mayoristas`
 
   constructor(private http:HttpClient) {}
 

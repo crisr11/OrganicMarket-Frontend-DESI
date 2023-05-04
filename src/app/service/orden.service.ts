@@ -2,13 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Orden } from '../model/orden';
 import { Subject, EMPTY } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OrdenService {
+  private url: string = `${environment.host}/orden`
   //url:string="https://organicmarket-back.herokuapp.com/orden";
-  url: string = "http://localhost:8080/orden"
+  //url: string = "http://localhost:8080/orden"
 
   private listaCambio = new Subject<Orden[]>()
   private confirmaEliminacion = new Subject<Boolean>()

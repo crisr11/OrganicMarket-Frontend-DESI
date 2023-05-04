@@ -10,9 +10,9 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PersonaService {
-  //private url: string = `${environment.host}/personas`;
+  private url: string = `${environment.host}/personas`;
   //url:string="https://organicmarket-back.herokuapp.com/personas";
-  url: string = "http://localhost:8080/personas"
+  //url: string = "http://localhost:8080/personas"
 
   private listaCambio=new Subject<persona[]>()
   private confirmaEliminacion=new Subject<Boolean>();

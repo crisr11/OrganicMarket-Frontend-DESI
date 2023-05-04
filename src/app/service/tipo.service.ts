@@ -2,14 +2,16 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Subject} from 'rxjs';
 import { Tipo } from '../model/tipo';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TipoService {
+  private url: string = `${environment.host}/tipos`
   //url: string = "https://organicmarket-back.herokuapp.com/tipos"
-  url: string = "http://localhost:8080/tipos"
-  //url: string = `${environment.host}/tipos`
+  //url: string = "http://localhost:8080/tipos"
+
   private confirmaEliminacion=new Subject<Boolean>();
   private listaCambio = new Subject<Tipo[]>()
   constructor(private http: HttpClient) { }

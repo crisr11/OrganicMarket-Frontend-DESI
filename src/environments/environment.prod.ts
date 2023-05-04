@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  API: '/api'
+  API: 'https://organicmarket-backend-desi-production.up.railway.app'
 };
