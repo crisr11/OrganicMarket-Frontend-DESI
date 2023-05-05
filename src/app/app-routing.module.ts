@@ -36,7 +36,7 @@ import { PersonaReporteDniComponent } from './page/persona/persona-reporte-dni/p
 
 const routes: Routes = [
   {
-    path: '', component: AgricultorComponent
+    path: '', redirectTo: 'productos', pathMatch: 'full'
   },
   {
     path: 'agricultor', component: AgricultorComponent, children: [
